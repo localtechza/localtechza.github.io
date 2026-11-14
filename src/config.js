@@ -1,8 +1,7 @@
 // src/config.js
 // Central configuration for the LocalTech website.
 
-// TODO: Replace this with your new Render backend URL for LocalTech
-// (e.g. https://localtech-xxxx.onrender.com) once you have deployed it.
+// Render backend for LocalTech (deployed from github.com/localtechza/backend)
 export const BACKEND_URL = "https://localtech-backend.onrender.com";
 
 // TODO: Replace this with your real LocalTech domain once you have one
