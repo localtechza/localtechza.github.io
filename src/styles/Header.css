@@ -1,0 +1,244 @@
+/* src/styles/Header.css */
+
+/* Header Container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    height: 150px;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 14px; /* Adjusted font size from your original */
+    font-weight: bold;
+    color: #333;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    color: #2563EB;
+}
+
+/* ============ Header actions: cart (always visible) + hamburger ============ */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* Desktop: nav fills the space between logo and cart, links pushed right */
+.main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Cart button with product-count badge */
+.header-cart {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.header-cart:hover {
+    border-color: #2563EB;
+    color: #2563EB;
+}
+
+.header-cart:focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+}
+
+.header-cart svg {
+    width: 22px;
+    height: 22px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background-color: #2563EB;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+.cart-count.is-empty {
+    background-color: #9ca3af;
+}
+
+/* Hamburger button — hidden on desktop, shown on tablets/phones below */
+.menu-toggle {
+    display: none;
+}
+
+/* ============ Tablet & phone: hamburger menu ============ */
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap; /* Lets the nav drop onto its own row when open */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        text-align: left;
+    }
+
+    .logo {
+        height: 110px;
+    }
+
+    /* Show the hamburger */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        background-color: transparent;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .menu-toggle:hover span {
+        background-color: #2563EB;
+    }
+
+    /* Morph the three bars into an X when open */
+    .menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Collapsible nav: hidden until the hamburger is tapped.
+       order: 2 pushes it onto its own row (row 1 = logo + cart + hamburger) */
+    .main-nav {
+        display: none;
+        flex: none;
+        order: 2;
+        width: 100%;
+    }
+
+    .main-nav.is-open {
+        display: block;
+    }
+
+    /* Full-width list of page links, easy to tap */
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        margin-top: 12px;
+        padding-bottom: 5px;
+    }
+
+    .navbar li {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        text-align: center;
+        padding: 13px 15px;
+        font-size: 15px;
+        background-color: #f5f5f5;
+        border: 1px solid #ececec;
+        border-radius: 8px;
+    }
+
+    .navbar a:hover,
+    .navbar a:active {
+        background-color: #eaeaea;
+        color: #2563EB;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .logo {
+        height: 90px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .header-cart {
+        width: 42px;
+        height: 42px;
+    }
+
+    .header-cart svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+}

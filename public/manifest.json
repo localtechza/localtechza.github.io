@@ -1,0 +1,25 @@
+{
+  "short_name": "LocalTech",
+  "name": "LocalTech",
+  "icons": [
+    {
+      "src": "logo4.png",
+      "type": "image/png",
+      "sizes": "any"
+    },
+    {
+      "src": "logo4.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo20.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563EB",
+  "background_color": "#ffffff"
+}

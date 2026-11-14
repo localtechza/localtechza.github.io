@@ -1,0 +1,176 @@
+/* General Styles */
+.checkout-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.checkout-container {
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centers the container */
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Note shown when arriving from the booking page */
+.booking-payment-note {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid #2563EB;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.95em;
+    color: #374151;
+    line-height: 1.5;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* Total Summary */
+.total-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Payment Button */
+.payment-button {
+    background-color: #2563EB;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.payment-button:hover {
+    background-color: #1D4ED8;
+}
+
+.payment-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Pickup Instructions */
+.pickup-instructions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f5ff;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.pickup-instructions p {
+    margin: 10px 0;
+}
+
+.pickup-instructions strong {
+    color: #476778;
+}
+
+/* EFT Instructions */
+.eft-instructions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f5ff;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.eft-instructions p {
+    margin: 10px 0;
+}
+
+.eft-instructions strong {
+    color: #476778;
+}
+
+/* Error / Status Messages */
+.status-message {
+    margin-top: 15px;
+    color: #ff4d4d;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border-radius: 5px;
+}
+
+/* Secured Image - Desktop (Default) */
+.secured-image {
+    position: absolute;
+    right: 80px;
+    bottom: 280px;
+    width: 350px; /* Adjust size as needed */
+}
+
+.secured-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .checkout-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-container {
+        width: 100%;
+    }
+
+    /* Move secured image below the form */
+    .secured-image {
+        position: static; /* No absolute positioning */
+        margin-top: 20px; /* Space between form and image */
+        width: 250px; /* Adjust size as needed */
+        text-align: center;
+    }
+}
