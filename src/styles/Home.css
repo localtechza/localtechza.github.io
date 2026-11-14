@@ -155,8 +155,8 @@
 
     .repair-banner-button {
         /* --- Tweak these to move/resize the button on phones --- */
-        top: 63%;          /* e.g. 40% = higher, 60% = lower */
-        left: 30%;
+        top: 65%;          /* e.g. 40% = higher, 60% = lower */
+        left: 20%;
 
         padding: 10px 18px;
         font-size: 14px;
