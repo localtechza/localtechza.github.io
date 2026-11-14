@@ -30,8 +30,8 @@
 .top-banner-button {
     position: absolute;
     /* --- Tweak these two to move the button around the banner --- */
-    top: 75%;      /* e.g. 45% = higher up, 55% = lower down */
-    left: 10%;     /* e.g. 40% = further left, 60% = further right */
+    top: 93%;      /* e.g. 45% = higher up, 55% = lower down */
+    left: 8%;     /* e.g. 40% = further left, 60% = further right */
     transform: translate(-50%, -50%);
 
     display: inline-block;
@@ -71,8 +71,8 @@
 
     .top-banner-button {
         /* --- Tweak these to move/resize the button on phones --- */
-        top: 80%;   /* e.g. 40% = higher, 60% = lower */
-        left: 12%;
+        top: 55%;   /* e.g. 40% = higher, 60% = lower */
+        left: 15%;
 
         padding: 9px 18px;
         font-size: 14px;
@@ -155,8 +155,8 @@
 
     .repair-banner-button {
         /* --- Tweak these to move/resize the button on phones --- */
-        top: 59%;          /* e.g. 40% = higher, 60% = lower */
-        left: 21%;
+        top: 64%;          /* e.g. 40% = higher, 60% = lower */
+        left: 23%;
 
         padding: 10px 18px;
         font-size: 14px;
