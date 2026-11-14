@@ -12,6 +12,12 @@
     margin-bottom: 0; /* Wrapper handles the spacing */
 }
 
+/* Phone-only banner images are hidden on desktop (shown at ≤768px below) */
+.top-banner-mobile,
+.repair-banner .home-banner-mobile {
+    display: none;
+}
+
 /* ============ Top banner + "Shop All" button ============ */
 .top-banner-wrap {
     position: relative; /* Anchors the button to the banner */
@@ -52,6 +58,15 @@
 @media (max-width: 768px) {
     .top-banner-wrap {
         margin-bottom: 15px;
+    }
+
+    /* Swap to the phone-sized banner image on mobile */
+    .top-banner:not(.top-banner-mobile) {
+        display: none; /* hide the desktop banner */
+    }
+
+    .top-banner-mobile {
+        display: block; /* show the phone banner */
     }
 
     .top-banner-button {
@@ -127,6 +142,15 @@
 @media (max-width: 768px) {
     .repair-banner {
         margin: 15px auto 0;
+    }
+
+    /* Swap to the phone-sized repairs banner image on mobile */
+    .repair-banner .home-banner:not(.home-banner-mobile) {
+        display: none; /* hide the desktop banner */
+    }
+
+    .repair-banner .home-banner-mobile {
+        display: block; /* show the phone banner */
     }
 
     .repair-banner-button {
