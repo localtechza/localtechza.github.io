@@ -44,6 +44,75 @@
     color: #2563EB;
 }
 
+/* ============ Desktop: "Shop" dropdown (all product categories) ============ */
+.has-dropdown {
+    position: relative; /* anchors the dropdown panel to the button */
+}
+
+.nav-dropdown-toggle {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 15px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle:focus-visible {
+    color: #2563EB;
+}
+
+.nav-caret {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+/* The panel itself — hidden until the item is hovered or focused */
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 215px;
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+}
+
+.has-dropdown:hover .nav-dropdown,
+.has-dropdown:focus-within .nav-dropdown {
+    display: block;
+}
+
+.nav-dropdown li {
+    display: block;
+}
+
+.nav-dropdown a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-dropdown a:hover {
+    background-color: #f5f5f5;
+    color: #2563EB;
+}
+
 /* ============ Header actions: cart (always visible) + hamburger ============ */
 .header-actions {
     display: flex;
@@ -214,6 +283,28 @@
     .navbar a:active {
         background-color: #eaeaea;
         color: #2563EB;
+    }
+
+    /* "Shop" dropdown flattens into the hamburger menu: the button hides and
+       its category links join the main list, styled like every other item. */
+    .nav-dropdown-toggle {
+        display: none;
+    }
+
+    .nav-dropdown,
+    .has-dropdown:hover .nav-dropdown,
+    .has-dropdown:focus-within .nav-dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: static;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
     }
 }
 

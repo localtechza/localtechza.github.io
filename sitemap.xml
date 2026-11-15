@@ -38,6 +38,11 @@
   </url>
 
   <url>
+    <loc>https://localtech.example.com/#/products/laptops</loc>
+    <lastmod>2026-11-15</lastmod>
+  </url>
+
+  <url>
     <loc>https://localtech.example.com/#/products/mini-pcs</loc>
     <lastmod>2026-11-10</lastmod>
   </url>

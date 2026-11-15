@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Bookings from "./pages/Bookings";
 import Contact from "./pages/Contact";
 import DesktopPCs from "./pages/Products/DesktopPCs";
+import Laptops from "./pages/Products/Laptops";
 import MiniPCs from "./pages/Products/MiniPCs";
 import Monitors from "./pages/Products/Monitors";
 import GamingPCs from "./pages/Products/GamingPCs";
@@ -32,6 +33,7 @@ function AppWrapper() {
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/desktop-pcs" element={<DesktopPCs />} />
+        <Route path="/products/laptops" element={<Laptops />} />
         <Route path="/products/mini-pcs" element={<MiniPCs />} />
         <Route path="/products/monitors" element={<Monitors />} />
         <Route path="/products/gaming-pcs" element={<GamingPCs />} />

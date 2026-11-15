@@ -30,7 +30,7 @@ const Home = () => {
                     <div className="text-section">
                         <h1>Welcome to LocalTech!</h1>
                         <p>
-                            Your local shop for desktop PCs, mini PCs, monitors, gaming rigs and
+                            Your local shop for desktop PCs, laptops, mini PCs, monitors, gaming rigs and
                             accessories. We build, repair and support computers for home and business —
                             with friendly, straight-talking service.
                         </p>

@@ -29,12 +29,29 @@ const Header = () => {
             <nav id="main-menu" className={`main-nav${menuOpen ? " is-open" : ""}`}>
                 <ul className="navbar">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/products/desktop-pcs">Desktop PCs</Link></li>
-                    <li><Link to="/products/mini-pcs">Mini PCs</Link></li>
-                    <li><Link to="/products/monitors">Monitors</Link></li>
-                    <li><Link to="/products/gaming-pcs">Gaming PCs</Link></li>
-                    <li><Link to="/products/pc-accessories">PC Accessories</Link></li>
-                    <li><Link to="/products/other-tech">Other Tech</Link></li>
+                    {/* Shop dropdown — hover/focus opens it on desktop (Header.css).
+                        On phones the button is hidden and its links flatten
+                        straight into the hamburger menu. */}
+                    <li className="has-dropdown">
+                        <button
+                            type="button"
+                            className="nav-dropdown-toggle"
+                            aria-haspopup="true"
+                            aria-label="Shop product categories"
+                        >
+                            Shop <span className="nav-caret" aria-hidden="true">▾</span>
+                        </button>
+                        <ul className="nav-dropdown">
+                            <li><Link to="/products/all">Shop All</Link></li>
+                            <li><Link to="/products/desktop-pcs">Desktop PCs</Link></li>
+                            <li><Link to="/products/laptops">Laptops</Link></li>
+                            <li><Link to="/products/mini-pcs">Mini PCs</Link></li>
+                            <li><Link to="/products/monitors">Monitors</Link></li>
+                            <li><Link to="/products/gaming-pcs">Gaming PCs</Link></li>
+                            <li><Link to="/products/pc-accessories">PC Accessories</Link></li>
+                            <li><Link to="/products/other-tech">Other Tech</Link></li>
+                        </ul>
+                    </li>
                     <li><Link to="/services">Services</Link></li>
                     <li><Link to="/bookings">Bookings</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
