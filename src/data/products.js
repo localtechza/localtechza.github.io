@@ -22,6 +22,25 @@ const products = [
     // Desktop PCs
     // =====================
     {
+        id: 13,
+        handle: "refurbished-hp-elitedesk-800-g6-sff-i5-10500t-16gb-256gb-nvme-win-11-pro",
+        title: "Refurbished HP EliteDesk 800 G6 SFF i5-10500T 16GB 256GB NVMe Win 11 Pro",
+        description: "This compact Small Form Factor desktop delivers reliable business performance with a 10th Gen Intel Core i5-10500T processor, 16 GB DDR4 memory and a fast 256 GB NVMe SSD. Intel UHD Graphics 630 drives dual DisplayPort outputs for multi-monitor setups, while four USB 3.0 and four USB 2.0 ports keep peripherals connected.\n\nThe unit ships with Windows 11 Pro 64-bit pre-installed, a power cable and a 12-month warranty. Refurbished to good condition, it’s ready for office productivity straight out of the box.",
+        price: 6450.99,
+        images: {
+            "Refurbished HP EliteDesk 800 G6 SFF i5-10500T 16GB 256GB NVMe Win 11 Pro": "https://res.cloudinary.com/rmmufvrh/image/upload/v1794753987/HPEliteDesk805G6SFFRefurbished33_4f78ea96-0b93-4cab-8d37-7693288b38c0.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1794753987/HPEliteDesk805G6SFFRefurbished1_b8364c35-cc3f-49af-a2ed-e8201198e356.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1794753987/HPEliteDesk805G6SFFRefurbished2_f87b6ab1-9b6a-42cb-b8da-ddda7f642101.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1794753986/HPEliteDesk805G6SFFRefurbished3_c6c2b681-5340-4092-8911-65416a97bd24.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1794753986/HPEliteDesk805G6SFFRefurbished3_c6c2b681-5340-4092-8911-65416a97bd24.jpg"
+        ],
+        options: [],
+        category: "Desktop PCs"
+    },
+
+    {
         id: 1,
         handle: "home-office-desktop",
         title: "LocalTech Home Office Desktop",
