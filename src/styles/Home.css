@@ -30,17 +30,17 @@
 .top-banner-button {
     position: absolute;
     /* --- Tweak these two to move the button around the banner --- */
-    top: 93%;      /* e.g. 45% = higher up, 55% = lower down */
-    left: 8%;     /* e.g. 40% = further left, 60% = further right */
+    top: 80%;      /* e.g. 45% = higher up, 55% = lower down */
+    left: 7%;     /* e.g. 40% = further left, 60% = further right */
     transform: translate(-50%, -50%);
 
     display: inline-block;
-    padding: 14px 34px;
+    padding: 10px 34px;
     font-size: 18px;
     font-weight: bold;
     color: white;
     background-color: #2563EB;
-    border: 3px solid white;
+    border: 0px solid white;
     border-radius: 8px;
     text-decoration: none;
     white-space: nowrap;
@@ -74,9 +74,9 @@
         top: 55%;   /* e.g. 40% = higher, 60% = lower */
         left: 15%;
 
-        padding: 9px 18px;
+        padding: 7px 18px;
         font-size: 14px;
-        border-width: 2px;
+        border-width: 0px;
         border-radius: 6px;
         box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
     }
