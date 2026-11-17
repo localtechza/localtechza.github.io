@@ -15,8 +15,13 @@ import ShopAll from "./pages/Products/ShopAll";
 import ProductPage from "./pages/Products/ProductPage";
 import Cart from "./pages/cart";
 import Checkout from "./pages/Checkout";
+import CheckoutResult from "./pages/CheckoutResult";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
 import Header from "./components/Header";
 import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
 import usePageTracking from "./utils/usePageTracking"; // 👈 import the new hook
 
 import "./App.css";
@@ -43,6 +48,12 @@ function AppWrapper() {
         <Route path="/products/:handle" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        {/* Paystack sends customers here (see backend callback_url) */}
+        <Route path="/checkout-result" element={<CheckoutResult />} />
+        {/* Email-only accounts + the hidden order desk */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </>
   );
@@ -51,9 +62,11 @@ function AppWrapper() {
 function App() {
   return (
     <CartProvider>
-      <Router>
-        <AppWrapper />
-      </Router>
+      <AuthProvider>
+        <Router>
+          <AppWrapper />
+        </Router>
+      </AuthProvider>
     </CartProvider>
   );
 }

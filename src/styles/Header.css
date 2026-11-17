@@ -188,6 +188,57 @@
     background-color: #9ca3af;
 }
 
+/* Account button (sign in / my account) — sits beside the cart */
+.header-account {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.header-account:hover,
+.header-account:focus-visible {
+    border-color: #2563EB;
+    color: #2563EB;
+}
+
+.header-account:focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+}
+
+.header-account svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Signed in: tint it so the customer can see at a glance */
+.header-account.is-signed-in {
+    border-color: #2563EB;
+    color: #2563EB;
+    background-color: #eff6ff;
+}
+
+/* Small green pip confirming an active session */
+.account-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #10b981;
+    border: 2px solid #fff;
+}
+
 /* Hamburger button — hidden on desktop, shown on tablets/phones below */
 .menu-toggle {
     display: none;
@@ -328,6 +379,16 @@
     .header-cart {
         width: 42px;
         height: 42px;
+    }
+
+    .header-account {
+        width: 42px;
+        height: 42px;
+    }
+
+    .header-account svg {
+        width: 20px;
+        height: 20px;
     }
 
     .header-cart svg {

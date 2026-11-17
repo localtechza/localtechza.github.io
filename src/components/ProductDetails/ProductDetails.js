@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import products from '../../data/products';
 import './ProductDetails.css';
 import { useCart } from '../../context/CartContext';
+import { useAuth } from '../../context/AuthContext';
+import { recordView } from '../../utils/viewed';
 
 const ProductDetails = () => {
     const { handle } = useParams();
@@ -19,6 +21,14 @@ const ProductDetails = () => {
     const [selectedImage, setSelectedImage] = useState('');
 
     const { addToCart } = useCart();
+    const { token } = useAuth();
+
+    // Remember this product for the customer's "Recently viewed" list
+    // (always saved in this browser; mirrored to their account when signed in)
+    useEffect(() => {
+        if (product) recordView(product, token);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [product?.handle]);
 
     useEffect(() => {
         if (product) {

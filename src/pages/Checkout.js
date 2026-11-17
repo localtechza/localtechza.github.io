@@ -2,13 +2,18 @@ import React, { useState, useEffect, useRef } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
+import { useAuth } from "../context/AuthContext";
 import "../styles/Checkout.css";
 import acceptedImage from "../assets/accepted.png";
+
+// Where CheckoutResult picks the payment reference up after Paystack
+const PENDING_KEY = "lt_pending_payment";
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
     const navigate = useNavigate();
     const location = useLocation();
+    const { signIn } = useAuth();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -60,15 +65,45 @@ const Checkout = () => {
     const grandTotal = total + shippingFee;
 
     // =========================
+    // Shared checks — the email is what links the order to the customer's
+    // account (order tracking + invoice delivery), so it is required.
+    // =========================
+    const validateForm = () => {
+        if (!formData.name.trim()) return "Enter your name.";
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+            return "Enter a valid email address — we use it to link this order to your account and email your invoice.";
+        }
+        if (!formData.address.trim()) return "Enter your delivery or pickup address.";
+        if (cart.length === 0) return "Your cart is empty.";
+        return "";
+    };
+
+    const saveSessionToken = (token) => {
+        // Signs the buyer in on this browser (email-only account, no password)
+        if (token) signIn(token);
+    };
+
+    // =========================
     // PAYSTACK
     // =========================
     const handlePaystackPayment = async () => {
         if (hasSubmittedRef.current) return;
 
+        const problem = validateForm();
+        if (problem) {
+            setStatusMessage("Error: " + problem);
+            return;
+        }
+
         hasSubmittedRef.current = true;
         setLoading(true);
 
+        // Our reference for this payment = the order's transaction id.
+        // Created in memory so a failed attempt can never leave a stray order.
+        const transactionId = `TXN-${Date.now()}`;
+
         try {
+            // 1. Start Paystack FIRST — if this fails, no order exists yet
             const res = await fetch(
                 `${BACKEND_URL}/initialize-payment`,
                 {
@@ -77,17 +112,19 @@ const Checkout = () => {
                     body: JSON.stringify({
                         email: formData.email,
                         amount: grandTotal,
+                        reference: transactionId,
                     }),
                 }
             );
 
-            const data = await res.json();
+            const data = await res.json().catch(() => ({}));
 
-            if (!data.data?.authorization_url) {
-                throw new Error("Payment init failed");
+            if (!res.ok || !data.data?.authorization_url) {
+                throw new Error("Payment could not be started — you have not been charged. Please try again.");
             }
 
-            await fetch(`${BACKEND_URL}/checkout`, {
+            // 2. Book the order: invoice number, emails, account sign-in
+            const checkoutRes = await fetch(`${BACKEND_URL}/checkout`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -99,8 +136,25 @@ const Checkout = () => {
                     address: formData.address,
                     shippingOption,
                     paymentMethod: "paystack",
+                    transactionId,
                 }),
             });
+            const checkoutData = await checkoutRes.json().catch(() => ({}));
+            if (!checkoutRes.ok) {
+                throw new Error(checkoutData.error || "Checkout failed — you have not been charged.");
+            }
+
+            saveSessionToken(checkoutData.token);
+
+            // Where CheckoutResult resumes once Paystack sends the buyer back
+            localStorage.setItem(
+                PENDING_KEY,
+                JSON.stringify({
+                    ref: transactionId,
+                    invoiceNumber: checkoutData.invoiceNumber,
+                    token: checkoutData.token || null,
+                })
+            );
 
             clearCart();
 
@@ -120,6 +174,12 @@ const Checkout = () => {
     const handleEFTPayment = async () => {
         if (hasSubmittedRef.current) return;
 
+        const problem = validateForm();
+        if (problem) {
+            setStatusMessage("Error: " + problem);
+            return;
+        }
+
         hasSubmittedRef.current = true;
         setLoading(true);
 
@@ -138,20 +198,25 @@ const Checkout = () => {
                         address: formData.address,
                         shippingOption,
                         paymentMethod: "EFT",
+                        transactionId: `TXN-${Date.now()}`,
                     }),
                 }
             );
 
-            const data = await res.json();
+            const data = await res.json().catch(() => ({}));
 
             if (!res.ok) {
                 throw new Error(data.error || "Checkout failed");
             }
 
+            saveSessionToken(data.token);
+
             clearCart();
 
             setStatusMessage(
-                "Order placed successfully! EFT instructions below."
+                data.invoiceNumber
+                    ? `Order #${data.invoiceNumber} placed! EFT instructions below — you're signed in, so track it any time from the account icon.`
+                    : "Order placed successfully! EFT instructions below."
             );
 
             // 🔥 OLD BEHAVIOUR RESTORED: stay on page briefly then go home
