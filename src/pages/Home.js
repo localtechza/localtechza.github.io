@@ -49,16 +49,22 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    {/* Block 2: three clickable category images */}
+                    {/* Block 2: three clickable category tiles — real labels over the photos */}
                     <div className="home-images">
-                        <Link to="/products/desktop-pcs" className="image-container">
-                            <img src={leftImage} alt="Shop desktop computers" className="home-image" />
+                        <Link to="/products/desktop-pcs" className="image-container category-tile">
+                            <img src={leftImage} alt="" className="home-image" />
+                            <span className="category-tile-scrim" aria-hidden="true" />
+                            <span className="category-tile-label">Office solutions</span>
                         </Link>
-                        <Link to="/products/pc-accessories" className="image-container">
-                            <img src={middleImage} alt="Shop PC accessories" className="home-image" />
+                        <Link to="/products/pc-accessories" className="image-container category-tile">
+                            <img src={middleImage} alt="" className="home-image" />
+                            <span className="category-tile-scrim" aria-hidden="true" />
+                            <span className="category-tile-label">Accessories</span>
                         </Link>
-                        <Link to="/products/gaming-pcs" className="image-container">
-                            <img src={rightImage} alt="Shop gaming PCs" className="home-image" />
+                        <Link to="/products/gaming-pcs" className="image-container category-tile">
+                            <img src={rightImage} alt="" className="home-image" />
+                            <span className="category-tile-scrim" aria-hidden="true" />
+                            <span className="category-tile-label">Home &amp; gaming</span>
                         </Link>
                     </div>
                 </div>

@@ -169,3 +169,60 @@
         font-size: 1rem;
     }
 }
+
+/* ============ Category tiles (left / middle / right) ============
+   Same idea as the banners: the photo is the design, the label is
+   real HTML so it stays crisp and changes with the shop categories. */
+
+.category-tile {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #111827;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-tile:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.category-tile .home-image {
+    position: relative;
+    z-index: 0;
+}
+
+/* Shade only the bottom edge, where the label sits — the rest of the
+   photo stays untouched. */
+.category-tile-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        rgba(17, 24, 39, 0) 45%,
+        rgba(17, 24, 39, 0.72) 100%
+    );
+}
+
+.category-tile-label {
+    position: absolute;
+    z-index: 2;
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+    color: #ffffff;
+    font-size: clamp(1.05rem, 1.8vw, 1.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 768px) {
+    .category-tile-label {
+        bottom: 24px;
+        font-size: clamp(1.15rem, 5vw, 1.6rem);
+    }
+}
