@@ -15,15 +15,13 @@ const Home = () => {
     return (
         <>
             <main className="home-container">
-                {/* Top Banner Image with a "Shop All" button overlaid */}
-                <div className="top-banner-wrap">
-                    <img src={bannerImage} alt="LocalTech Banner" className="top-banner" />
+                {/* Top Banner — the whole banner is one big link; "Shop All" is real text on top */}
+                <Link to="/products/all" className="top-banner-wrap">
+                    <img src={bannerImage} alt="" className="top-banner" />
                     {/* Phone-only version — shown at ≤768px (see Home.css) */}
                     <img src={bannerMobileImage} alt="" className="top-banner top-banner-mobile" />
-                    <Link to="/products/all" className="top-banner-button">
-                        Shop All
-                    </Link>
-                </div>
+                    <span className="top-banner-button">Shop All</span>
+                </Link>
 
                 <div className="home-content">
                     {/* Block 1: Welcome text + contact button */}
@@ -45,13 +43,13 @@ const Home = () => {
                     {/* Block 2: three images side by side, all aligned */}
                     <div className="home-images">
                         <div className="image-container">
-                            <img src={leftImage} alt="Computers and tech on the left" className="home-image" />
+                            <img src={leftImage} alt="Desktop computers and tech" className="home-image" />
                         </div>
                         <div className="image-container">
                             <img src={middleImage} alt="PC accessories and other tech" className="home-image" />
                         </div>
                         <div className="image-container">
-                            <img src={rightImage} alt="Computers and tech on the right" className="home-image" />
+                            <img src={rightImage} alt="Computers and tech for home and business" className="home-image" />
                         </div>
                     </div>
                 </div>
@@ -59,15 +57,13 @@ const Home = () => {
                 {/* Featured Products Carousel */}
                 <FeaturedCarousel />
 
-                {/* PC Repairs banner with a booking button overlaid on the middle */}
-                <div className="repair-banner">
-                    <img src={paletteImage} alt="PC repairs — book your PC in for service" className="home-banner" />
+                {/* PC Repairs banner — whole banner links to bookings; label is real text on top */}
+                <Link to="/bookings" className="repair-banner">
+                    <img src={paletteImage} alt="" className="home-banner" />
                     {/* Phone-only version — shown at ≤768px (see Home.css) */}
                     <img src={paletteMobileImage} alt="" className="home-banner home-banner-mobile" />
-                    <Link to="/bookings" className="repair-banner-button">
-                        Book Your PC In Here
-                    </Link>
-                </div>
+                    <span className="repair-banner-button">Book Your PC In Here</span>
+                </Link>
             </main>
             <Footer />
         </>

@@ -24,7 +24,7 @@ const Header = () => {
         <header className="header">
             {/* Logo */}
             <Link to="/" className="logo-container">
-                <img src={logo} alt="LocalTech Logo" className="logo" />
+                <img src={logo} alt="LocalTech — home" className="logo" />
             </Link>
 
             {/* Navigation */}

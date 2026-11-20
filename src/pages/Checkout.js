@@ -297,7 +297,7 @@ const Checkout = () => {
             </div>
 
             <div className="secured-image">
-                <img src={acceptedImage} alt="secure" />
+                <img src={acceptedImage} alt="Accepted payment methods" />
             </div>
         </div>
     );

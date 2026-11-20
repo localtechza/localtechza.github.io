@@ -29,9 +29,9 @@
 /* "Shop All" button — goes to the Shop All page (/products/all) */
 .top-banner-button {
     position: absolute;
-    /* --- Tweak these two to move the button around the banner --- */
-    top: 80%;      /* e.g. 45% = higher up, 55% = lower down */
-    left: 7%;     /* e.g. 40% = further left, 60% = further right */
+    /* Centred on the banner — correct on every screen size */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
     display: inline-block;
@@ -54,6 +54,12 @@
     transform: translate(-50%, -50%) scale(1.05);
 }
 
+/* Keyboard users can see which whole-banner link is focused */
+.top-banner-wrap:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 2px;
+}
+
 /* ============ Mobile: Shop All button (separate rules to tweak) ============ */
 @media (max-width: 768px) {
     .top-banner-wrap {
@@ -70,10 +76,7 @@
     }
 
     .top-banner-button {
-        /* --- Tweak these to move/resize the button on phones --- */
-        top: 55%;   /* e.g. 40% = higher, 60% = lower */
-        left: 15%;
-
+        /* Only the size changes on phones — position stays centred */
         padding: 7px 18px;
         font-size: 14px;
         border-width: 0px;
@@ -113,9 +116,9 @@
 /* "Book Your PC In Here" button — same destination as the Services page button */
 .repair-banner-button {
     position: absolute;
-    /* --- Tweak these two to move the button around the banner --- */
-    top: 60%;      /* e.g. 45% = higher up, 55% = lower down */
-    left: 12%;     /* e.g. 40% = further left, 60% = further right */
+    /* Centred on the banner — correct on every screen size */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
     display: inline-block;
@@ -138,6 +141,11 @@
     transform: translate(-50%, -50%) scale(1.05);
 }
 
+.repair-banner:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 2px;
+}
+
 /* ============ Mobile: banner button (separate rules to tweak) ============ */
 @media (max-width: 768px) {
     .repair-banner {
@@ -154,10 +162,7 @@
     }
 
     .repair-banner-button {
-        /* --- Tweak these to move/resize the button on phones --- */
-        top: 64%;          /* e.g. 40% = higher, 60% = lower */
-        left: 27%;
-
+        /* Only the size changes on phones — position stays centred */
         padding: 10px 18px;
         font-size: 14px;
         border-width: 2px;

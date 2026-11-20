@@ -160,7 +160,7 @@ const ProductDetails = () => {
                     <img
                         className="main-image"
                         src={mainImage}
-                        alt={selectedColor}
+                        alt={`${product?.title || "Product"}${selectedColor ? ` — ${selectedColor}` : ""}`}
                     />
                 </div>
 
