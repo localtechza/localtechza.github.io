@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import FeaturedCarousel from "../components/FeaturedCarousel";
 import "../styles/Home.css";
+import "../styles/HybridBanner.css";
 import paletteImage from "../assets/palette.webp";  // Decorative banner image
 import paletteMobileImage from "../assets/palette-mobile.webp";  // PHONE version of the repairs banner — replace this file with your phone-sized image
 import leftImage from "../assets/left.webp";  // Left image
@@ -15,12 +16,20 @@ const Home = () => {
     return (
         <>
             <main className="home-container">
-                {/* Top Banner — the whole banner is one big link; "Shop All" is real text on top */}
-                <Link to="/products/all" className="top-banner-wrap">
-                    <img src={bannerImage} alt="" className="top-banner" />
-                    {/* Phone-only version — shown at ≤768px (see Home.css) */}
-                    <img src={bannerMobileImage} alt="" className="top-banner top-banner-mobile" />
-                    <span className="top-banner-button">Shop All</span>
+                {/* Top Banner — CSS design + real text over a soft photo layer.
+                    The whole banner is one link; images are decorative only. */}
+                <Link to="/products/all" className="hybrid-banner hybrid-banner--shop">
+                    <img src={bannerImage} alt="" className="hybrid-banner-image hybrid-banner-image--desktop" />
+                    <img src={bannerMobileImage} alt="" className="hybrid-banner-image hybrid-banner-image--mobile" />
+                    <span className="hybrid-banner-scrim" aria-hidden="true" />
+                    <span className="hybrid-banner-content">
+                        <span className="hybrid-banner-eyebrow">Chosen Thoughtfully</span>
+                        <span className="hybrid-banner-title">Shop all PCs &amp; tech</span>
+                        <span className="hybrid-banner-subtitle">
+                            Desktops, laptops, gaming rigs, monitors and accessories — with friendly local support.
+                        </span>
+                        <span className="hybrid-banner-button">Shop All</span>
+                    </span>
                 </Link>
 
                 <div className="home-content">
@@ -57,12 +66,19 @@ const Home = () => {
                 {/* Featured Products Carousel */}
                 <FeaturedCarousel />
 
-                {/* PC Repairs banner — whole banner links to bookings; label is real text on top */}
-                <Link to="/bookings" className="repair-banner">
-                    <img src={paletteImage} alt="" className="home-banner" />
-                    {/* Phone-only version — shown at ≤768px (see Home.css) */}
-                    <img src={paletteMobileImage} alt="" className="home-banner home-banner-mobile" />
-                    <span className="repair-banner-button">Book Your PC In Here</span>
+                {/* PC Repairs banner — same hybrid design, links to bookings */}
+                <Link to="/bookings" className="hybrid-banner hybrid-banner--repairs">
+                    <img src={paletteImage} alt="" className="hybrid-banner-image hybrid-banner-image--desktop" />
+                    <img src={paletteMobileImage} alt="" className="hybrid-banner-image hybrid-banner-image--mobile" />
+                    <span className="hybrid-banner-scrim" aria-hidden="true" />
+                    <span className="hybrid-banner-content">
+                        <span className="hybrid-banner-eyebrow">Repairs &amp; Diagnostics</span>
+                        <span className="hybrid-banner-title">PC giving you trouble?</span>
+                        <span className="hybrid-banner-subtitle">
+                            Drop it off or book a courier — we'll diagnose it first and quote before any work.
+                        </span>
+                        <span className="hybrid-banner-button">Book Your PC In Here</span>
+                    </span>
                 </Link>
             </main>
             <Footer />

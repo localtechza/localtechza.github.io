@@ -1,0 +1,192 @@
+/* Hybrid banners: CSS design + real HTML text over a soft photo layer.
+   The images are decorative texture only — all words stay selectable,
+   zoomable and accessible. */
+
+.hybrid-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    isolation: isolate;
+    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 55%, #1D4ED8 100%);
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.18);
+    text-decoration: none;
+}
+
+.hybrid-banner--shop {
+    margin-bottom: 20px;
+}
+
+.hybrid-banner--repairs {
+    margin: 20px auto 0;
+}
+
+/* Photo layer — kept faint so it never fights the CSS text */
+.hybrid-banner-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.34;
+    z-index: 0;
+    transition: transform 0.6s ease;
+}
+
+.hybrid-banner-image--mobile {
+    display: none;
+}
+
+/* Brand overlay guarantees readable white text on any photo */
+.hybrid-banner-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.18), transparent 42%),
+        linear-gradient(115deg, rgba(17, 24, 39, 0.86) 0%, rgba(37, 99, 235, 0.72) 50%, rgba(29, 78, 216, 0.88) 100%);
+}
+
+/* Subtle geometric detail, drawn in CSS */
+.hybrid-banner::before,
+.hybrid-banner::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.hybrid-banner::before {
+    width: 280px;
+    height: 280px;
+    top: -110px;
+    right: -60px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hybrid-banner::after {
+    width: 190px;
+    height: 190px;
+    bottom: -100px;
+    left: -55px;
+    border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.hybrid-banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hybrid-banner-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #bfdbfe;
+}
+
+.hybrid-banner-title {
+    margin: 0;
+    font-size: clamp(1.75rem, 4.2vw, 3rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hybrid-banner-subtitle {
+    margin: 0 0 6px;
+    max-width: 620px;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    color: #e0e7ff;
+    line-height: 1.4;
+}
+
+/* Real HTML button — large like before, but no absolute positioning */
+.hybrid-banner-button {
+    display: inline-block;
+    padding: 14px 48px;
+    font-size: clamp(1rem, 2.6vw, 1.85rem);
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2563EB;
+    border: 2px solid rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hybrid-banner-button:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-2px) scale(1.03);
+}
+
+.hybrid-banner:hover .hybrid-banner-image {
+    transform: scale(1.04);
+}
+
+.hybrid-banner:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .hybrid-banner {
+        min-height: 270px;
+        border-radius: 12px;
+    }
+
+    .hybrid-banner-image--desktop {
+        display: none;
+    }
+
+    .hybrid-banner-image--mobile {
+        display: block;
+    }
+
+    .hybrid-banner-content {
+        padding: 24px 18px;
+        gap: 8px;
+    }
+
+    .hybrid-banner-button {
+        padding: 10px 24px;
+        font-size: 1.1rem;
+        border-width: 2px;
+    }
+
+    .hybrid-banner--shop {
+        margin-bottom: 15px;
+    }
+
+    .hybrid-banner--repairs {
+        margin: 15px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hybrid-banner {
+        min-height: 240px;
+    }
+
+    .hybrid-banner-button {
+        padding: 9px 18px;
+        font-size: 1rem;
+    }
+}
