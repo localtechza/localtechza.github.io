@@ -104,7 +104,7 @@ const Bookings = () => {
             const result = await response.json();
 
             if (response.ok) {
-                setStatusMessage("Booking request sent successfully! We'll be in touch to confirm your drop-off.");
+                setStatusMessage("Booking request sent! We've emailed you the details and will confirm your drop-off time soon. Check spam or junk if it doesn't arrive.");
                 setStatusTone("success");
                 setFormData({
                     service: "PC Repair & Diagnostics",
