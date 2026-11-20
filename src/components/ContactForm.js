@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BACKEND_URL } from "../config";
-import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
+import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
 
 const ContactForm = () => {
     // Wake the free backend as soon as this page opens, not on submit.
@@ -15,6 +15,7 @@ const ContactForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        wakeBackend(); // in case the tab was open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
 

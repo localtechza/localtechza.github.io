@@ -3,7 +3,7 @@ import { useCart } from "../context/CartContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useAuth } from "../context/AuthContext";
-import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
+import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
 import "../styles/Checkout.css";
 import acceptedImage from "../assets/accepted.webp";
 
@@ -99,6 +99,7 @@ const Checkout = () => {
         }
 
         hasSubmittedRef.current = true;
+        wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
 
@@ -185,6 +186,7 @@ const Checkout = () => {
         }
 
         hasSubmittedRef.current = true;
+        wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
 

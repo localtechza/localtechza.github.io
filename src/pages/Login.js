@@ -10,7 +10,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useAuth } from "../context/AuthContext";
-import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
+import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
 import "../styles/Account.css";
 
 const Login = () => {
@@ -47,6 +47,7 @@ const Login = () => {
             setError("Enter a valid email address.");
             return;
         }
+        wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setBusy(true);
         setInfo(WAKE_MESSAGE);
         try {
@@ -85,6 +86,7 @@ const Login = () => {
             setError("Enter the 6-digit code from your email.");
             return;
         }
+        wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setBusy(true);
         setInfo(WAKE_MESSAGE);
         try {

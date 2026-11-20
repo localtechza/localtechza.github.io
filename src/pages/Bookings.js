@@ -4,7 +4,7 @@ import "../styles/Bookings.css";
 import Footer from "../components/Footer";
 import { BACKEND_URL } from "../config";
 import { useCart } from "../context/CartContext";
-import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
+import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
 
 // ================= courier pricing =================
 // We currently charge for the courier only: 2 trips (collection + delivery back).
@@ -88,6 +88,7 @@ const Bookings = () => {
         }
 
         // ============ DROP-OFF: free, submit the booking as before ============
+        wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
 
