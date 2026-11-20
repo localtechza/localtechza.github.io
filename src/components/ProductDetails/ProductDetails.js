@@ -125,6 +125,7 @@ const ProductDetails = () => {
             id: product.id,
             handle: product.handle,
             title: product.title,
+            image: mainImage,
             price: itemPrice,
             color: selectedColor,
             size: selectedSize,
