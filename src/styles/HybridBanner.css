@@ -12,7 +12,8 @@
     border-radius: 16px;
     overflow: hidden;
     isolation: isolate;
-    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 55%, #1D4ED8 100%);
+    /* Dark fallback only — the photo itself now carries the banner */
+    background: #111827;
     box-shadow: 0 10px 30px rgba(17, 24, 39, 0.18);
     text-decoration: none;
 }
@@ -25,14 +26,14 @@
     margin: 20px auto 0;
 }
 
-/* Photo layer — kept faint so it never fights the CSS text */
+/* Photo layer — shown at full strength; the photo is the design now */
 .hybrid-banner-image {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.34;
+    opacity: 1;
     z-index: 0;
     transition: transform 0.6s ease;
 }
@@ -41,41 +42,19 @@
     display: none;
 }
 
-/* Brand overlay guarantees readable white text on any photo */
+/* Neutral (not blue) scrim — just enough shade to keep white text legible
+   without hiding the photo. */
 .hybrid-banner-scrim {
     position: absolute;
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background:
-        radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.18), transparent 42%),
-        linear-gradient(115deg, rgba(17, 24, 39, 0.86) 0%, rgba(37, 99, 235, 0.72) 50%, rgba(29, 78, 216, 0.88) 100%);
-}
-
-/* Subtle geometric detail, drawn in CSS */
-.hybrid-banner::before,
-.hybrid-banner::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    border-radius: 50%;
-}
-
-.hybrid-banner::before {
-    width: 280px;
-    height: 280px;
-    top: -110px;
-    right: -60px;
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.hybrid-banner::after {
-    width: 190px;
-    height: 190px;
-    bottom: -100px;
-    left: -55px;
-    border: 2px solid rgba(255, 255, 255, 0.16);
+    background: linear-gradient(
+        180deg,
+        rgba(17, 24, 39, 0.22) 0%,
+        rgba(17, 24, 39, 0.34) 50%,
+        rgba(17, 24, 39, 0.55) 100%
+    );
 }
 
 .hybrid-banner-content {
@@ -104,7 +83,7 @@
     line-height: 1.15;
     font-weight: 800;
     letter-spacing: -0.5px;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75);
 }
 
 .hybrid-banner-subtitle {
