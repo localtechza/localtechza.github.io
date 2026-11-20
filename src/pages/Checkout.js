@@ -294,10 +294,11 @@ const Checkout = () => {
 
                     {statusMessage && <p className="status-message">{statusMessage}</p>}
                 </div>
-            </div>
 
-            <div className="secured-image">
-                <img src={acceptedImage} alt="Accepted payment methods" />
+                {/* Payment badge always sits below the form, on every device */}
+                <div className="secured-image">
+                    <img src={acceptedImage} alt="Accepted payment methods" />
+                </div>
             </div>
         </div>
     );
