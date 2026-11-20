@@ -1,135 +1,109 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!-- TODO: Replace localtech.example.com with your real domain -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://localtech.example.com/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/services</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/services</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/bookings</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/bookings</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/contact</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/contact</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/cart</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/privacy</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/checkout</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/terms</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/desktop-pcs</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/desktop-pcs</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/laptops</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://localtechza.co.za/#/products/laptops</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/mini-pcs</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/mini-pcs</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/monitors</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/monitors</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/gaming-pcs</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/gaming-pcs</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/pc-accessories</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/pc-accessories</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/other-tech</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/other-tech</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/all</loc>
-    <lastmod>2026-11-14</lastmod>
+    <loc>https://localtechza.co.za/#/products/all</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/home-office-desktop</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-hp-elitedesk-800-g6-sff-i5-10th-gen-16gb-ddr4-256gb-nvme-computer</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/business-desktop-pro</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-dell-optiplex-3080-sff-core-i5-10th-gen-16gb-ddr4-512gb-nvme-computer</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/compact-mini-pc</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-dell-latitude-5490-i5-8th-gen-8gb-ddr4-240gb-nvme-14-inch-laptop</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/home-media-mini-pc</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-hp-elitebook-840-g6-i7-8th-gen-16gb-ddr4-256gb-ssd-14-inch-laptop</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/24-inch-full-hd-monitor</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-5-x-lenovo-thinkcentre-m910q-mini-pc-i5-6th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/27-inch-qhd-monitor</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-mecer-jupiter-h610-mini-pc-i3-12th-gen-8gb-ddr4-128gb-ssd-philips-20inch-computer-set</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
   <url>
-    <loc>https://localtech.example.com/#/products/starter-gaming-pc</loc>
-    <lastmod>2026-11-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://localtech.example.com/#/products/elite-gaming-pc</loc>
-    <lastmod>2026-11-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://localtech.example.com/#/products/mechanical-gaming-keyboard</loc>
-    <lastmod>2026-11-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://localtech.example.com/#/products/ergonomic-wireless-mouse</loc>
-    <lastmod>2026-11-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://localtech.example.com/#/products/usb-c-docking-station</loc>
-    <lastmod>2026-11-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://localtech.example.com/#/products/portable-ssd-1tb</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://localtechza.co.za/#/products/refurbished-dell-p2319h-23inch-hd-computer-monitor-go-gadgets-sa</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 
 </urlset>

@@ -278,14 +278,13 @@ const Checkout = () => {
                     )}
 
                     {/* ✅ EFT DISPLAY */}
-                    {/* TODO: Replace the bank details below with your own */}
                     {paymentMethod === "eft" && (
                         <div className="eft-instructions">
                             <p>Please make an EFT payment to:</p>
-                            <p><strong>Bank:</strong> [YOUR BANK]</p>
+                            <p><strong>Bank:</strong> Capitec</p>
                             <p><strong>Account Name:</strong> LocalTech</p>
-                            <p><strong>Account Number:</strong> [YOUR ACCOUNT NUMBER]</p>
-                            <p><strong>Branch Code:</strong> [YOUR BRANCH CODE]</p>
+                            <p><strong>Account Number:</strong> 1681446705</p>
+                            <p><strong>Branch Code:</strong> 470010</p>
                             <p><strong>Reference:</strong> TXN- (from invoice email)</p>
                             <p>
                                 <strong>Please Note:</strong> Email proof of payment to localtechza@gmail.com

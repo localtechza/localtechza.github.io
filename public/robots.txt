@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://localtech.example.com/sitemap.xml
+Sitemap: https://localtechza.co.za/sitemap.xml

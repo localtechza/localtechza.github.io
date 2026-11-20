@@ -19,6 +19,9 @@ const Contact = () => {
                         <strong>Email:</strong>{" "}
                         <a href="mailto:localtechza@gmail.com">localtechza@gmail.com</a>
                     </p>
+                    <p>
+                        <strong>Workshop:</strong> 44 Kundalila Road, Waterfall, KZN
+                    </p>
                 </div>
 
                 <ContactForm />
