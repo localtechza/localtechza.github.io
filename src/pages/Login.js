@@ -69,7 +69,7 @@ const Login = () => {
             } else if (data.delivered === false) {
                 setError(data.message || "We could not email the code — try again later.");
             } else {
-                setInfo(`We emailed a 6-digit code to ${clean} — it expires in 10 minutes.`);
+                setInfo(`We emailed a 6-digit code to ${clean} — it expires in 10 minutes. If it doesn't appear, check your spam or junk folder.`);
             }
         } catch (_) {
             setError("Could not reach the server — check your connection.");
@@ -119,6 +119,7 @@ const Login = () => {
                         <p className="auth-sub">
                             No password needed — just your email address. If you bought
                             something recently, you're already signed in on that device.
+                            If the code email doesn't arrive, check your spam or junk folder.
                         </p>
                         <form onSubmit={requestCode}>
                             <input
@@ -133,13 +134,15 @@ const Login = () => {
                                 {busy ? "Sending…" : "Email me a code"}
                             </button>
                         </form>
+                        {info && <p className="form-info">{info}</p>}
                         {error && <p className="form-error">{error}</p>}
                     </>
                 ) : (
                     <>
                         <h1>Enter your code</h1>
                         <p className="auth-sub">
-                            We sent a 6-digit code to <strong>{email}</strong>.
+                            We sent a 6-digit code to <strong>{email}</strong>. If you
+                            don't see it, check your spam or junk folder.
                         </p>
                         <form onSubmit={verifyCode}>
                             <input

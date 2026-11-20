@@ -29,6 +29,7 @@ const Checkout = () => {
     const [paymentMethod, setPaymentMethod] = useState("paystack");
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
+    const [statusTone, setStatusTone] = useState("info"); // info | success | error
 
     const hasSubmittedRef = useRef(false); // 🔥 prevents double checkout
 
@@ -95,6 +96,7 @@ const Checkout = () => {
         const problem = validateForm();
         if (problem) {
             setStatusMessage("Error: " + problem);
+            setStatusTone("error");
             return;
         }
 
@@ -102,6 +104,7 @@ const Checkout = () => {
         wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
+        setStatusTone("info");
 
         // Our reference for this payment = the order's transaction id.
         // Created in memory so a failed attempt can never leave a stray order.
@@ -168,6 +171,7 @@ const Checkout = () => {
         } catch (err) {
             hasSubmittedRef.current = false;
             setStatusMessage("Error: " + err.message);
+            setStatusTone("error");
         } finally {
             setLoading(false);
         }
@@ -182,6 +186,7 @@ const Checkout = () => {
         const problem = validateForm();
         if (problem) {
             setStatusMessage("Error: " + problem);
+            setStatusTone("error");
             return;
         }
 
@@ -189,6 +194,7 @@ const Checkout = () => {
         wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
+        setStatusTone("info");
 
         try {
             const res = await fetch(
@@ -222,9 +228,10 @@ const Checkout = () => {
 
             setStatusMessage(
                 data.invoiceNumber
-                    ? `Order #${data.invoiceNumber} placed! EFT instructions below — you're signed in, so track it any time from the account icon.`
-                    : "Order placed successfully! EFT instructions below."
+                    ? `Order #${data.invoiceNumber} placed! EFT instructions below — you're signed in, so track it any time from the account icon. If the invoice email doesn't arrive, check your spam or junk folder.`
+                    : "Order placed successfully! EFT instructions below. Check your spam or junk folder if the invoice email doesn't arrive."
             );
+            setStatusTone("success");
 
             // 🔥 OLD BEHAVIOUR RESTORED: stay on page briefly then go home
             setTimeout(() => {
@@ -234,6 +241,7 @@ const Checkout = () => {
         } catch (err) {
             hasSubmittedRef.current = false;
             setStatusMessage("Error: " + err.message);
+            setStatusTone("error");
         } finally {
             setLoading(false);
         }
@@ -299,7 +307,11 @@ const Checkout = () => {
                         </div>
                     )}
 
-                    {statusMessage && <p className="status-message">{statusMessage}</p>}
+                    {statusMessage && (
+                        <p className={statusTone === "error" ? "status-message" : statusTone === "success" ? "status-success" : "status-info"}>
+                            {statusMessage}
+                        </p>
+                    )}
                 </div>
 
                 {/* Payment badge always sits below the form, on every device */}

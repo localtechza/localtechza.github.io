@@ -93,7 +93,8 @@ const CheckoutResult = () => {
                             Thank you! Your order
                             {invoiceNumber ? ` (#${invoiceNumber})` : ""} is on its way
                             to you soon.
-                            {detail ? ` ${detail}.` : ""}
+                            {detail ? ` ${detail}.` : ""} Check your spam or junk
+                            folder if the invoice email hasn't arrived yet.
                         </p>
                         <div className="result-actions">
                             {isSignedIn ? (

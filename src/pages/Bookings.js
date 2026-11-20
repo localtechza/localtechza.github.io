@@ -33,6 +33,7 @@ const Bookings = () => {
 
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
+    const [statusTone, setStatusTone] = useState("info"); // info | success | error
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -91,6 +92,7 @@ const Bookings = () => {
         wakeBackend(); // covers tabs left open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
+        setStatusTone("info");
 
         try {
             const response = await fetch(`${BACKEND_URL}/book-service`, {
@@ -103,6 +105,7 @@ const Bookings = () => {
 
             if (response.ok) {
                 setStatusMessage("Booking request sent successfully! We'll be in touch to confirm your drop-off.");
+                setStatusTone("success");
                 setFormData({
                     service: "PC Repair & Diagnostics",
                     date: "",
@@ -114,9 +117,11 @@ const Bookings = () => {
                 });
             } else {
                 setStatusMessage("Failed to send booking request: " + result.error);
+                setStatusTone("error");
             }
         } catch (error) {
             setStatusMessage("An error occurred: " + error.message);
+            setStatusTone("error");
             console.error("Error:", error);
         } finally {
             setLoading(false);
@@ -243,7 +248,11 @@ const Bookings = () => {
                             ? `Continue to Checkout — Pay R${COURIER_TOTAL.toFixed(2)}`
                             : "Submit Booking (No Charge)"}
                 </button>
-                {statusMessage && <p>{statusMessage}</p>}
+                {statusMessage && (
+                    <p className={statusTone === "error" ? "status-message" : statusTone === "success" ? "status-success" : "status-info"}>
+                        {statusMessage}
+                    </p>
+                )}
             </form>
             <Footer />
         </div>

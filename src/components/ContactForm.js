@@ -8,6 +8,7 @@ const ContactForm = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
+    const [statusTone, setStatusTone] = useState("info"); // info | success | error
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,6 +19,7 @@ const ContactForm = () => {
         wakeBackend(); // in case the tab was open long enough for the server to sleep again
         setLoading(true);
         setStatusMessage(WAKE_MESSAGE);
+        setStatusTone("info");
 
         try {
             const response = await fetch(`${BACKEND_URL}/send-email`, {
@@ -30,12 +32,15 @@ const ContactForm = () => {
 
             if (response.ok) {
                 setStatusMessage("Message sent successfully!");
+                setStatusTone("success");
                 setFormData({ name: "", email: "", message: "" });
             } else {
                 setStatusMessage("Failed to send message: " + result.error);
+                setStatusTone("error");
             }
         } catch (error) {
             setStatusMessage("An error occurred: " + error.message);
+            setStatusTone("error");
             console.error("Error:", error);
         } finally {
             setLoading(false);
@@ -58,7 +63,11 @@ const ContactForm = () => {
                 <button type="submit" disabled={loading}>
                     {loading ? "Sending…" : "Send"}
                 </button>
-                {statusMessage && <p>{statusMessage}</p>}
+                {statusMessage && (
+                    <p className={statusTone === "error" ? "status-message" : statusTone === "success" ? "status-success" : "status-info"}>
+                        {statusMessage}
+                    </p>
+                )}
             </form>
         </div>
     );
