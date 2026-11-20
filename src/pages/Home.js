@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import FeaturedCarousel from "../components/FeaturedCarousel";
 import "../styles/Home.css";
-import paletteImage from "../assets/palette.png";  // Decorative banner image
-import paletteMobileImage from "../assets/palette-mobile.png";  // PHONE version of the repairs banner — replace this file with your phone-sized image
-import leftImage from "../assets/left.jpg";  // Left image
-import rightImage from "../assets/right.jpg";  // Right image
-import bannerImage from "../assets/banner.jpg";  // Top banner image
-import bannerMobileImage from "../assets/banner-mobile.jpg";  // PHONE version of the top banner — replace this file with your phone-sized image
-import middleImage from "../assets/middle.jpg";  // PC Accessories & Other Tech image
+import paletteImage from "../assets/palette.webp";  // Decorative banner image
+import paletteMobileImage from "../assets/palette-mobile.webp";  // PHONE version of the repairs banner — replace this file with your phone-sized image
+import leftImage from "../assets/left.webp";  // Left image
+import rightImage from "../assets/right.webp";  // Right image
+import bannerImage from "../assets/banner.webp";  // Top banner image
+import bannerMobileImage from "../assets/banner-mobile.webp";  // PHONE version of the top banner — replace this file with your phone-sized image
+import middleImage from "../assets/middle.webp";  // PC Accessories & Other Tech image
 
 const Home = () => {
     return (

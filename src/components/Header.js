@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Header.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
 

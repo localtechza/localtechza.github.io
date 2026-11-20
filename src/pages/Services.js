@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Footer from "../components/Footer";
 import "../styles/Services.css";
-import cleanerImage from "../assets/cleaner.jpg"; // Import image (you can update this if necessary)
+import cleanerImage from "../assets/cleaner.webp"; // Import image (you can update this if necessary)
 
 const Services = () => {
     const navigate = useNavigate(); // Initialize navigation

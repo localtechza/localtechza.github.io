@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useAuth } from "../context/AuthContext";
 import "../styles/Checkout.css";
-import acceptedImage from "../assets/accepted.png";
+import acceptedImage from "../assets/accepted.webp";
 
 // Where CheckoutResult picks the payment reference up after Paystack
 const PENDING_KEY = "lt_pending_payment";
