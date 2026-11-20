@@ -4,6 +4,7 @@ import "../styles/Bookings.css";
 import Footer from "../components/Footer";
 import { BACKEND_URL } from "../config";
 import { useCart } from "../context/CartContext";
+import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
 
 // ================= courier pricing =================
 // We currently charge for the courier only: 2 trips (collection + delivery back).
@@ -14,6 +15,8 @@ const COURIER_TOTAL = COURIER_TRIP_PRICE * 2; // R240.00
 const Bookings = () => {
     const navigate = useNavigate();
     const { addToCart } = useCart();
+    // Start waking the backend while the customer fills in the form.
+    useBackendWake();
 
     const [formData, setFormData] = useState({
         service: "PC Repair & Diagnostics",
@@ -86,7 +89,7 @@ const Bookings = () => {
 
         // ============ DROP-OFF: free, submit the booking as before ============
         setLoading(true);
-        setStatusMessage("Submitting booking... Please wait");
+        setStatusMessage(WAKE_MESSAGE);
 
         try {
             const response = await fetch(`${BACKEND_URL}/book-service`, {
@@ -234,7 +237,7 @@ const Bookings = () => {
 
                 <button type="submit" disabled={loading}>
                     {loading
-                        ? "Submitting..."
+                        ? "Submitting…"
                         : deliveryMethod === "courier"
                             ? `Continue to Checkout — Pay R${COURIER_TOTAL.toFixed(2)}`
                             : "Submit Booking (No Charge)"}

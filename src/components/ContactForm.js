@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { BACKEND_URL } from "../config";
+import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
 
 const ContactForm = () => {
+    // Wake the free backend as soon as this page opens, not on submit.
+    useBackendWake();
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
@@ -13,7 +16,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setStatusMessage("Sending... Please wait");
+        setStatusMessage(WAKE_MESSAGE);
 
         try {
             const response = await fetch(`${BACKEND_URL}/send-email`, {
@@ -52,7 +55,7 @@ const ContactForm = () => {
                 <textarea name="message" value={formData.message} placeholder="Message" onChange={handleChange} required></textarea>
 
                 <button type="submit" disabled={loading}>
-                    {loading ? "Sending..." : "Send"}
+                    {loading ? "Sending…" : "Send"}
                 </button>
                 {statusMessage && <p>{statusMessage}</p>}
             </form>

@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import products from "../data/products";
+import { useBackendWake } from "../utils/backendWake";
 import "../styles/Cart.css";
 
 const Cart = () => {
+    // Warm the backend before the customer reaches the checkout buttons.
+    useBackendWake();
     const { cart, removeFromCart, clearCart } = useContext(CartContext);
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 

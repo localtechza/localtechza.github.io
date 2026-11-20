@@ -3,6 +3,7 @@ import { useCart } from "../context/CartContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useAuth } from "../context/AuthContext";
+import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
 import "../styles/Checkout.css";
 import acceptedImage from "../assets/accepted.webp";
 
@@ -14,6 +15,8 @@ const Checkout = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { signIn } = useAuth();
+    // Warm the backend while the customer is still filling in the form.
+    useBackendWake();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -97,6 +100,7 @@ const Checkout = () => {
 
         hasSubmittedRef.current = true;
         setLoading(true);
+        setStatusMessage(WAKE_MESSAGE);
 
         // Our reference for this payment = the order's transaction id.
         // Created in memory so a failed attempt can never leave a stray order.
@@ -182,6 +186,7 @@ const Checkout = () => {
 
         hasSubmittedRef.current = true;
         setLoading(true);
+        setStatusMessage(WAKE_MESSAGE);
 
         try {
             const res = await fetch(
@@ -269,11 +274,11 @@ const Checkout = () => {
 
                     {paymentMethod === "paystack" ? (
                         <button onClick={handlePaystackPayment} disabled={loading}>
-                            {loading ? "Processing..." : "Pay with Card"}
+                            {loading ? "Just a moment…" : "Pay with Card"}
                         </button>
                     ) : (
                         <button onClick={handleEFTPayment} disabled={loading}>
-                            {loading ? "Processing..." : "Place Order (EFT)"}
+                            {loading ? "Just a moment…" : "Place Order (EFT)"}
                         </button>
                     )}
 

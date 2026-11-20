@@ -10,9 +10,11 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useAuth } from "../context/AuthContext";
+import { useBackendWake, WAKE_MESSAGE } from "../utils/backendWake";
 import "../styles/Account.css";
 
 const Login = () => {
+    useBackendWake();
     const { isSignedIn, verified, email: currentEmail, signIn, loading } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
@@ -46,6 +48,7 @@ const Login = () => {
             return;
         }
         setBusy(true);
+        setInfo(WAKE_MESSAGE);
         try {
             const res = await fetch(`${BACKEND_URL}/auth/start`, {
                 method: "POST",
@@ -83,6 +86,7 @@ const Login = () => {
             return;
         }
         setBusy(true);
+        setInfo(WAKE_MESSAGE);
         try {
             const res = await fetch(`${BACKEND_URL}/auth/verify`, {
                 method: "POST",
