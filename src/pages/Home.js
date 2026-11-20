@@ -40,17 +40,17 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    {/* Block 2: three images side by side, all aligned */}
+                    {/* Block 2: three clickable category images */}
                     <div className="home-images">
-                        <div className="image-container">
-                            <img src={leftImage} alt="Desktop computers and tech" className="home-image" />
-                        </div>
-                        <div className="image-container">
-                            <img src={middleImage} alt="PC accessories and other tech" className="home-image" />
-                        </div>
-                        <div className="image-container">
-                            <img src={rightImage} alt="Computers and tech for home and business" className="home-image" />
-                        </div>
+                        <Link to="/products/desktop-pcs" className="image-container">
+                            <img src={leftImage} alt="Shop desktop computers" className="home-image" />
+                        </Link>
+                        <Link to="/products/pc-accessories" className="image-container">
+                            <img src={middleImage} alt="Shop PC accessories" className="home-image" />
+                        </Link>
+                        <Link to="/products/gaming-pcs" className="image-container">
+                            <img src={rightImage} alt="Shop gaming PCs" className="home-image" />
+                        </Link>
                     </div>
                 </div>
 

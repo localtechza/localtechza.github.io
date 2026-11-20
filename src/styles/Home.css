@@ -210,6 +210,18 @@
     flex: 1;
     min-width: 0;
     display: flex;
+    border-radius: 12px;
+    transition: transform 0.25s ease;
+}
+
+/* Subtle hover/focus cue so the photos read as clickable */
+.image-container:hover {
+    transform: translateY(-4px);
+}
+
+.image-container:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 3px;
 }
 
 .home-image {
@@ -219,6 +231,12 @@
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     display: block;
+    transition: box-shadow 0.25s ease;
+}
+
+.image-container:hover .home-image,
+.image-container:focus-visible .home-image {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Style for the heading and bottom text */
