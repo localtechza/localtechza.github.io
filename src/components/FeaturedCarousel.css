@@ -76,16 +76,10 @@
 .carousel-card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-/* Desktop cards are wider, so "cover" was trimming the product photo.
-   Show the whole image inside the box instead — phones keep their
-   current look via the rules below. */
-@media (min-width: 769px) {
-    .carousel-card-image img {
-        object-fit: contain;
-    }
+    /* Whole product photo at every width — "cover" was trimming the top
+       and bottom of images in the box, which showed up when the browser
+       was resized to a tablet/mobile width on desktop. */
+    object-fit: contain;
 }
 
 .carousel-card-info {
