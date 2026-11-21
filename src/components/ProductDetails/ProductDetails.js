@@ -149,8 +149,17 @@ const ProductDetails = () => {
     const hasLineArtOption = product.options?.some(opt => opt.name === "Line Art");
     const hasWoodenStandOption = product.options?.some(opt => opt.name === "Wooden Stand");
 
-    // Additional product photos from allImages
-    const galleryImages = product.allImages || [];
+    // Thumbnails: the extra photos (allImages) PLUS the default photo —
+    // the one showing when the page opens. Without it, once a customer
+    // clicked another thumbnail they could never get back to the first
+    // image without refreshing. Duplicates are dropped, so a product that
+    // already lists its first photo in allImages doesn't show it twice.
+    const extraImages = product.allImages || [];
+    const galleryImages = extraImages.length
+        ? [colorVariantImage, ...extraImages].filter(
+              (img, i, arr) => img && arr.indexOf(img) === i
+          )
+        : [];
     const hasGallery = galleryImages.length > 0;
 
     return (
