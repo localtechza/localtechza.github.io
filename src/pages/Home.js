@@ -4,31 +4,31 @@ import Footer from "../components/Footer";
 import FeaturedCarousel from "../components/FeaturedCarousel";
 import "../styles/Home.css";
 import "../styles/HybridBanner.css";
-import paletteImage from "../assets/palette.webp";  // Decorative banner image
+import paletteImage from "../assets/palette.webp";  // Repairs banner (desktop) — wording baked into the image
 import paletteMobileImage from "../assets/palette-mobile.webp";  // PHONE version of the repairs banner — replace this file with your phone-sized image
-import leftImage from "../assets/left.webp";  // Left image
-import rightImage from "../assets/right.webp";  // Right image
-import bannerImage from "../assets/banner.webp";  // Top banner image
+import leftImage from "../assets/left.webp";  // Left tile: Office solutions
+import rightImage from "../assets/right.webp";  // Right tile: Home & gaming
+import bannerImage from "../assets/banner.webp";  // Top banner (desktop) — wording baked into the image
 import bannerMobileImage from "../assets/banner-mobile.webp";  // PHONE version of the top banner — replace this file with your phone-sized image
-import middleImage from "../assets/middle.webp";  // PC Accessories & Other Tech image
+import middleImage from "../assets/middle.webp";  // Middle tile: Accessories
 
 const Home = () => {
     return (
         <>
             <main className="home-container">
-                {/* Top Banner — CSS design + real text over a soft photo layer.
-                    The whole banner is one link; images are decorative only. */}
+                {/* Top banner — one image (all wording is part of the graphic),
+                    the whole picture is a single link to Shop All. */}
                 <Link to="/products/all" className="hybrid-banner hybrid-banner--shop">
-                    <img src={bannerImage} alt="" className="hybrid-banner-image hybrid-banner-image--desktop" />
-                    <img src={bannerMobileImage} alt="" className="hybrid-banner-image hybrid-banner-image--mobile" />
-                    <span className="hybrid-banner-content">
-                        <span className="hybrid-banner-eyebrow">Chosen Thoughtfully</span>
-                        <span className="hybrid-banner-title">Shop all PCs &amp; tech</span>
-                        <span className="hybrid-banner-subtitle">
-                            Desktops, laptops, gaming rigs, monitors and accessories — with friendly local support.
-                        </span>
-                    </span>
-                    <span className="hybrid-banner-button">Shop All</span>
+                    <img
+                        src={bannerImage}
+                        alt="Shop all PCs &amp; tech — desktops, laptops, gaming rigs, monitors and accessories"
+                        className="hybrid-banner-image hybrid-banner-image--desktop"
+                    />
+                    <img
+                        src={bannerMobileImage}
+                        alt=""
+                        className="hybrid-banner-image hybrid-banner-image--mobile"
+                    />
                 </Link>
 
                 <div className="home-content">
@@ -48,22 +48,17 @@ const Home = () => {
                         </Link>
                     </div>
 
-                    {/* Block 2: three clickable category tiles — real labels over the photos */}
+                    {/* Block 2: three clickable category tiles — labels are part
+                        of the images, so nothing sits on top of them */}
                     <div className="home-images">
                         <Link to="/products/desktop-pcs" className="image-container category-tile">
-                            <img src={leftImage} alt="" className="home-image" />
-                            <span className="category-tile-scrim" aria-hidden="true" />
-                            <span className="category-tile-label">Office solutions</span>
+                            <img src={leftImage} alt="Office solutions — desktop PCs" className="home-image" />
                         </Link>
                         <Link to="/products/pc-accessories" className="image-container category-tile">
-                            <img src={middleImage} alt="" className="home-image" />
-                            <span className="category-tile-scrim" aria-hidden="true" />
-                            <span className="category-tile-label">Accessories</span>
+                            <img src={middleImage} alt="Accessories — PC accessories" className="home-image" />
                         </Link>
                         <Link to="/products/gaming-pcs" className="image-container category-tile">
-                            <img src={rightImage} alt="" className="home-image" />
-                            <span className="category-tile-scrim" aria-hidden="true" />
-                            <span className="category-tile-label">Home &amp; gaming</span>
+                            <img src={rightImage} alt="Home &amp; gaming — gaming PCs" className="home-image" />
                         </Link>
                     </div>
                 </div>
@@ -71,18 +66,19 @@ const Home = () => {
                 {/* Featured Products Carousel */}
                 <FeaturedCarousel />
 
-                {/* PC Repairs banner — same hybrid design, links to bookings */}
+                {/* PC repairs banner — one image with the wording baked in,
+                    the whole picture links to the bookings page. */}
                 <Link to="/bookings" className="hybrid-banner hybrid-banner--repairs">
-                    <img src={paletteImage} alt="" className="hybrid-banner-image hybrid-banner-image--desktop" />
-                    <img src={paletteMobileImage} alt="" className="hybrid-banner-image hybrid-banner-image--mobile" />
-                    <span className="hybrid-banner-content">
-                        <span className="hybrid-banner-eyebrow">Repairs &amp; Diagnostics</span>
-                        <span className="hybrid-banner-title">PC giving you trouble?</span>
-                        <span className="hybrid-banner-subtitle">
-                            Drop it off or book a courier — we'll diagnose it first and quote before any work.
-                        </span>
-                    </span>
-                    <span className="hybrid-banner-button">Book Your PC In Here</span>
+                    <img
+                        src={paletteImage}
+                        alt="Repairs &amp; diagnostics — PC giving you trouble? Drop it off or book a courier"
+                        className="hybrid-banner-image hybrid-banner-image--desktop"
+                    />
+                    <img
+                        src={paletteMobileImage}
+                        alt=""
+                        className="hybrid-banner-image hybrid-banner-image--mobile"
+                    />
                 </Link>
             </main>
             <Footer />

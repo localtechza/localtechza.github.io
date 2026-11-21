@@ -206,7 +206,7 @@
 /* Block 2: three images side by side, aligned top and bottom */
 .home-images {
     display: flex;
-    align-items: stretch; /* all three images share the same height */
+    align-items: flex-start; /* each image keeps its own shape — no cropping */
     gap: 20px;
 }
 
@@ -215,14 +215,9 @@
     min-width: 0;
     display: flex;
     border-radius: 12px;
-    transition: transform 0.25s ease;
 }
 
-/* Subtle hover/focus cue so the photos read as clickable */
-.image-container:hover {
-    transform: translateY(-4px);
-}
-
+/* Keyboard focus cue only — no hover animation on the tiles */
 .image-container:focus-visible {
     outline: 3px solid #2563EB;
     outline-offset: 3px;
@@ -230,17 +225,10 @@
 
 .home-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* whole image shown, never cropped */
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     display: block;
-    transition: box-shadow 0.25s ease;
-}
-
-.image-container:hover .home-image,
-.image-container:focus-visible .home-image {
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Style for the heading and bottom text */
