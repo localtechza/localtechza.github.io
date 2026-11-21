@@ -87,6 +87,14 @@ const Checkout = () => {
         if (token) signIn(token);
     };
 
+    // Send the current session (if any) with checkout so a second order joins
+    // the same account instead of being filed under a brand-new one — that is
+    // what keeps a customer's orders stacking up in their profile.
+    const authHeaders = () => {
+        const token = localStorage.getItem("lt_token");
+        return token ? { Authorization: `Bearer ${token}` } : {};
+    };
+
     // =========================
     // PAYSTACK
     // =========================
@@ -134,7 +142,7 @@ const Checkout = () => {
             // 2. Book the order: invoice number, emails, account sign-in
             const checkoutRes = await fetch(`${BACKEND_URL}/checkout`, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: { "Content-Type": "application/json", ...authHeaders() },
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
@@ -201,7 +209,7 @@ const Checkout = () => {
                 `${BACKEND_URL}/checkout`,
                 {
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
+                    headers: { "Content-Type": "application/json", ...authHeaders() },
                     body: JSON.stringify({
                         name: formData.name,
                         email: formData.email,

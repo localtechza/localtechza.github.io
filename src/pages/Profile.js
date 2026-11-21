@@ -124,9 +124,11 @@ const Profile = () => {
 
     const token = localStorage.getItem("lt_token");
 
-    const loadOrders = useCallback(async () => {
+    // silent = refresh in the background (keeps the current list visible)
+    const loadOrders = useCallback(async (opts = {}) => {
         if (!token) return;
-        setLoadState("loading");
+        const silent = opts && opts.silent === true;
+        if (!silent) setLoadState("loading");
         try {
             const res = await fetch(`${BACKEND_URL}/auth/orders`, {
                 headers: { Authorization: `Bearer ${token}` },
@@ -136,9 +138,18 @@ const Profile = () => {
             setOrders(data.orders || []);
             setLoadState("ready");
         } catch (_) {
+            if (silent) return; // keep showing what we already have
             setLoadState("error");
         }
     }, [token]);
+
+    // Coming back to this tab? Pull the latest statuses — so changes made in
+    // the admin page show up without the customer reloading by hand.
+    useEffect(() => {
+        const onFocus = () => loadOrders({ silent: true });
+        window.addEventListener("focus", onFocus);
+        return () => window.removeEventListener("focus", onFocus);
+    }, [loadOrders]);
 
     useEffect(() => {
         if (authLoading) return;
@@ -207,8 +218,19 @@ const Profile = () => {
             )}
 
             <section className="profile-section">
-                <h2>Your orders</h2>
-                {loadState === "loading" && <p className="muted-text">Loading orders…</p>}
+                <div className="section-head">
+                    <h2>Your orders</h2>
+                    <button
+                        className="link-button"
+                        onClick={() => loadOrders()}
+                        disabled={loadState === "loading"}
+                    >
+                        {loadState === "loading" ? "Refreshing…" : "Refresh"}
+                    </button>
+                </div>
+                {loadState === "loading" && orders.length === 0 && (
+                    <p className="muted-text">Loading orders…</p>
+                )}
                 {loadState === "error" && (
                     <p className="form-error">
                         We couldn't load your orders right now.{" "}

@@ -245,6 +245,24 @@
     border-bottom: 2px solid #e5e7eb;
 }
 
+/* Section heading with an action on the right (e.g. Refresh orders) */
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.section-head h2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.section-head .link-button {
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
 .empty-state {
     background: #f9fafb;
     border: 1px dashed #d1d5db;

@@ -2,9 +2,9 @@
 // Email-only accounts for LocalTech (no passwords).
 //
 // A session token (issued by the backend at checkout or after the customer
-// enters the 6-digit code we emailed them) lives in localStorage. The
-// backend decides what the token may see: "verified" sessions get the whole
-// account, fresh checkout sessions only the order they were created with.
+// enters the 6-digit code we emailed them) lives in localStorage. Every
+// session belongs to one email address, so it sees all of that address's
+// orders — they stack in the profile with their own status history.
 import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { BACKEND_URL } from "../config";
 
