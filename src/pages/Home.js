@@ -21,7 +21,6 @@ const Home = () => {
                 <Link to="/products/all" className="hybrid-banner hybrid-banner--shop">
                     <img src={bannerImage} alt="" className="hybrid-banner-image hybrid-banner-image--desktop" />
                     <img src={bannerMobileImage} alt="" className="hybrid-banner-image hybrid-banner-image--mobile" />
-                    <span className="hybrid-banner-scrim" aria-hidden="true" />
                     <span className="hybrid-banner-content">
                         <span className="hybrid-banner-eyebrow">Chosen Thoughtfully</span>
                         <span className="hybrid-banner-title">Shop all PCs &amp; tech</span>
@@ -76,7 +75,6 @@ const Home = () => {
                 <Link to="/bookings" className="hybrid-banner hybrid-banner--repairs">
                     <img src={paletteImage} alt="" className="hybrid-banner-image hybrid-banner-image--desktop" />
                     <img src={paletteMobileImage} alt="" className="hybrid-banner-image hybrid-banner-image--mobile" />
-                    <span className="hybrid-banner-scrim" aria-hidden="true" />
                     <span className="hybrid-banner-content">
                         <span className="hybrid-banner-eyebrow">Repairs &amp; Diagnostics</span>
                         <span className="hybrid-banner-title">PC giving you trouble?</span>

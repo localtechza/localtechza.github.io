@@ -53,20 +53,9 @@
     display: none;
 }
 
-/* Neutral (not blue) scrim — just enough shade to keep white text legible
-   without hiding the photo. */
-.hybrid-banner-scrim {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(
-        180deg,
-        rgba(17, 24, 39, 0.22) 0%,
-        rgba(17, 24, 39, 0.34) 50%,
-        rgba(17, 24, 39, 0.55) 100%
-    );
-}
+/* No scrim: the photo shows at full strength, exactly as bright as the
+   file you made. Wording stays legible via its own text shadows instead
+   of a dark veil over the image. */
 
 .hybrid-banner-content {
     position: absolute;
@@ -89,6 +78,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #bfdbfe;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 .hybrid-banner-title {
@@ -104,8 +94,9 @@
     margin: 0 0 6px;
     max-width: 620px;
     font-size: clamp(0.95rem, 1.6vw, 1.15rem);
-    color: #e0e7ff;
+    color: #f1f5f9;
     line-height: 1.4;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 /* Real HTML button — parked in the bottom-right corner of the banner on
