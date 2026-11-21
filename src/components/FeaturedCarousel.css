@@ -35,11 +35,11 @@
 }
 
 .carousel-card {
-    /* Grow to fill any leftover space so the right arrow always sits
-       snug against the last card; min-width keeps them at least 250px
-       (and scrollable) when there are too many to fit */
-    flex: 1 1 250px;
-    min-width: 250px;
+    /* Exactly TWO cards fit across at any width (50% each, minus half the
+       gap); anything beyond that scrolls in. Capped at 340px so bigger
+       screens simply show more cards instead of fatter ones. */
+    flex: 0 0 calc(50% - 10px);
+    min-width: 0;
     max-width: 340px; /* Stops cards becoming huge on very wide screens */
     background: white;
     border-radius: 10px;
@@ -131,23 +131,49 @@
 }
 
 @media (max-width: 768px) {
-    .carousel-card {
-        flex: 1 1 200px;
-        min-width: 200px; /* Base rule's 250px min must not apply on phones */
-        max-width: 260px;
+    /* Give the row back the side padding so two cards stay comfortable */
+    .featured-carousel {
+        padding: 0 6px;
+    }
+
+    /* Arrows sit ON TOP of the row's edges instead of beside it —
+       beside the track they used to steal ~84px, which is what left
+       only one and a half cards visible on smaller screens */
+    .carousel-container {
+        position: relative;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .carousel-btn-left {
+        left: 0;
+        margin-right: 0;
+    }
+
+    .carousel-btn-right {
+        right: 0;
+        margin-left: 0;
     }
 
     .carousel-card-image {
         height: 200px;
     }
 
-    .carousel-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 20px;
-    }
-
     .carousel-title {
         font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-card-image {
+        height: 165px;
     }
 }

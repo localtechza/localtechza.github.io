@@ -14,17 +14,19 @@ const FeaturedCarousel = () => {
 
     if (featured.length === 0) return null;
 
-    const scrollLeft = () => {
+    // Move exactly one card + gap per click, so paging always lands on a
+    // whole card instead of stopping halfway between two of them.
+    const scrollByCard = (direction) => {
         const container = document.querySelector('.carousel-track');
-        const scrollAmount = 300;
-        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        if (!container) return;
+        const card = container.querySelector('.carousel-card');
+        const gap = 20;
+        const step = card ? card.getBoundingClientRect().width + gap : 300;
+        container.scrollBy({ left: direction * step, behavior: 'smooth' });
     };
 
-    const scrollRight = () => {
-        const container = document.querySelector('.carousel-track');
-        const scrollAmount = 300;
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    };
+    const scrollLeft = () => scrollByCard(-1);
+    const scrollRight = () => scrollByCard(1);
 
     return (
         <div className="featured-carousel">

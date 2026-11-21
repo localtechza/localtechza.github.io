@@ -91,8 +91,11 @@
     margin-bottom: 16px;
 }
 
+/* Description under the title — a touch smaller on desktop, where the
+   column is wide and 20px reads oversized. Phones keep their own 16px
+   size further down. */
 .product-info p {
-    font-size: 20px;
+    font-size: 17px;
     color: #000;
     margin-bottom: 24px;
 }
