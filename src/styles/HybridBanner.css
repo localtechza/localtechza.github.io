@@ -18,12 +18,22 @@
     text-decoration: none;
 }
 
+/* Full length: the banners run edge to edge of the screen instead of
+   sitting inside the home container's 20px padding. */
+.hybrid-banner--shop,
+.hybrid-banner--repairs {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 0;
+}
+
 .hybrid-banner--shop {
     margin-bottom: 20px;
 }
 
 .hybrid-banner--repairs {
-    margin: 20px auto 0;
+    margin-top: 20px;
 }
 
 /* Photo layer — shown at full strength; the photo is the design now */
@@ -64,7 +74,8 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 40px 24px;
+    /* Extra bottom space so the corner button never sits on the text */
+    padding: 40px 24px 96px;
     text-align: center;
     color: #ffffff;
 }
@@ -94,8 +105,13 @@
     line-height: 1.4;
 }
 
-/* Real HTML button — large like before, but no absolute positioning */
+/* Real HTML button — parked in the bottom-right corner of the banner on
+   every screen size, so it never moves the text around it. */
 .hybrid-banner-button {
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    z-index: 2;
     display: inline-block;
     padding: 14px 48px;
     font-size: clamp(1rem, 2.6vw, 1.85rem);
@@ -128,7 +144,6 @@
 @media (max-width: 768px) {
     .hybrid-banner {
         min-height: 270px;
-        border-radius: 12px;
     }
 
     .hybrid-banner-image--desktop {
@@ -140,11 +155,13 @@
     }
 
     .hybrid-banner-content {
-        padding: 24px 18px;
+        padding: 24px 18px 84px;
         gap: 8px;
     }
 
     .hybrid-banner-button {
+        right: 16px;
+        bottom: 16px;
         padding: 10px 24px;
         font-size: 1.1rem;
         border-width: 2px;
@@ -155,7 +172,7 @@
     }
 
     .hybrid-banner--repairs {
-        margin: 15px auto 0;
+        margin-top: 15px;
     }
 }
 

@@ -28,8 +28,8 @@ const Home = () => {
                         <span className="hybrid-banner-subtitle">
                             Desktops, laptops, gaming rigs, monitors and accessories — with friendly local support.
                         </span>
-                        <span className="hybrid-banner-button">Shop All</span>
                     </span>
+                    <span className="hybrid-banner-button">Shop All</span>
                 </Link>
 
                 <div className="home-content">
@@ -83,8 +83,8 @@ const Home = () => {
                         <span className="hybrid-banner-subtitle">
                             Drop it off or book a courier — we'll diagnose it first and quote before any work.
                         </span>
-                        <span className="hybrid-banner-button">Book Your PC In Here</span>
                     </span>
+                    <span className="hybrid-banner-button">Book Your PC In Here</span>
                 </Link>
             </main>
             <Footer />
