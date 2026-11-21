@@ -73,7 +73,7 @@
 }
 
 .hybrid-banner-eyebrow {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -83,7 +83,7 @@
 
 .hybrid-banner-title {
     margin: 0;
-    font-size: clamp(1.75rem, 4.2vw, 3rem);
+    font-size: clamp(2.05rem, 5vw, 3.6rem);
     line-height: 1.15;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -92,8 +92,8 @@
 
 .hybrid-banner-subtitle {
     margin: 0 0 6px;
-    max-width: 620px;
-    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    max-width: 760px;
+    font-size: clamp(1.05rem, 1.9vw, 1.4rem);
     color: #f1f5f9;
     line-height: 1.4;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
@@ -108,7 +108,7 @@
     z-index: 2;
     display: inline-block;
     padding: 14px 48px;
-    font-size: clamp(1rem, 2.6vw, 1.85rem);
+    font-size: clamp(1.05rem, 2.8vw, 1.95rem);
     font-weight: bold;
     color: #ffffff;
     background-color: #2563EB;
@@ -160,7 +160,7 @@
         right: 16px;
         bottom: 16px;
         padding: 10px 24px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         border-width: 2px;
     }
 
@@ -176,7 +176,7 @@
 @media (max-width: 480px) {
     .hybrid-banner-button {
         padding: 9px 18px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
