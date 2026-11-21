@@ -4,11 +4,13 @@
 
 .hybrid-banner {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    min-height: 430px;
+    /* The banner is exactly as tall as the image you make: the photo sits
+       in the layout at its own proportions, so the WHOLE image is shown at
+       every window width — nothing is ever cropped. */
+    display: block;
+    /* Only kicks in on narrow windows, to keep room for the wording */
+    min-height: 300px;
     border-radius: 16px;
     overflow: hidden;
     isolation: isolate;
@@ -28,12 +30,19 @@
     margin: 20px auto 0;
 }
 
-/* Photo layer — shown at full strength; the photo is the design now */
+/* Photo layer — sits in the layout at its own proportions, which is what
+   makes the banner the right length and height for the image you make.
+   Nothing is cropped: the whole picture is always visible. */
 .hybrid-banner-image {
-    position: absolute;
-    inset: 0;
+    position: static;
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    /* Safety net only: an image much taller than 600px (e.g. one made at
+       the old size) fills the box instead of letting the banner grow
+       without limit. Images at the recommended sizes sit under this cap
+       and are shown in full, uncropped. */
+    max-height: 600px;
     object-fit: cover;
     opacity: 1;
     z-index: 0;
@@ -60,11 +69,13 @@
 }
 
 .hybrid-banner-content {
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     /* Extra bottom space so the corner button never sits on the text */
     padding: 40px 24px 96px;
@@ -135,7 +146,9 @@
 
 @media (max-width: 768px) {
     .hybrid-banner {
-        min-height: 360px;
+        /* The phone-sized image is the one in the layout here, so the
+           banner takes its shape instead — still no cropping. */
+        min-height: 240px;
         border-radius: 12px;
     }
 
@@ -148,7 +161,7 @@
     }
 
     .hybrid-banner-content {
-        padding: 24px 18px 84px;
+        padding: 24px 18px 78px;
         gap: 8px;
     }
 
@@ -170,10 +183,6 @@
 }
 
 @media (max-width: 480px) {
-    .hybrid-banner {
-        min-height: 310px;
-    }
-
     .hybrid-banner-button {
         padding: 9px 18px;
         font-size: 1rem;
