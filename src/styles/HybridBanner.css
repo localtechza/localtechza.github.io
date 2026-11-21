@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 320px;
+    min-height: 430px;
     border-radius: 16px;
     overflow: hidden;
     isolation: isolate;
@@ -18,22 +18,14 @@
     text-decoration: none;
 }
 
-/* Full length: the banners run edge to edge of the screen instead of
-   sitting inside the home container's 20px padding. */
-.hybrid-banner--shop,
-.hybrid-banner--repairs {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
-    border-radius: 0;
-}
-
+/* Same width as the rest of the home content — aligned with the cards,
+   not running past them. */
 .hybrid-banner--shop {
     margin-bottom: 20px;
 }
 
 .hybrid-banner--repairs {
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 
 /* Photo layer — shown at full strength; the photo is the design now */
@@ -143,7 +135,8 @@
 
 @media (max-width: 768px) {
     .hybrid-banner {
-        min-height: 270px;
+        min-height: 360px;
+        border-radius: 12px;
     }
 
     .hybrid-banner-image--desktop {
@@ -178,7 +171,7 @@
 
 @media (max-width: 480px) {
     .hybrid-banner {
-        min-height: 240px;
+        min-height: 310px;
     }
 
     .hybrid-banner-button {
