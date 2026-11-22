@@ -254,12 +254,398 @@ const products = [
     // =====================
     // Laptops
     // =====================
+    {
+        id: 51,
+        handle: "demo-dell-pro-14-plus-pb14250-ultra-5-235u-16gb-ddr5-512gb-nvme-14inch-laptop-demo",
+        title: "DEMO DELL PRO 14 PLUS PB14250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - DEMO",
+        description: "The Dell Pro 14 Plus PB14250 with Intel Core Ultra 5 235U is a mainstream commercial 14-inch business laptop designed for modern professionals and hybrid workers. It delivers AI-ready compute, robust security features, and a sleek design to support productivity and collaboration in busy work environments.\n\n\nREFURBISHED GRADE: DEMO no box\n\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nPro 14 Plus PB14250\n\nPROCESSOR:\nIntel® Core™ Ultra 5 235U\n\nCPU CORES:\n12 Total Cores\n14 Total Threads\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n512GB NVMe Solid State Drive\n\nDISPLAY:\n14inch Full HD+ (1920 × 1200)\nIPS LCD\nAnti-Glare\n300nits Brightness\n45% NTSC\n\nGRAPHICS:\nIntel® Graphics\n\nCAMERA:\nYes\n\nCONNECTIVITY:\nWireless & Bluetooth\nWi-Fi 7\nBluetooth\n\nPORTS / EXPANSION:\n2 × Thunderbolt™ 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 × USB-A 3.2 Gen 1\n1 × HDMI 2.1\n1 × combo audio jack\n\nSECURITY & MANAGEMENT:\nTPM 2.0 security chip\n\nBATTERY & POWER:\n3-cell, ~45 Wh battery\n65 W USB-C power adapter (ExpressCharge™ capable)\nA 3-cell, 45 Wh battery paired with Dell’s USB-C ExpressCharge™ technology balances all-day productivity with rapid top-ups\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\nDELL PRO 14 Plus PB14250\nCharger & Power Cable\n\n\nWARRANTY:\nDell ProSupport (Until August 03, 2031)",
+        price: 17950.00,
+        images: {
+            "DEMO DELL PRO 14 PLUS PB14250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - DEMO": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363432/555.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363456/99.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363459/88.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363459/77.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363460/66.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 50,
+        handle: "refurbsihed-dell-latitude-7440-i7-13th-gen-16gb-lpddr5-512gb-nvme-14-inch-laptop",
+        title: "REFURBSIHED - DELL LATITUDE 7440 - I7 13TH GEN - 16GB LPDDR5 - 512GB NVME - 14 INCH - LAPTOP",
+        description: "The Dell Latitude 7440, a premium business-class laptop built for professionals who demand reliability and portability. This model features a 14-inch display and modern connectivity, making it ideal for office productivity, remote work, and everyday multitasking.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nBRAND:\nDell\n\nMODEL:\nLatitude 7440\n\nPROCESSOR:\nIntel® Core™ i7-1365U\n\nPROCESSOR SPEED:\n1.80GHz\n\nPROCESSOR CORES - THREADS:\n10 Cores - 12 Threads\n\nMEMORY:\n16GB LPDDR5\n\nSTORAGE:\n512GB NVME Solid-State Drive\n\nGRAPHICS:\nIntel Iris Xe Graphics\n\nDISPLAY:\n14\" Full HD\nLED-backlit\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nMaxxAudio Pro\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\nWi-Fi 6\n\nPORTS:\n2 x USB 3.2\n2 x Type-C\n1 x HDMI\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Latitude 7440\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 16950.00,
+        images: {
+            "REFURBSIHED - DELL LATITUDE 7440 - I7 13TH GEN - 16GB LPDDR5 - 512GB NVME - 14 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363207/DellLatitude7440RefurbishedLaptop3.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363206/DellLatitude7440RefurbishedLaptop.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363204/DellLatitude7440LaptopRefurbished2_63b121a5-fd72-46ad-b75c-ceae4d4be1e0.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363203/DellLatitude7440LaptopRefurbished1_06113905-4ed6-4317-a8f0-e7b5b498e2a7.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363185/DellLatitude7440RefurbishedLaptop1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795363184/DellLatitude7440RefurbishedLaptop2.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 49,
+        handle: "demo-dell-pro-14-plus-pb14250-ultra-5-236v-16gb-ddr5-512gb-nvme-14inch-laptop-demo",
+        title: "DEMO DELL PRO 14 PLUS PB14250 - ULTRA 5 236V - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - DEMO",
+        description: "The Dell Pro 14 Plus PB14250 with Intel Core Ultra 5 236V is a modern commercial 14-inch laptop designed for today's professionals. It blends AI-ready performance, reliable security, and a sleek business look, making it perfect for hybrid work and everyday productivity tasks.\n\nCONDITION/GRADE: REFURBISHED GRADE: DEMO no box\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nPROCESSOR:\nIntel Core Ultra 5 236V\n\nBASE CLOCK:\n~2.1 GHz\n\nMAX BOOST FREQUENCY:\nup to 4.7 GHz\n\nSMART CACHE:\n8 MB\n\nCORES & THREADS:\nTotal Cores: 8\nTotal Threads: 8\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n512GB NVMe Solid State Drive\n\nDISPLAY:\n14inch Full HD+ (1920 × 1200)\nIPS LCD\nAnti-Glare\n300nits Brightness\n45% NTSC\n\nGRAPHICS CARD:\nIntel Arc 130V GPU\n\nCAMERA:\nYes\n\nCONNECTIVITY:\nWireless & Bluetooth\nWi-Fi 7\nBluetooth\n\nPorts / Expansion:\n2 × Thunderbolt 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 × USB-A 3.2 Gen 1\n1 × HDMI 2.1\n1 × combo audio jack\n\nSECURITY & MANAGEMENT:\nTPM 2.0 security chip\n\nBATTERY & POWER:\n3-cell, ~55 Wh battery\n65 W USB-C power adapter (ExpressCharge capable)\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDELL PRO 14 Plus PB14250\nCharger & Power Cable\n\nWARRANTY:\nDell ProSupport (Until October 7, 2029)",
+        price: 16950.00,
+        images: {
+            "DEMO DELL PRO 14 PLUS PB14250 - ULTRA 5 236V - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - DEMO": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362978/DELLPRO14PLUS_2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362907/11.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362908/22.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362916/33.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362893/44.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 48,
+        handle: "refurbished-hp-zbook-firefly-14-g9-i7-12th-gen-16gb-ddr5-512gb-nvme-nvidia-t550-14-inch-touch-screen-autocad-workstation-laptop",
+        title: "REFURBISHED - HP ZBOOK FIREFLY 14 G9 - I7 12TH GEN - 16GB DDR5 - 512GB NVME - NVIDIA T550 - 14 INCH - TOUCH SCREEN - AUTOCAD WORKSTATION - LAPTOP",
+        description: "The HP ZBook Firefly 14 G9 as a powerful and portable solution for professionals who need reliable performance on the go. This refurbished workstation combines the sleek portability of an EliteBook with the power required for demanding design, engineering and everyday business tasks. Perfect for users searching for a refurbished desktop PC alternative that delivers desktop-class performance in a compact laptop chassis.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nBRAND:\nHP\n\nMODEL:\nZbook Firefly 14 G9\n\nPROCESSOR:\nIntel Core i7 1255U\n\nPROCESSOR SPEED:\n1.70GHz\n\nPROCESSOR CORES - THREADS:\nCores: 10\nThreads: 12\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n512GB NVME Solid-State Drive\n\nGRAPHICS:\nNVIDIA T550\n4GB GDDR6 on a 64-bit memory bus\nCUDA / Shading Cores: 1,024\nIntel Iris Xe Graphics eligible\n\nDISPLAY:\n14\" FHD\nTouch Screen\nLED-backlit\n16:9 Aspect Ratio\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nBang & Olufsen\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\nWi-Fi\n\nPORTS:\n2 x USB 3.2\n1 x HDMI\n2 x Type-C\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP ZBOOK FIREFLY 14 G9\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 15950.00,
+        images: {
+            "REFURBISHED - HP ZBOOK FIREFLY 14 G9 - I7 12TH GEN - 16GB DDR5 - 512GB NVME - NVIDIA T550 - 14 INCH - TOUCH SCREEN - AUTOCAD WORKSTATION - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362636/HPZbook14G9_74e1481d-81f9-431a-acb3-fbd0640b0e11.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362637/HPZbook14G92.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362638/HPZbook14G91.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362640/HPZbook14G94.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362641/HPZbook14G93.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 47,
+        handle: "refurbished-dell-latitude-5450-ultra-7-165u-16gb-ddr5-512gb-nvme-14-inch-laptop",
+        title: "REFURBISHED - DELL LATITUDE 5450 - ULTRA 7 165U - 16GB DDR5 - 512GB NVME - 14 INCH - LAPTOP",
+        description: "The Dell Latitude 5450 delivers reliable performance and portability for professionals on the move. This refurbished laptop features a compact 14-inch design, modern connectivity, and the power you need for everyday tasks.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nLatitude 5450\n\nCPU:\nIntel® Core™ Ultra 7 Processor 165U\n\nRAM:\n16GB DDR5\n\nSSD:\n512GB NVMe Solid-State Drive\n\nGPU:\nIntel® Graphics\n\nDISPLAY:\n14\" HD\nLED-backlit\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nMaxxAudio\n\nWEBCAM:\nYes HD\n\nNETWORKING:\nBluetooth\nWi-Fi 6\n\nPORTS:\n2 x USB 3.2\n1 x HDMI 2.0\n1 x Headphone/Microphone combo port\n2 x Type-C\nLAN Port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Latitude 5450\nPower Cable & Charger\n\nWARRANTY:\n12 Months",
+        price: 15950.00,
+        images: {
+            "REFURBISHED - DELL LATITUDE 5450 - ULTRA 7 165U - 16GB DDR5 - 512GB NVME - 14 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362501/DellLatitude5450_fde57c4a-4450-41f3-9590-7687868fd965.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362502/DellLatitude5440LaptopRefurbished2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362503/DellLatitude5440LaptopRefurbished1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362507/DellLatitude5440LaptopRefurbished3.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362508/DellLatitude5440LaptopRefurbished4.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 46,
+        handle: "refurbished-hp-elitebook-840-g10-i5-13th-gen-16gb-ddr5-265gb-nvme-14inch-laptop",
+        title: "REFURBISHED - HP ELITEBOOK 840 G10 - I5 13TH GEN - 16GB DDR5 - 265GB NVMe - 14INCH - LAPTOP",
+        description: "The HP EliteBook 840 G10, a premium refurbished laptop designed for the modern professional. This business-class machine offers reliable performance and portability, perfect for remote work or office tasks. With its 14-inch display and powerful internals, it delivers a seamless computing experience for everyday use.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteBook 840 G10\n\nPROCESSOR:\nIntel® Core™ i5-1345U\n\nPROCESSOR SPEED:\n1.60GHz\n\nPROCESSOR CORES - THREADS:\n10 Cores - 12 Threads\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n256GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel® Iris® Xe Graphics eligible\n\nDISPLAY:\n14\" Full HD\nLED-backlit\n16:9 Aspect Ratio\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nHD with Bang & Olufsen\nIntegrated stereo speakers\nWEBCAM:\nHD webcam\n\nNETWORKING:\nWi-Fi\nBluetooth 5.3\n\nPORTS:\n2 x USB 3.0\n2 x Type C\n1 x HDMI\n1 x Headphone / Microphone Combo Jack\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP ELITEBOOK 840 G10\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 14950.00,
+        images: {
+            "REFURBISHED - HP ELITEBOOK 840 G10 - I5 13TH GEN - 16GB DDR5 - 265GB NVMe - 14INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362365/HPEliteBook840G10Laptop_82552f83-c195-4945-8c16-445e409c3543_2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362366/72c24b5797591a08ad7d831fd60411cfbf3e3f75.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362381/03c2a60c534c07906a5e477890743dbfb664373d.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362382/16a26c511cb090cc9a008ea6946f75dad1a0323c.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 45,
+        handle: "refurbished-hp-zbook-firefly-15-g8-i7-11th-gen-32gb-ddr4-256gb-nvme-nvidia-t500-15-6-inch-laptop-autocad-workstation",
+        title: "REFURBISHED - HP ZBOOK FIREFLY 15 G8 - I7 11TH GEN - 32GB DDR4 - 256GB NVME - NVIDIA T500 - 15.6 INCH - LAPTOP - AUTOCAD WORKSTATION",
+        description: "The HP ZBook Firefly 15 G8 is a powerful refurbished laptop built for professionals who need reliable performance on the go. Perfect for running demanding software like AutoCAD, this workstation combines a fast Intel processor with plenty of memory and speedy storage. Its compact design makes it ideal for engineers, designers and business users who require a portable yet capable machine.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nZbook Firefly 15 G8\n\nPROCESSOR:\nIntel® Core™ I7 1185G7\n12 MB Intel® Smart Cache\n\nPROCESSOR SPEED:\n3.00GHz\n\nPROCESSOR CORES - THREADS:\nCores: 4\nThreads: 8\n\nMEMORY:\n32GB DDR4\n\nSTORAGE:\n256GB NVME Solid-State Drive\n\nGRAPHICS:\nNVIDIA T500\n4GB GDDR6\n64-bit Memory Interface\nIntel® Iris® Xe Graphics\n\nDISPLAY:\n15.6\" HD\nLED-backlit\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nBang & Olufsen\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\nWi-Fi\n\nPORTS:\n2 x USB 3.2\n1 x HDMI\n2 x Type-C\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP ZBOOK FIREFLY 15 G8\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 14950.00,
+        images: {
+            "REFURBISHED - HP ZBOOK FIREFLY 15 G8 - I7 11TH GEN - 32GB DDR4 - 256GB NVME - NVIDIA T500 - 15.6 INCH - LAPTOP - AUTOCAD WORKSTATION": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362217/HPZBOOKFIREFLY15G8.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362232/87033247_6459387378.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362236/87033247_6856064271.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362236/87625921_8254744732.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 44,
+        handle: "refurbished-dell-pro-14-plus-pb14250-ultra-5-235u-16gb-ddr5-256gb-nvme-14inch-laptop",
+        title: "REFURBISHED - DELL PRO 14 PLUS PB14250 - ULTRA 5 235U - 16GB DDR5 - 256GB NVME - 14INCH - LAPTOP",
+        description: "The Dell Pro 14 Plus PB14250 with Intel Core Ultra 5 235U is a mainstream commercial 14-inch business laptop designed for modern professionals and hybrid workers. It delivers AI-ready performance and robust security features to support productivity in today's business environment.\n\n\nREFURBISHED GRADE: Good condition used\n\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nPro 14 Plus PB14250\n\nPROCESSOR:\nIntel Core Ultra 5 235U\n\nBASE CLOCK:\n~2.0 GHz\n\nMAX BOOST FREQUENCY:\nup to 4.9 GHz\n\nSMRT CACHE:\n12 MB\n\nCORES & THREADS:\nTotal Cores: 12\nTotal Threads: 14\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n256GB NVMe Solid State Drive\n\nDISPLAY:\n14inch Full HD+ (1920 × 1200)\nIPS LCD\nAnti-Glare\n300nits Brightness\n45% NTSC\n\nGRAPHICS CARD:\nIntel Graphics\n\nCAMERA:\nYes\n\nCONNECTIVITY:\nWireless & Bluetooth\n\nWi-Fi 7\nBluetooth\n\nPORTS / EXPANSION:\n2 × Thunderbolt 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 × USB-A 3.2 Gen 1\n1 × HDMI 2.1\n1 × combo audio jack\n\nSECURITY & MANAGEMENT:\nTPM 2.0 security chip\n\nBATTERY & POWER:\n3-cell, ~45 Wh battery\n65 W USB-C power adapter (ExpressCharge capable)\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\nDELL PRO 14 Plus PB14250\nCharger & Power Cable\n\n\nWARRANTY:\n12 months",
+        price: 14950.00,
+        images: {
+            "REFURBISHED - DELL PRO 14 PLUS PB14250 - ULTRA 5 235U - 16GB DDR5 - 256GB NVME - 14INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362091/DellPro14PC14250RefurbishedLaptop77.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362092/download_9.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362093/download_8.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362115/download_10.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362116/download_11.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 43,
+        handle: "refurbished-dell-latitude-7420-i7-11th-gen-32gb-lpddr4-512gb-nvme-14-inch-laptop",
+        title: "REFURBISHED - DELL LATITUDE 7420 - I7 11TH GEN - 32GB LPDDR4 - 512GB NVME - 14 INCH - LAPTOP",
+        description: "The Dell Latitude 7420, a premium refurbished laptop built for business professionals who demand reliability and performance. This compact 14-inch machine features an 11th generation Intel Core i7 processor and 32GB of memory, making it perfect for office tasks, remote work, and everyday productivity.\n\n\nREFURBISHED GRADE: Good condition used\n\n\nSPECIFICATIONS:\n\nMAKE:\nDell\n\nMODEL:\nLatitude 7420\n\nCPU:\nIntel® Core™ i7-1185G7\n\n12 MB Intel® Smart Cache\n\n3.00GHz\n\n4 Cores 8 Threads\n\nRAM:\n32GB LPDDR4\n\nSSD:\n512GB NVMe Solid-State Drive\n\nGPU:\nIntel® Iris® Xe Graphics\n\nDISPLAY:\n14\"\n\nLED-backlit\n\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nMaxxAudio Pro\n\nWaves\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\n\nWi-Fi 6\n\nPORTS:\n1 x USB 3.2\n\n1 x Type-C\n\n1 x Type-C Charging\n\n1 x HDMI\n\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\n\nDell Latitude 7420\nCharger & Power Cable\n\n\nWARRANTY:\n12 Months",
+        price: 12950.00,
+        images: {
+            "REFURBISHED - DELL LATITUDE 7420 - I7 11TH GEN - 32GB LPDDR4 - 512GB NVME - 14 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361937/DellLatitude7420_1_2_dca6dd30-ec73-427e-9121-44063aab7fff.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361938/DellLatitude74201.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361939/DellLatitude74203.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361940/DELLLATITUDE742077.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 42,
+        handle: "refurbished-dell-latitude-3540-i7-13th-gen-16gb-ddr4-512gb-nvme-15-6-inch-laptop",
+        title: "REFURBISHED - DELL LATITUDE 3540 - I7 13TH GEN - 16GB DDR4 - 512GB NVME - 15.6 INCH - LAPTOP",
+        description: "The Dell Latitude 3540 is a reliable and efficient laptop perfect for everyday productivity and business tasks. This refurbished desktop PC offers great value with a powerful processor, ample memory, and fast storage, making it an ideal choice for students and professionals alike.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nLatitude 3540\n\nPROCESSOR:\nIntel® Core™ i7-1355U\n\nPROCESSOR SPEED:\n1.70GHz\n\nPROCESSOR CORES - THREADS:\n10 Cores - 12 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n512GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel® Iris® Xe Graphics\n\nDISPLAY:\n15.6\" HD\nLED-backlit\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nYes HD\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\nWi-Fi\n\nPORTS:\n3 x USB 3.1\n1 x HDMI\n1 x Type-C\n1 x Headphone/Microphone combo port\nLAN\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Latitude 3540\nPower Cable & Charger\n\nWARRANTY:\n12 Months",
+        price: 12950.00,
+        images: {
+            "REFURBISHED - DELL LATITUDE 3540 - I7 13TH GEN - 16GB DDR4 - 512GB NVME - 15.6 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361784/DellLatitude3540LaptopRefurbished_9f79a447-a9e8-4f84-a37d-b95cd502b48_1_ae85be14-694c-4708-8634-c0762ddb84da.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361805/DellLatitude3540LaptopRefurbished1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361806/DellLatitude3540LaptopRefurbished2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361807/DellLatitude3540LaptopRefurbished5.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361808/DellLatitude3540LaptopRefurbished4.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 41,
+        handle: "refurbished-dell-15-dc15250-i5-13th-gen-16gb-ddr4-512gb-nvme-15-6-inch-laptop",
+        title: "REFURBISHED - DELL 15 DC15250 - I5 13TH GEN - 16GB DDR4 - 512GB NVME - 15.6 INCH - LAPTOP",
+        description: "The Dell 15 DC15250 laptop, a versatile machine built for everyday productivity and multitasking. This refurbished system features a powerful 13th Gen Intel Core i5 processor and 16GB of DDR4 memory, making it perfect for work, study, or home use.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nMAKE:\nDell 15 DC15250\n\nCPU:\nIntel® Core™ i5-1334U\n\n12 MB Intel® Smart Cache\n\nCPU SPEED:\n1.30GHz\n\nCORES - THREADS:\n10 Cores\n12 Threads\n\nRAM:\n16GB DDR4\n\nSSD:\n512GB NVMe Solid-State Drive\n\nGPU:\nIntel® Iris® Xe Graphics\n\nSCREEN:\n15.6\"\n\nLED-backlit\n\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nYes\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\n\nWi-Fi\n\nPORTS:\n1 x USB 3.1\n1 x USB 2.0\n1 x Type-C\n1 x HDMI\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell 15 DC15250\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 9500.00,
+        images: {
+            "REFURBISHED - DELL 15 DC15250 - I5 13TH GEN - 16GB DDR4 - 512GB NVME - 15.6 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361666/Dell15DC15250.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361666/Dell15DC152501.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361667/Dell15DC152502.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361668/Dell15DC152503.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 40,
+        handle: "refurbished-hp-probook-650-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-15-6-inch-laptop",
+        title: "REFURBISHED - HP PROBOOK 650 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME - 15.6 INCH - LAPTOP",
+        description: "A reliable and efficient laptop perfect for work, study, and everyday computing. This HP ProBook 650 G8 combines solid performance with a familiar design, making it a great choice for users who need a dependable machine for productivity tasks. With its Intel processor and ample memory, you can handle multiple applications smoothly, whether you are browsing the web, working on documents, or managing emails.\n\n\nREFURBISHED GRADE: Good condition used\n\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nProBook 650 G8\n\nPROCESSOR:\nIntel Core i5 1135G7\n\nPROCESSOR SPEED:\n2.40GHz\n\nPROCESSOR CORES - THREADS:\n4 Cores - 8 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n256GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel Iris Xe Graphics\n\nDISPLAY:\n15.6\" HD\nLED-backlit\n16:9 Aspect Ratio\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nYes\n\nWEBCAM:\nHD webcam\n\nNETWORKING:\nEthernet\nWi-Fi\nBluetooth\n\nPORTS:\n3 x USB 3.0\n1 x Type C\n1 x HDMI\n1 x Headphone / Microphone Combo Jack\nDC-in jack\n1 x LAN Port\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\nHP ProBook 650 G8\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 9500.00,
+        images: {
+            "REFURBISHED - HP PROBOOK 650 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME - 15.6 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361510/HPProDesk650G8Laptoprefurbished_f23a523c-2990-4785-84d1-fa666bfc9ff1.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361510/95369892_7394487000.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361511/95369892_7362361086.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361512/95369892_8706816791.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361512/95369892_0732134195.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 39,
+        handle: "refurbished-hp-probook-450-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-ssd-15-6-inch-laptop",
+        title: "REFURBISHED - HP PROBOOK 450 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME SSD - 15.6 INCH - LAPTOP",
+        description: "The HP ProBook 450 G8 is a premium business laptop engineered for professionals who need reliable performance, modern security, and exceptional productivity. Powered by 11th Generation Intel® Core™ processors, fast DDR4 memory, and high-speed NVMe SSD storage, it effortlessly handles multitasking, Microsoft Office applications, web browsing, video conferencing, and demanding business workloads.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nProBook 450 G8\n\nPROCESSOR:\nIntel® Core™ I5 1135G7\n\nPROCESSOR SPEED:\n2.40GHz\n8 MB Intel® Smart Cache\n\nPROCESSOR CORES - THREADS:\n4 Cores\n8 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n256GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel® Iris® Xe Graphics\n\nDISPLAY:\n15.6\" HD\nLED-backlit\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nHD Audio\nIntegrated stereo speakers\n\nWEBCAM:\nHD webcam\n\nNETWORKING:\nWi-Fi\nBluetooth\n\nPORTS:\n2 x USB 3.0\n1 x Headphone / Microphone Combo Jack\n1 x Type-C\nDC-in jack\nLAN Port\nHDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP ProBook 450 G8\nCharger & Power Cable\n\nWARRANTY:\n12 Month",
+        price: 8950.00,
+        images: {
+            "REFURBISHED - HP PROBOOK 450 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME SSD - 15.6 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361373/HPPROBOOK450G8_93839a7f-a9c6-48a5-a9b8-45307f7aade8.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361374/89135234_6725060400.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361374/87467129_6148639409.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361387/100207288_7516789318.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 38,
+        handle: "refurbished-hp-elitebook-850-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-15-6-inch-laptop",
+        title: "REFURBISHED - HP ELITEBOOK 850 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME - 15.6 INCH - LAPTOP",
+        description: "Introducing a reliable and powerful laptop designed for business and everyday use. The HP EliteBook 850 G8 delivers solid performance with its latest generation processor, making it perfect for office tasks, multitasking and home computing. This refurbished unit offers great value for those seeking a dependable machine with modern features.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nMAKE:\nHP\n\nMODEL:\nEliteBook 850 G8\n\nCPU:\nIntel® Core™ i5-1145G7\n\nRAM:\n16GB DDR4\n\nSSD:\n256GB NVMe Solid-State Drive\n\nGPU:\nIntel® Iris® Xe Graphics\n\nDISPLAY:\n15.6\" HD\nLED-backlit\n16:9 Aspect Ratio\n\nGRAPHICS:\nIntel® Iris® Xe Graphics\n\nAUDIO:\nBang & Olufsen\n\nWEBCAM:\nHD webcam\n\nNETWORKING:\nWiFi\nBluetooth\n\nPORTS:\n2 x USB 3.2\n1 x Headphone / Microphone Combo Jack\n2 x Type-C\nHDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP EliteBook 850 G8\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 8950.00,
+        images: {
+            "REFURBISHED - HP ELITEBOOK 850 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME - 15.6 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360439/HPEliteBook850G8LaptopRefurbished_c0371cbd-3ad4-45b8-8434-ae29e515c242.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360439/HPEliteBook850G8LaptopRefurbished2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360440/HPEliteBook850G8LaptopRefurbished1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360440/HPEliteBook850G8LaptopRefurbished3.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 37,
+        handle: "refurbished-hp-elitebook-840-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-14-inch-laptop",
+        title: "REFURBISHED - HP ELITEBOOK 840 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME - 14 INCH - LAPTOP",
+        description: "The HP EliteBook 840 G8 is a premium business-class laptop designed for professionals who demand performance, portability and reliability. Featuring an 11th Generation Intel Core processor, a sleek aluminium design and a 14-inch HD display, it delivers an excellent balance of productivity and mobility.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteBook 840 G8\n\nPROCESSOR:\nIntel® Core™ i5-1145G7\n\nPROCESSOR SPEED:\n2.60GHz\n\nPROCESSOR CORES - THREADS:\n4 Cores - 8 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n256GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel® Iris® Xe Graphics\n\nDISPLAY:\n14\" Full HD\nLED-backlit\n16:9 Aspect Ratio\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nHD with Bang & Olufsen\nIntegrated stereo speakers\nWEBCAM:\nHD webcam\n\nNETWORKING:\nWi-Fi\nBluetooth\n\nPORTS:\n2 x USB 3.0\n2 x Type C\n1 x Headphone / Microphone Combo Jack\nDC-in jack\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nBOX CONTENTS:\nWhat's in the box?\nHP ELITEBOOK 840 G8\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 8950.00,
+        images: {
+            "REFURBISHED - HP ELITEBOOK 840 G8 - I5 11TH GEN - 16GB DDR4 - 256GB NVME - 14 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360307/HPELITEBOOK840G8LaptopRefurbished_da20cfbc-26c7-41d1-9cc0-4ec1ccfd0493_1.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360307/HPELITEBOOK840G8LaptopRefurbished2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360308/HPELITEBOOK840G8LaptopRefurbished1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360308/HPELITEBOOK840G8LaptopRefurbished3.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 36,
+        handle: "refurbished-hp-elitebook-830-g7-i7-10th-gen-16gb-ddr4-256gb-nvme-13-3inch-laptop",
+        title: "REFURBISHED - HP ELITEBOOK 830 G7 - I7 10TH GEN - 16GB DDR4 - 256GB NVME - 13.3INCH - LAPTOP",
+        description: "The HP EliteBook 830 G7 is a premium refurbished laptop built for business professionals who need reliable performance on the go. Featuring a powerful 10th generation Intel Core i7 processor and a compact 13.3-inch display, it delivers smooth multitasking and efficiency for everyday office tasks.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteBook 830 G7\n\nPROCESSOR:\nIntel® Core™ I7 10610U\n\nPROCESSOR SPEED:\n1.80GHz\n8 MB Intel® Smart Cache\n\nPROCESSOR CORES - THREADS:\n4 Cores\n8 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n256GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel® UHD Graphics\n\nDISPLAY:\n13.3\" HD\nLED-backlit\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nHD Audio\nIntegrated stereo speakers\n\nWEBCAM:\nHD webcam\n\nNETWORKING:\nWi-Fi\nBluetooth\n\nPORTS:\n1 x USB 3.0\n1 x Headphone / Microphone Combo Jack\n1 x Type-C\nDC-in jack\nHDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP ELITEBOOK 830 G7\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 7950.00,
+        images: {
+            "REFURBISHED - HP ELITEBOOK 830 G7 - I7 10TH GEN - 16GB DDR4 - 256GB NVME - 13.3INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360159/HPEliteBook840G7Laptop11.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360160/89315830_9110769314.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360160/87983584_4908456046.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360160/89315830_8535641983.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 35,
+        handle: "refurbished-hp-probook-440-g9-i3-12th-gen-16gb-ddr4-256gb-nvme-14-inch-laptop",
+        title: "REFURBISHED - HP PROBOOK 440 G9 - I3 12TH GEN - 16GB DDR4 - 256GB NVME - 14 INCH - LAPTOP",
+        description: "A refurbished HP ProBook 440 G9 laptop offers the perfect blend of portability and performance for business and everyday use. Powered by an Intel Core i3 12th Gen processor with 16GB of DDR4 memory and a 256GB NVMe SSD, this 14-inch device delivers reliable speed and responsiveness for work, study, or home use.\n\nCONDITION/GRADE:\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nMAKE:\nHP\n\nMODEL:\nProBook 440 G9\n\nCPU:\nIntel® Core™ I3 1215U\n\nRAM:\n16GB DDR4\n\nSSD:\n256GB NVMe Solid-State Drive\n\nGPU:\nIntel® UHD Graphics for 12th Gen\n\nSCREEN SIZE:\n14\"\n\nDISPLAY TYPE:\nHD LED-backlit\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nHD Audio Integrated stereo speakers\n\nWEB CAMERA:\nHD webcam\n\nNETWORKING:\nWi-Fi Bluetooth 5.2\n\nPORTS:\n2 x USB 3.0\n1 x Headphone / Microphone Combo Jack\n1 x Type-C\n1 x LAN Port\nDC-in jack\nHDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nBOX CONTENTS:\n\nWhat's in the box?\nHP ProBook 440 G9\nCharger & Power Cable\n\nWARRANTY:\n\n12 Months",
+        price: 6950.00,
+        images: {
+            "REFURBISHED - HP PROBOOK 440 G9 - I3 12TH GEN - 16GB DDR4 - 256GB NVME - 14 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360000/1.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360001/2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360002/3.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360002/4.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
     
     
 
     // =====================
     // Mini PCs
     // =====================
+    {
+        id: 34,
+        handle: "refurbished-lenovo-thinkcentre-m80s-gen-3-sff-i5-12th-gen-16gb-ddr5-256gb-ssd-computer",
+        title: "REFURBISHED - LENOVO THINKCENTRE M80S GEN 3 SFF - I5 12TH GEN - 16GB DDR5 - 256GB SSD - COMPUTER",
+        description: "The Lenovo ThinkCentre M80s Gen 3 is a compact, modern enterprise desktop that delivers solid performance for daily productivity and multitasking. With its small form factor design and reliable Intel processor, it's a dependable choice for home offices and professional setups.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nMAKE:\nLenovo\n\nMODEL:\nThinkCentre M80s Gen 3\n\nFORM FACTOR:\nSmall Form Factor\n\nCPU:\nIntel® Core™ i5-12400\n18 MB Intel® Smart Cache\nBase Frequency: 2.50GHz\nMax Turbo Frequency: 4.40GHz\n6 Cores\n12 Threads\n\nRAM:\n16GB DDR5\n\nSSD:\n256GB Solid State Drive\n\nGPU:\nIntel® UHD Graphics 730\n\nDISPLAY:\nNo Monitor\n\nNETWORKING:\nEthernet LAN\nWi-Fi\nCabling technology - 10/100/1000Base-T(X)\n\nPORTS:\n2 x USB 2.0\n6 x USB 3.0\n1 x LAN Port\n1 x Headphone/Microphone combo port\n2 x Display Port\n1 x HDMI\n1 x Type-C\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nLenovo ThinkCentre M80s Gen 3\nPower Cable\n\nWARRANTY:\n12 Months",
+        price: 9950.00,
+        images: {
+            "REFURBISHED - LENOVO THINKCENTRE M80S GEN 3 SFF - I5 12TH GEN - 16GB DDR5 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354632/LenovoThinkCentreM80I510TH_13a2cd0d-b16c-4feb-8636-b00098e7b650.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354633/LenovoThinkCentreM801_8cd64659-f3c3-41ca-87c3-df4176f9b636.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354635/LenovoThinkCentreM80sGen3_84b2f3b4-a8fd-4e8c-9930-81b1529dcaf3.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 33,
+        handle: "refurbished-dell-optiplex-5000-sff-i5-12th-gen-16gb-ddr4-256gb-nvme-computer",
+        title: "REFURBISHED - DELL OPTIPLEX 5000 SFF - I5 12TH GEN - 16GB DDR4 - 256GB NVME - COMPUTER",
+        description: "The Dell OptiPlex 5000 Small Form Factor (SFF) is an excellent entry-level desktop PC perfect for home offices and general productivity tasks. This refurbished unit delivers reliable Intel performance in a compact chassis, ideal for users seeking a capable and space‑saving computer. With a powerful processor and fast storage, it handles everyday computing with ease.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nOptiPlex 5000\n\nFORM FACTOR:\nSmall Form Factor\n\nCPU:\nIntel® Core™ i5-12500\n\n18 MB Intel® Smart Cache\n\nBase Frequency: 3.00GHz\nMax Turbo Frequency: 4.60GHz\n\n6 Cores – 12 Threads\n\nRAM:\n16GB DDR4\n\nSSD:\n256GB NVMe Solid State Drive\n\nGPU:\nIntel® UHD Graphics 770\n\nNone\n\nEthernet LAN\n\n5 x USB 3.0\n4 x USB 2.0\n1 x Type-C\nHeadphone/Microphone combo port\n1 x LAN Port\n2 x DisplayPorts\n\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell OptiPlex 5000\nPower Cable\n\nWARRANTY:\n12 Months",
+        price: 9950.00,
+        images: {
+            "REFURBISHED - DELL OPTIPLEX 5000 SFF - I5 12TH GEN - 16GB DDR4 - 256GB NVME - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359518/DellOptiPlex5000RefurbishedDesktop2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359524/DellOptiPlex5000RefurbishedDesktop.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359527/DellOptiPlex5000RefurbishedDesktop1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359530/DellOptiPlex5000RefurbishedDesktop3.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 32,
+        handle: "dell-optiplex-3090-mini-tower-refurbished-grade-good-condition-used",
+        title: "Dell OptiPlex 3090 Mini Tower REFURBISHED GRADE: Good condition used",
+        description: "The Dell OptiPlex 3090 Mini Tower is a reliable business-class desktop built for everyday productivity and office tasks. Powered by Intel 10th Gen processors, it delivers dependable performance in a compact tower design that fits neatly under any desk.\n\nCONDITION/GRADE:\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nOptiPlex 3090\n\nFORM FACTOR:\nMini Tower\n\nPROCESSOR:\nIntel® Core™ i5-10505\n\nPROCESSOR SPEED:\n3.30GHz\n\nPROCESSOR CORES – THREADS:\n6 Cores – 12 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n256GB Solid State Drive\n\nGRAPHICS:\nIntel® UHD Graphics 630\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n4 x USB 3.0\n2 x USB 2.0\nHeadphone/Microphone combo port\n1 x LAN Port\n1 x DisplayPort\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Optiplex 3090\nPower Cable\n\nWARRANTY:\n12 Months",
+        price: 8250.00,
+        images: {
+            "Dell OptiPlex 3090 Mini Tower REFURBISHED GRADE: Good condition used": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359388/DellOptiPlex3090MT1.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359390/DellOptiPlex3090MT.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795359393/DellOptiPlex3090MT2.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 31,
+        handle: "refurbished-hp-elitedesk-800-g6-sff-i5-10th-gen-8gb-ddr4-256gb-nvme-computer",
+        title: "REFURBISHED - HP ELITEDESK 800 G6 SFF - I5 10TH GEN - 8GB DDR4 - 256GB NVME - COMPUTER",
+        description: "The HP EliteDesk 800 G6 SFF is a powerful, business-class desktop designed to deliver excellent performance, security, and reliability in professional environments. Featuring a compact Small Form Factor design, it offers an ideal balance between performance and space efficiency, making it suitable for modern offices and demanding business workloads.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 800 G6\n\nFORM FACTOR:\nSmall Form Factor\n\nCPU:\nIntel® Core™ i5-10400\n\n12 MB Intel® Smart Cache\n\nCPU SPEED:\n2.90GHz\n\nCPU CORES – THREADS:\n6 Cores\n12 Threads\n\nRAM:\n8GB DDR4\n\nSSD:\n256GB NVMe Solid-State Drive\n\nGPU:\nIntel® UHD Graphics 630\n\nDISPLAY:\nNo Monitor\n\nOPTICAL DRIVE:\nNone\n\nDRIVE BAYS:\n1 x 3.5\"\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n4 x USB 2.0\n4 x USB 3.0\n1 x Headphone/Microphone combo port\n1 x LAN Port\n2 x DisplayPorts\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP EliteDesk 800 G6\nPower Cable\n\nWARRANTY:\n12 Months",
+        price: 6450.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 800 G6 SFF - I5 10TH GEN - 8GB DDR4 - 256GB NVME - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354452/HPEliteDesk805G6SFFRefurbished3_c6c2b681-5340-4092-8911-65416a97bd24.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354464/HPEliteDesk805G6SFFRefurbished.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354465/HPEliteDesk805G6SFFRefurbished2_f87b6ab1-9b6a-42cb-b8da-ddda7f642101.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354467/HPEliteDesk805G6SFFRefurbished1_b8364c35-cc3f-49af-a2ed-e8201198e356.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354468/HPEliteDesk805G6SFFRefurbished33_35c04c80-d563-45fc-9667-3b78ce1b46c1.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
     {
         id: 30,
         handle: "refurbished-lenovo-thinkcentre-m920s-sff-i7-9th-gen-8gb-ddr4-256gb-ssd-computer",
