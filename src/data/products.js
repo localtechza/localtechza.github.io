@@ -22,6 +22,24 @@ const products = [
     // Desktop PCs
     // =====================
     {
+        id: 57,
+        handle: "dell-pro-16-plus-pb16250-ultra-5-236v-16gb-ddr5-512gb-nvme-16inch-laptop-new-boxed",
+        title: "DELL PRO 16 PLUS PB16250 - ULTRA 5 236V - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED",
+        description: "The Dell Pro 16 Plus PB16250 with Intel Core Ultra 5 236V is a powerful mainstream commercial 16-inch laptop designed for modern professionals and hybrid workers. It delivers AI-ready performance and robust features to support productivity and collaboration in business environments.\n\nREFURBISHED GRADE: NEW BOXED\n\nSPECIFICATIONS:\nMAKE:\nDell Pro Plus 16 PC16250\n\nCPU:\nIntel® Core™ Ultra 5 236V\nBase clock ~2.1 GHz\nMax boost frequency up to 4.7 GHz\n8 MB Smart Cache\nAI: OpenVINO™, WindowsML, ONNX RT\n\nCores and Threads:\nTotal Cores: 8\nTotal Threads: 8\n\nRAM:\n16GB LPDDR5x\nSpeed: 8533MHz\n\nSSD:\n512GB NVMe Solid State Drive\n\nGPU:\nIntel® Arc™ 130V GPU\n\nDisplay:\n16inch Full HD+ (1920 × 1200)\nIPS LCD\nAnti-Glare\n300nits Brightness\n45% NTSC\n\nCamera:\nIntegrated webcam\n1920 x 1080 pixels\nFull HD\n30 fps\nPrivacy shutter\n\nConnectivity:\nWireless & Bluetooth\nWi-Fi\nBluetooth\n\nPorts / Expansion:\n2 × Thunderbolt™ 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 × USB-A 3.2 Gen 1\n1 × HDMI 2.1\n1 × combo audio jack\n\nSecurity:\nTPM 2.0 security chip\n\nBattery & Power:\n3-cell, ~55 Wh battery\n65 W USB-C power adapter (ExpressCharge™ capable)\nA 3-cell, 55 Wh battery paired with Dell’s USB-C ExpressCharge™ technology balances all-day productivity with rapid top-ups\n\nOperating System:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDELL PRO PLUS 16 PB16250\nCharger & Power Cable\n\nWARRANTY:\nDell Pro Support (Until April 4, 2029)",
+        price: 20500.00,
+        images: {
+            "DELL PRO 16 PLUS PB16250 - ULTRA 5 236V - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445296/DELLPRO16PC16250hh22.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445296/DELLPro16PlusPC162501ai3.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445297/DELLPro16PlusPC162501ai1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445298/DELLPro16PlusPC162501ai2.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
         id: 23,
         handle: "refurbished-dell-optiplex-3060-mini-tower-i5-8th-gen-8gb-ddr4-256gb-ssd-computer",
         title: "REFURBISHED - DELL OPTIPLEX 3060 MINI TOWER - I5 8TH GEN - 8GB DDR4 - 256GB SSD - COMPUTER",
@@ -631,6 +649,80 @@ const products = [
     // =====================
     // Mini PCs
     // =====================
+    {
+        id: 61,
+        handle: "refurbished-dell-optiplex-7010-mini-pc-i5-13th-gen-16gb-ddr4-512gb-nvme-computer",
+        title: "REFURBISHED - DELL OPTIPLEX 7010 MINI PC - I5 13TH GEN - 16GB DDR4 - 512GB NVME - COMPUTER",
+        description: "The Dell OptiPlex 7010 Micro is a powerful business-class Mini PC designed to deliver exceptional performance while taking up minimal desk space. Powered by 13th Generation Intel® Core™ processors, fast DDR4 memory, and high-speed NVMe SSD storage, it is ideal for modern offices, remote work, education, and commercial environments where reliability and efficiency are essential.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nOptiPlex 7010\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nIntel® Core™ i5 13500T\n\nPROCESSOR SPEED:\n1.60GHz\nMax Turbo Frequency 4.60GHz\n24 MB Intel® Smart Cache\n\nPROCESSOR CORES – THREADS:\n14 Cores\n20 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n512GB NVMe Solid State Drive\n\nGRAPHICS:\nIntel® UHD Graphics 770\n\nDISPLAY:\nNo Monitor\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n4 x USB 3.0\n2 x USB 2.0\nHeadphone/Microphone combo port\n1 x RJ-45\n1 x DisplayPorts\n1 x HDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell OptiPlex 7010\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 9500.00,
+        images: {
+            "REFURBISHED - DELL OPTIPLEX 7010 MINI PC - I5 13TH GEN - 16GB DDR4 - 512GB NVME - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449834/Screenshot2024-10-10134433_e5ba69d8-4ef9-44e7-9cbd-64644909f254.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449834/dell7010_07435a92-0b12-44fb-a751-213edc7f0c1e.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449834/Screenshot2024-10-10134509_d4ba7e17-d58c-4f96-98cf-47fe72f614cd.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449834/40297571dd38fe601d8d9eea5e731a69_1.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 60,
+        handle: "lenovo-thinkcentre-neo-50q-gen-5-mini-pc-core-7-240h-16gb-ddr5-512gb-nvme-computer-demo",
+        title: "LENOVO THINKCENTRE NEO 50Q GEN 5 MINI PC - CORE 7 240H - 16GB DDR5 - 512GB NVME - COMPUTER - DEMO",
+        description: "The Lenovo ThinkCentre Neo 50q Gen 5 Mini PC delivers robust performance and reliability for modern workspaces. This compact desktop computer features a powerful Intel Core processor, ample DDR5 memory, and fast NVMe storage, making it an ideal choice for business productivity and everyday computing tasks.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nLenovo\n\nMODEL:\nThinkCentre Neo 50q Gen 5\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nIntel® Core™ 7 processor 240H\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n512GB NVMe Solid State Drive\n\nGRAPHICS:\nIntel® Graphics\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\nWiFi\n\nPORTS & CONNECTIVITY:\nFront Ports\n1 × USB 3.2 Gen 1\n1 × USB-C (Gen 1)\n1 × Headset jack\nRear Ports\n4 × USB 3.2 Gen 1\n1 x DisplayPort\n1 x HDMI\n1 x RJ-45 Ethernet\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nLenovo ThinkCentre 50q Gen 5\nPower Cable & Charger\n\nWARRANTY:\n26 Months Onsite Warranty",
+        price: 10500.00,
+        images: {
+            "LENOVO THINKCENTRE NEO 50Q GEN 5 MINI PC - CORE 7 240H - 16GB DDR5 - 512GB NVME - COMPUTER - DEMO": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449281/LenovoThinkCentreneo50qGen5.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449278/LenovoThinkCentreneo50qGen51.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449279/LenovoThinkCentreneo50qGen52.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449278/LenovoThinkCentreneo50qGen53.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 59,
+        handle: "refurbished-hp-elitedesk-800-g4-mini-pc-i5-8th-gen-8gb-ddr4-256gb-nvme-hp-le2202-lcd-computer-set-2",
+        title: "REFURBISHED - HP ELITEDESK 800 G4 MINI PC - I5 8TH GEN - 8GB DDR4 - 256GB NVME - HP - LE2202 - LCD - COMPUTER SET",
+        description: "The HP EliteDesk 800 G4 Mini PC is a compact, business-class desktop computer designed for reliable everyday performance in office and home environments. Its space-saving design makes it ideal for small workspaces, reception areas, and professional office setups. Suitable for administrative tasks, web browsing, email, and business applications, it delivers practical performance in a compact form factor.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 800 G4\n\nFORM FACTOR:\nMini PC\n\nCPU:\nIntel® Core™ i5-8400\n\nGPU:\nIntel® HD Graphics 630\n\nRAM:\n8GB DDR4\n\nSSD:\n256GB NVMe\n\nPORTS:\n6 x USB 3.0\n1 x Headphone/Microphone combo port\n1 x RJ-45\n1 x DisplayPorts\n\nCONNECTIVITY:\nEthernet LAN\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nDISPLAY:\nScreen Size: 22 inch\nContrast Ratio: 1,000:1\nImage Brightness: 250 cd/m²\nColor Support: 16.7 Million Colors\n1 x VGA\n\nBOX CONTENTS:\nWhat's in the box?\nHP EliteDesk 800 G4 Mini PC\n22 Inch Screen\nDual Power Cable OR 2 X Single Power Cables\n1 x Diplay Cable\n1 x FREE Wired Keyboard\n1 x FREE Wired Mouse\n\nWARRANTY:\n12 Months",
+        price: 5500.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 800 G4 MINI PC - I5 8TH GEN - 8GB DDR4 - 256GB NVME - HP - LE2202 - LCD - COMPUTER SET": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448508/6666.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448507/5555.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448506/55566.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448510/444444.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 58,
+        handle: "refurbished-lenovo-thinkcentre-tio22d-m720q-i5-9th-gen-16gb-ddr4-256gb-nvme-22inch-all-in-one",
+        title: "REFURBISHED - LENOVO THINKCENTRE TIO22D + M720Q - I5 9TH GEN - 16GB DDR4 - 256GB NVME - 22INCH - ALL IN ONE",
+        description: "This refurbished Lenovo ThinkCentre all-in-one desktop combines a 22-inch display with a powerful compact PC, perfect for home offices and business setups. Featuring an Intel Core i5 processor, 16GB of DDR4 memory, and a 256GB NVMe SSD, this system delivers reliable performance while saving valuable desk space.\n\nCONDITION/GRADE:\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nLenovo\n\nMODEL:\nThinkCentre M720Q\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nIntel® Core™ i5-9400T\n\nPROCESSOR SPEED:\n1.80GHz\n\nPROCESSOR CORES – THREADS:\n6 Cores – 6 Threads\n\nMEMORY:\n16GB DDR4\n\nSTORAGE:\n256GB NVMe Solid-State Drive\n\nGRAPHICS:\nIntel® UHD Graphics 630\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n3 x USB 3.0\n1 x DisplayPort\n1 x VGA\n1 x LAN Port\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nDISPLAY SPECIFICATIONS:\nLenovo ThinkCentre Tiny-in-One (TIO) 22\nDisplay diagonal: 60,5 cm (22)\nDisplay type: LED\nDisplay resolution: 1920 x 1080 pixels\nNative aspect ratio: 16:9\nContrast ratio (typical): 1000:1\nDisplay brightness: 250 cd/m²\n\nBOX CONTENTS:\nWhat's in the box?\nLenovo ThinkCentre M720Q Mini Pc\nLenovo ThinkCentre Tiny-in-One (TIO) TIO22D\nPower unit & cable\n1 x FREE Wired Keyboard \n1 x FREE Wired Mouse \n\nWARRANTY:\nWARRANTY:\n12 Months",
+        price: 6950.00,
+        images: {
+            "REFURBISHED - LENOVO THINKCENTRE TIO22D + M720Q - I5 9TH GEN - 16GB DDR4 - 256GB NVME - 22INCH - ALL IN ONE": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448252/LenovoTI022DRefurbishedm900_99e4d97d-70a3-4827-9e0c-f0c3365a3054_2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448251/DESK-M720Q-TINY-A003-1_1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448251/LenovoTI022DRefurbishedm9001.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448252/LenovoTI022DRefurbishedm900_bc7cd1d9-86f0-4519-a3fa-62b31975c5a3.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448252/LenovoThinkCentreM720Qi58thGenMiniComputerRefurbished_1_9569e224-d502-4faf-b18b-09cd4a148ce8.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795448254/LenovoM720q_24a862f6-60e8-4ca0-ae45-74000a8c8975.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
     {
         id: 34,
         handle: "refurbished-lenovo-thinkcentre-m80s-gen-3-sff-i5-12th-gen-16gb-ddr5-256gb-ssd-computer",
