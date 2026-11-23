@@ -255,6 +255,24 @@ const products = [
     // Laptops
     // =====================
     {
+        id: 52,
+        handle: "dell-latitude-5550-ultra-7-165h-16gb-ddr5-256gb-nvme-15-6-inch-touch-screen-laptop-demo",
+        title: "DELL LATITUDE 5550 - ULTRA 7 165H - 16GB DDR5 - 256GB NVME - 15.6 INCH - TOUCH SCREEN - LAPTOP - DEMO",
+        description: "The Dell Latitude 5550, a reliable refurbished laptop designed for productivity and everyday business use. This model features an Intel Core Ultra processor and ample memory, making it ideal for office tasks, multitasking and running business applications smoothly.\n\n\nREFURBISHED GRADE: DEMO Boxed\n\nSPECIFICATIONS:\n\nBRAND:\nDell\n\nMODEL:\nLatitude 5550\n\nPROCESSOR:\nIntel® Core™ Ultra 7 165H\n\nPROCESSOR SPEED:\n1.40GHz\n\nPROCESSOR CORES - THREADS:\n16 X Cores\n22 X Threads\n\nMEMORY:\n16GB DDR5\n\nSTORAGE:\n256GB NVMe Solid State Drive\n\nGRAPHICS:\nIntel® Arc™ graphics\n\nDISPLAY:\n15.6\" FHD\nTouch Screen\nLED-backlit\n16:9 Aspect Ratio\n\nKEYBOARD LAYOUT:\nUK Keyboard layout\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nMaxxAudio\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\nWi-Fi\n\nPORTS:\n2 x USB 3.2\n2 x Type-C\n1 x HDMI\n1 x LAN Port\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Latitude 5550\nCharger & Power Cable\n\nWARRANTY:\nDell ProSupport: Ending on April 26, 2028",
+        price: 18500.00,
+        images: {
+            "DELL LATITUDE 5550 - ULTRA 7 165H - 16GB DDR5 - 256GB NVME - 15.6 INCH - TOUCH SCREEN - LAPTOP - DEMO": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444404/DellLatitude55504.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444404/DellLatitude55502.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444404/DellLatitude55501.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444404/DellLatitude55503.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
         id: 51,
         handle: "demo-dell-pro-14-plus-pb14250-ultra-5-235u-16gb-ddr5-512gb-nvme-14inch-laptop-demo",
         title: "DEMO DELL PRO 14 PLUS PB14250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - DEMO",
