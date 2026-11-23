@@ -331,25 +331,7 @@ const products = [
         category: "Laptops"
     },
 
-    {
-        id: 47,
-        handle: "refurbished-dell-latitude-5450-ultra-7-165u-16gb-ddr5-512gb-nvme-14-inch-laptop",
-        title: "REFURBISHED - DELL LATITUDE 5450 - ULTRA 7 165U - 16GB DDR5 - 512GB NVME - 14 INCH - LAPTOP",
-        description: "The Dell Latitude 5450 delivers reliable performance and portability for professionals on the move. This refurbished laptop features a compact 14-inch design, modern connectivity, and the power you need for everyday tasks.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nLatitude 5450\n\nCPU:\nIntel® Core™ Ultra 7 Processor 165U\n\nRAM:\n16GB DDR5\n\nSSD:\n512GB NVMe Solid-State Drive\n\nGPU:\nIntel® Graphics\n\nDISPLAY:\n14\" HD\nLED-backlit\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nMaxxAudio\n\nWEBCAM:\nYes HD\n\nNETWORKING:\nBluetooth\nWi-Fi 6\n\nPORTS:\n2 x USB 3.2\n1 x HDMI 2.0\n1 x Headphone/Microphone combo port\n2 x Type-C\nLAN Port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Latitude 5450\nPower Cable & Charger\n\nWARRANTY:\n12 Months",
-        price: 15950.00,
-        images: {
-            "REFURBISHED - DELL LATITUDE 5450 - ULTRA 7 165U - 16GB DDR5 - 512GB NVME - 14 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362501/DellLatitude5450_fde57c4a-4450-41f3-9590-7687868fd965.jpg"
-        },
-        allImages: [
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362502/DellLatitude5440LaptopRefurbished2.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362503/DellLatitude5440LaptopRefurbished1.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362507/DellLatitude5440LaptopRefurbished3.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362508/DellLatitude5440LaptopRefurbished4.jpg"
-        ],
-        options: [],
-        category: "Laptops"
-    },
-
+    
     {
         id: 46,
         handle: "refurbished-hp-elitebook-840-g10-i5-13th-gen-16gb-ddr5-265gb-nvme-14inch-laptop",
@@ -442,24 +424,7 @@ const products = [
         category: "Laptops"
     },
 
-    {
-        id: 41,
-        handle: "refurbished-dell-15-dc15250-i5-13th-gen-16gb-ddr4-512gb-nvme-15-6-inch-laptop",
-        title: "REFURBISHED - DELL 15 DC15250 - I5 13TH GEN - 16GB DDR4 - 512GB NVME - 15.6 INCH - LAPTOP",
-        description: "The Dell 15 DC15250 laptop, a versatile machine built for everyday productivity and multitasking. This refurbished system features a powerful 13th Gen Intel Core i5 processor and 16GB of DDR4 memory, making it perfect for work, study, or home use.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nMAKE:\nDell 15 DC15250\n\nCPU:\nIntel® Core™ i5-1334U\n\n12 MB Intel® Smart Cache\n\nCPU SPEED:\n1.30GHz\n\nCORES - THREADS:\n10 Cores\n12 Threads\n\nRAM:\n16GB DDR4\n\nSSD:\n512GB NVMe Solid-State Drive\n\nGPU:\nIntel® Iris® Xe Graphics\n\nSCREEN:\n15.6\"\n\nLED-backlit\n\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nYes\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\n\nWi-Fi\n\nPORTS:\n1 x USB 3.1\n1 x USB 2.0\n1 x Type-C\n1 x HDMI\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell 15 DC15250\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
-        price: 9500.00,
-        images: {
-            "REFURBISHED - DELL 15 DC15250 - I5 13TH GEN - 16GB DDR4 - 512GB NVME - 15.6 INCH - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361666/Dell15DC15250.jpg"
-        },
-        allImages: [
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361666/Dell15DC152501.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361667/Dell15DC152502.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361668/Dell15DC152503.jpg"
-        ],
-        options: [],
-        category: "Laptops"
-    },
-
+    
     {
         id: 40,
         handle: "refurbished-hp-probook-650-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-15-6-inch-laptop",
