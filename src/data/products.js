@@ -255,6 +255,79 @@ const products = [
     // Laptops
     // =====================
     {
+        id: 56,
+        handle: "dell-pro-16-pc16250-ultra-5-235u-16gb-ddr5-512gb-nvme-16inch-laptop-new-boxed",
+        title: "DELL PRO 16 PC16250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED",
+        description: "The Dell Pro 16 PC16250 with Intel Core Ultra 5 235U is a mainstream commercial 16-inch business laptop designed for modern professionals and hybrid workers. It delivers AI-ready performance, robust security features, and a sleek, professional design that supports productivity and collaboration in office environments.\n\nREFURBISHED GRADE: NEW BOXED\n\nSPECIFICATIONS:\n\nMAKE:\nDell Pro 16 PC16250\n\nCPU:\nIntel® Core™ Ultra 5 235U\n\nBase clock:\n~2.0 GHz\n\nMax boost frequency:\nup to 4.9 GHz\n\nSmart cache:\n12 MB\n\nCores & threads:\nTotal Cores: 12\nTotal Threads: 14\n\nRAM:\n16GB DDR5\n\nSpeed:\n5600MHz\n\nSSD:\n512GB NVMe Solid State Drive\n\nDisplay:\n16inch Full HD+ (1920 × 1200)\n\nPanel type:\nIPS LCD\n\nAnti-glare:\nYes\n\nBrightness:\n300nits\n\nNTSC:\n45%\n\nGPU:\nIntel® Graphics\n\nCamera:\nIntegrated webcam\n\nResolution:\n1920 x 1080 pixels\n\nFPS:\n30 fps\n\nPrivacy shutter:\nYes\n\nWireless:\nWi-Fi\nBluetooth\n\nPorts / Expansion:\n2 × Thunderbolt™ 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 × USB-A 3.2 Gen 1\n1 × HDMI 2.1\n1 × combo audio jack\n\nTPM:\nTPM 2.0 security chip\n\nBattery:\n3-cell, ~45 Wh battery\n\nPower adapter:\n65 W USB-C power adapter (ExpressCharge™ capable)\n\nOperating system:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDELL PRO 16 PC16250\nCharger & Power Cable\n\nWARRANTY:\nDell Pro Support (Until April 13, 2029)",
+        price: 20500.00,
+        images: {
+            "DELL PRO 16 PC16250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445296/DELLPRO16PC16250hh22.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445296/DELLPro16PlusPC162501ai3.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445298/DELLPro16PlusPC162501ai2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445297/DELLPro16PlusPC162501ai1.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 55,
+        handle: "dell-pro-14-plus-pb14250-ultra-7-265u-16gb-ddr5-512gb-nvme-14inch-laptop-new",
+        title: "DELL PRO 14 PLUS PB14250 - ULTRA 7 265U - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - NEW",
+        description: "The Dell Pro 14 Plus PB14250 is a smart choice for professionals who need reliable performance on the go. This 14-inch laptop packs a modern Intel Core Ultra 7 processor and fast DDR5 memory, making it ideal for everyday tasks, video calls, and light creative work. With a compact design and solid-state storage, it’s built to keep you productive whether you're at your desk or working from a coffee shop.\n\nCONDITION/GRADE:\nREFURBISHED GRADE: New No Box\n\nSPECIFICATIONS:\nBRAND:\nDell\nMODEL:\nPro 14 Plus PB14250\nPROCESSOR:\nIntel Core Ultra 7 265U\nBase clock: ~2.10 GHz\nMax boost frequency: up to 5.3 GHz\nSmart Cache: 12 MB\nCores & Threads: 12 cores, 14 threads\nMEMORY:\n16GB DDR5\nSpeed: 5600MHz\nSTORAGE:\n512GB NVMe Solid State Drive\nDISPLAY:\n14inch Full HD+ (1920 x 1200)\nIPS LCD\nAnti-Glare\n300nits Brightness\n45% NTSC\nGRAPHICS CARD:\nIntel Graphics\nCAMERA:\nYes\nCONNECTIVITY:\nWireless & Bluetooth\nWi-Fi 7\nBluetooth\nPorts / Expansion\n2 x Thunderbolt 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 x USB-A 3.2 Gen 1\n1 x HDMI 2.1\n1 x combo audio jack\nSECURITY & MANAGEMENT:\nTPM 2.0 security chip\nBATTERY & POWER:\n3-cell, ~45 Wh battery\n65 W USB-C power adapter (ExpressCharge capable)\nA 3-cell, 45 Wh battery paired with Dell’s USB-C ExpressCharge technology balances all-day productivity with rapid top-ups\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nBOX CONTENTS:\nWhat's in the box?\nDELL PRO 14 Plus PB14250\nCharger & Power Cable\nFREE Laptop Bag\n\nWARRANTY:\nDell ProSupport (Until February 28, 2030)",
+        price: 19950.00,
+        images: {
+            "DELL PRO 14 PLUS PB14250 - ULTRA 7 265U - 16GB DDR5 - 512GB NVME - 14INCH - LAPTOP - NEW": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445132/123.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445147/345.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445148/567.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445149/789.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445149/765.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445150/432.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 54,
+        handle: "refurbished-dell-precision-7750-i7-10th-gen-32gb-ddr4-1tb-nvme-nvidia-rtx-3000-17-3-inch-laptop-autocad-workstation",
+        title: "REFURBISHED - DELL PRECISION 7750 - I7 10TH GEN - 32GB DDR4 - 1TB NVME - NVIDIA RTX 3000 - 17.3 INCH - LAPTOP - AUTOCAD WORKSTATION",
+        description: "The Dell Precision 7750 is a powerful refurbished workstation laptop designed for professionals who need reliable performance for demanding tasks like AutoCAD, engineering, and content creation. With a 10th generation Intel Core i7 processor and 32GB of DDR4 memory, this machine handles multitasking and large workloads with ease. The dedicated NVIDIA RTX 3000 graphics and spacious 1TB NVMe SSD provide the speed and graphical power required for professional applications, all within a portable 17.3-inch form factor.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nDell\n\nMODEL:\nPrecision 7750\n\nPROCESSOR:\nIntel® Core™ i7-10850H\n\n12 MB Intel® Smart Cache\n\nPROCESSOR SPEED:\n2.70GHz Processor Base Frequency\n5.10GHz Max Turbo Frequency\n\nPROCESSOR CORES - THREADS:\n6 Cores\n12 Threads\n\nMEMORY:\n32GB DDR4\n\nSTORAGE:\n1TB Solid-State Drive (NVMe)\n\nGRAPHICS:\nNvidia Quadro RTX 3000\n\n6GB GDDR6\n192-bit\nCUDA Cores: 1920\nIntel® UHD Graphics for 10th Gen Intel® Processors\n\nDISPLAY:\n17.3\" HD\nLED-backlit\n16:9 Aspect Ratio\n\nOPTICAL DRIVE:\nNone\n\nAUDIO:\nRealtek ALC3281-CG\nWaves\n\nWEBCAM:\nYes\n\nNETWORKING:\nBluetooth\nWi-Fi\n\nPORTS:\n3 x USB 3.2\n2 x Type-C\n1 x HDMI 2.0\n1 x LAN Port\n1 x Headphone/Microphone combo port\nDC-in jack\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Precision 7750\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 18950.00,
+        images: {
+            "REFURBISHED - DELL PRECISION 7750 - I7 10TH GEN - 32GB DDR4 - 1TB NVME - NVIDIA RTX 3000 - 17.3 INCH - LAPTOP - AUTOCAD WORKSTATION": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444899/DellPrecision7760cg22_d2735e4a-6575-41d4-8911-9e48951571d43000.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444898/Dell_Precision7760Autocad_Laptop_Refurbished.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444900/dellprecision7750side.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
+        id: 53,
+        handle: "refurbished-dell-precision-7560-i7-11th-gen-32gb-ddr4-512gb-nvme-nvidia-rtx-a4000-15-6inch-touch-screen-autocad-workstation-laptop",
+        title: "REFURBISHED - DELL PRECISION 7560 - I7 11TH GEN - 32GB DDR4 - 512GB NVME - NVIDIA RTX A4000 - 15.6INCH - TOUCH SCREEN - AUTOCAD WORKSTATION - LAPTOP",
+        description: "The Dell Precision 7560 is a refurbished laptop designed for professionals who need high-performance computing and reliable graphics. This powerful mobile workstation is perfect for CAD applications, 3D modelling, and video editing, featuring an Intel Core i7 processor and NVIDIA RTX graphics.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS: \nBRAND: Dell\nMODEL: Precision 7560\nCPU: Intel® Core™ i7 -11850H\nRAM: 32GB DDR4\nSSD: 512GB NVMe Solid-State Drive\nGPU: NVIDIA RTX A4000\nVideo Memory: 8 GB GDDR6\nMemory Bus Width: 256-bit\nMemory Bandwidth: Up to 384 GB/s\nCUDA Cores: 5120\nIntel® Iris® Xe Graphics\nDisplay: 15.6\" FHD\nTouch Screen\nLED-backlit\n16:9 Aspect Ratio\nKeyboard Layout: Numeric keypad\nOptical Drive: None\nAudio: Yes\nWebcam: Yes\nNetworking: Bluetooth\nEthernet\nWiFi\nPorts: 2 x USB 3.0\n2 x Type-C\n1 x HDMI\n1 x Headphone/Microphone combo port\n1 x DC-in jack\n1 x LAN Port\nOperating System: Windows 11 Pro 64 Bit\n\nWhat's in the box?\nDell Precision 7560\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 18950.00,
+        images: {
+            "REFURBISHED - DELL PRECISION 7560 - I7 11TH GEN - 32GB DDR4 - 512GB NVME - NVIDIA RTX A4000 - 15.6INCH - TOUCH SCREEN - AUTOCAD WORKSTATION - LAPTOP": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444744/dell_precision_7560_32gb.png"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444744/DellPrecision7550RefurbishedLaptop1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444743/DellPrecision7550RefurbishedLaptop3.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444743/DellPrecision7550RefurbishedLaptop2.jpg"
+        ],
+        options: [],
+        category: "Laptops"
+    },
+
+    {
         id: 52,
         handle: "dell-latitude-5550-ultra-7-165h-16gb-ddr5-256gb-nvme-15-6-inch-touch-screen-laptop-demo",
         title: "DELL LATITUDE 5550 - ULTRA 7 165H - 16GB DDR5 - 256GB NVME - 15.6 INCH - TOUCH SCREEN - LAPTOP - DEMO",
