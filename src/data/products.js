@@ -1349,6 +1349,61 @@ const products = [
     // =====================
     // PC Accessories
     // =====================
+    {
+        id: 77,
+        handle: "refurbished-lenovo-thinkpad-hybrid-135w-usb-c-lenovo-accessories",
+        title: "REFURBISHED - LENOVO THINKPAD HYBRID - 135W - USB-C - LENOVO - ACCESSORIES",
+        description: "Upgrade your laptop setup with this refurbished Lenovo ThinkPad Hybrid USB-C docking station. Designed for productivity, it delivers power, dual display support, and expanded connectivity for USB-C and USB-A laptops including Dell, HP, and Apple devices. Perfect for mixed OS environments running Windows 10, Windows 11, macOS, Ubuntu, or ChromeOS, this docking station transforms your workspace with reliable performance.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nLenovo\n\nMODEL:\nThinkPad Hybrid USB-C DUD9011D1\n\nDOCKING STATION PORTS:\n2 x HDMI 2.0 (to 4K @ 60Hz)\n2 x DisplayPort 1.2 (to 4K @ 60 Hz)\n3 x USB-A 3.2 Gen 2\n2 x USB-A 2.0\n1 x USB-C (10 Gbps, 5V / 3A)\n1 x USB-C upstream\n1 x Gigabit Ethernet (LAN Port)\n1 x Combo Audio Port 3.5mm\n\nBOX CONTENTS:\nWhat's in the box?\n1 x Lenovo ThinkPad Hybrid USB-C DUD9011D1\n1 x Lenovo 135 Watt Charger & Power Cable\n1 x Type-C Cable\n\nWARRANTY:\n12 Months",
+        price: 1850.00,
+        images: {
+            "REFURBISHED - LENOVO THINKPAD HYBRID - 135W - USB-C - LENOVO - ACCESSORIES": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531556/LenovoThinkPadHybridUSB-CDUD9011D11_75c94313-45aa-4b86-a9d5-8a97f8c0b27a.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531556/LenovoThinkPadHybridUSB-CDUD9011D1_f5945a5d-08b4-401a-99d8-5e87d3f49e95.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531557/LenovoThinkPadHybridUSB-CDUD9011D12.jpg"
+        ],
+        options: [],
+        category: "PC Accessories"
+    },
+
+    
+    {
+        id: 75,
+        handle: "refurbished-dell-wd19s-180w-thunderbolt-docking-station-usb-c-dell-accessories",
+        title: "REFURBISHED - DELL WD19S - 180W - THUNDERBOLT DOCKING STATION - USB-C - DELL - ACCESSORIES",
+        description: "Upgrade your laptop setup with this powerful docking station. Perfect for expanding your workspace with multiple displays and peripherals, the DELL WD19S delivers reliable performance and versatile connectivity for both home and office use. Whether you're connecting external monitors or adding USB devices, this refurbished docking station offers excellent value and functionality.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nBRAND:\nDell\n\nMODEL:\nWD19S\n\nINTERFACES:\n2 x Display Ports\n1 x HDMI\n1 x USB-C 3.2 Gen 2/Display Port\n1 x USB-C 3.2 Gen\n1 x Network Gigabit Ethernet - LAN Port\n3 x USB 3.\n\nVIDEO RESOLUTION:\nUp to 4K - 60 Hz (Dual Displays)\nUp to QHD - 60 Hz (Three Displays)\n2560 x 1440 - 60 Hz\n\nWhat's in the box?\nDell WD19s Docking Station\nDell 180 Watt Charger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 1850.00,
+        images: {
+            "REFURBISHED - DELL WD19S - 180W - THUNDERBOLT DOCKING STATION - USB-C - DELL - ACCESSORIES": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531169/5e32f53632dc18528cdc903b7abd7eac2ed8bd35.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531307/f390a91f96a5e50b1a13f236362820567424806d_1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531307/REFURBISHED_-_DELL_WD19S_f948ba3b-43b7-442c-b235-41692c4b5419.jpg"
+        ],
+        options: [],
+        category: "PC Accessories"
+    },
+
+    {
+        id: 74,
+        handle: "refurbished-5-x-dell-wd19s-180w-thunderbolt-docking-station-usb-c-dell-accessories",
+        title: "REFURBISHED - 5 X DELL WD19S - 180W - THUNDERBOLT DOCKING STATION - USB-C - DELL - ACCESSORIES",
+        description: "The Dell WD19S 180W Thunderbolt Docking Station, a reliable solution for expanding your laptop's connectivity and display options. This refurbished docking station is perfect for users needing multiple monitor setups and enhanced peripheral support. With its robust 180W power delivery and extensive port selection, it's an ideal choice for home offices or professional workspaces looking to upgrade their setup efficiently.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nMAKE:\nDell\n\nMODEL:\nWD19S\n\nINTERFACES:\n2 x Display Ports\n1 x HDMI\n1 x USB-C 3.2 Gen 2/Display Port\n1 x USB-C 3.2 Gen\n1 x Network Gigabit Ethernet - LAN Port\n3 x USB 3.\n\nVIDEO RESOLUTION:\nUp to 4K - 60 Hz (Dual Displays)\nUp to QHD - 60 Hz (Three Displays)\n2560 x 1440 - 60 Hz\n\nWhat's in the box?\n5 x Dell WD19s Docking Station\n5 x Dell 180 Watt Charger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 6000.00,
+        images: {
+            "REFURBISHED - 5 X DELL WD19S - 180W - THUNDERBOLT DOCKING STATION - USB-C - DELL - ACCESSORIES": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531169/dell_wd19s_docking_station_2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531169/5e32f53632dc18528cdc903b7abd7eac2ed8bd35.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531169/REFURBISHED_-_DELL_WD19S.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531168/f390a91f96a5e50b1a13f236362820567424806d.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531168/fa5afa7ace929e54340c817bdf108504e90fe4df.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795531168/20200302_195146__75232.1584125278.1280.1280__30604.jpg"
+        ],
+        options: [],
+        category: "PC Accessories"
+    },
+
     
     
     // =====================
