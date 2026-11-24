@@ -34,11 +34,19 @@
     font-weight: 600;
     color: #444;
     white-space: nowrap;
+    /* Site-wide Bookings.css gives every label top/bottom margins, which
+       nudged "Sort by" out of line with the dropdown */
+    margin: 0;
+    line-height: 1.2;
 }
 
 .category-toolbar select {
-    padding: 6px 8px;
+    padding: 0 8px;
+    height: 30px;
     font-size: 0.85rem;
+    line-height: 1.2;
+    /* Same site-wide rule also gives every select a bottom margin */
+    margin: 0;
     border: 1px solid #ccc;
     border-radius: 6px;
     background-color: #fff;

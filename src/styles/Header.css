@@ -130,20 +130,28 @@
 /* ============ Product search (live results as you type) ============ */
 .header-search {
     position: relative;
-    flex-shrink: 0;
-    /* Compact box tucked between the logo and the page links */
-    width: 210px;
-    margin: 0 4px;
+    flex-shrink: 1;
+    /* Longer bar that fills some of the empty space, with a clear gap
+       between it and the logo */
+    width: clamp(240px, 30vw, 420px);
+    margin: 0 0 0 30px;
 }
 
 .header-search-form {
     display: flex;
+    /* Row layout — Bookings.css sets a site-wide `form { flex-direction:
+       column }` for its booking form, which would stack the icon, input
+       and × on top of each other here. */
+    flex-direction: row;
     align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
+    gap: 8px;
+    max-width: none;
+    margin: 0;
+    padding: 7px 12px;
     border: 2px solid #e5e7eb;
     border-radius: 8px;
     background-color: #fff;
+    box-shadow: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -156,18 +164,23 @@
     width: 17px;
     height: 17px;
     flex-shrink: 0;
+    align-self: center;
     color: #6b7280;
 }
 
 .header-search-form input {
     flex: 1;
     min-width: 0;
+    width: auto;
     border: none;
     outline: none;
     background: transparent;
     font-size: 14px;
     color: #111827;
+    /* Site-wide Bookings.css gives every input padding and a bottom
+       margin — both cancelled here so the bar stays one clean row */
     padding: 0;
+    margin: 0;
 }
 
 .header-search-form input::placeholder {
@@ -182,9 +195,11 @@
 
 .header-search-clear {
     flex-shrink: 0;
+    align-self: center;
     width: 20px;
     height: 20px;
     padding: 0;
+    margin: 0;
     border: none;
     border-radius: 50%;
     background-color: #e5e7eb;
@@ -201,13 +216,15 @@
     background-color: #d1d5db;
 }
 
-/* Results dropdown — wider than the box so titles have room to breathe */
+/* Results dropdown — stacked one product per line (Footer.css sets a
+   site-wide `ul { display: flex }`, so block is forced back on here) */
 .header-search-results {
+    display: block;
     position: absolute;
     top: calc(100% + 6px);
     left: 0;
     right: auto;
-    width: min(340px, calc(100vw - 40px));
+    width: min(400px, calc(100vw - 40px));
     max-height: 60vh;
     overflow-y: auto;
     margin: 0;
@@ -219,6 +236,10 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     z-index: 1100;
     text-align: left;
+}
+
+.header-search-results li {
+    display: block;
 }
 
 .header-search-result {
