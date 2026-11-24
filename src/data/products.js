@@ -22,6 +22,42 @@ const products = [
     // Desktop PCs
     // =====================
     {
+        id: 63,
+        handle: "refurbished-hp-elitedesk-800-g5-mini-pc-i5-9th-gen-16gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - HP ELITEDESK 800 G5 MINI PC - I5 9TH GEN - 16GB DDR4 - 256GB SSD - COMPUTER",
+        description: "The HP EliteDesk 800 G5 Mini PC is a compact, business-class desktop computer designed for professional environments, home offices and everyday computing. Its space-saving design makes it ideal for offices with limited desk space while delivering reliable performance for everyday business applications.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 800 G5\n\nFORM FACTOR:\nMini PC\n\nCPU:\nIntel® Core™ i5-9400T\n\nRAM:\n16GB DDR4\n\nSSD:\n256GB Solid State Drive\n\nGPU:\nIntel® UHD Graphics 630\n\nCONNECTIVITY:\nEthernet LAN\n\nPORTS:\n6 x USB 3.0\n1 x Headphone/Microphone combo port\n2 x Display Port\n1 x Type-C\n1 x LAN Port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP EliteDesk 800 G5\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 5950.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 800 G5 MINI PC - I5 9TH GEN - 16GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/HPEliteDesk800G4MiniPCRefurbished2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/hp_elitedesk_800_g4_mini__43259.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/hp_800_g3_mini.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/HPEliteDesk800G4MiniPCRefurbished_cd577f3a-0dca-41e6-b85d-bc0a8d65ab3f.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506880/HPEliteDesk800G4MiniPCRefurbished1.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 62,
+        handle: "refurbished-mecer-jupiter-h610-mini-pc-i3-12th-gen-8gb-ddr4-128gb-ssd-computer",
+        title: "REFURBISHED - MECER JUPITER H610 MINI PC - I3 12TH GEN - 8GB DDR4 - 128GB SSD - COMPUTER",
+        description: "The compact powerhouse that brings desktop performance to any space. The Mecer Jupiter H610 mini PC delivers reliable productivity for home offices and professional workstations alike. Powered by a 12th generation Intel Core processor, it handles everyday tasks with ease, while the fast SSD ensures quick boot times and responsive multitasking.\n\n\nREFURBISHED GRADE: Good condition used\n\n\nSPECIFICATIONS:\nBRAND:\nMecer\n\nMODEL:\nJupiter H610\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nIntel® Core™ i3-12100\n\nPROCESSOR SPEED:\n3.30GHz\n\nPROCESSOR CORES – THREADS:\n4 Cores – 8 Threads\n\nMEMORY:\n8GB DDR4\n\nSTORAGE:\n128GB Solid State Drive\n\nGRAPHICS:\nIntel® UHD Graphics 730\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\nWi-Fi\n\nPORTS:\n4 x USB 3.0\n2 x USB 2.0\n2 x Type-C\n1 x Headphone/Microphone\n1 x LAN Port\n2 x Display Port\n1 x HDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\nMecer Jupiter H610\nCharger & Power Cable\n\n\nWARRANTY:\n12 Months",
+        price: 4950.00,
+        images: {
+            "REFURBISHED - MECER JUPITER H610 MINI PC - I3 12TH GEN - 8GB DDR4 - 128GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506701/MercerH610minipc1_12.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506701/MercerH610_2.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506701/MercerH610minipc_fd95873e-d730-41f5-b85f-56d93ad5745a.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
         id: 57,
         handle: "dell-pro-16-plus-pb16250-ultra-5-236v-16gb-ddr5-512gb-nvme-16inch-laptop-new-boxed",
         title: "DELL PRO 16 PLUS PB16250 - ULTRA 5 236V - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED",
@@ -649,6 +685,189 @@ const products = [
     // =====================
     // Mini PCs
     // =====================
+    {
+        id: 73,
+        handle: "refurbished-5-x-hp-elitedesk-705-g4-mini-pc-amd-ryzen-3-pro-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - 5 X HP ELITEDESK 705 G4 MINI PC - AMD RYZEN 3 PRO - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "Refurbished HP EliteDesk 705 G4 Mini PC for sale. This compact desktop computer offers reliable AMD Ryzen 3 Pro performance with 8GB DDR4 memory and 256GB SSD storage, perfect for home offices and everyday computing tasks.\n\nCONDITION/GRADE: \n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS: \n\nMAKE:\nHP\n\nMODEL:\nEliteDesk 705 G4\n\nFORM FACTOR:\nMini PC\n\nCPU:\nAMD Ryzen 3 Pro 2200G\n\nRAM:\n8GB DDR4\n\nSSD:\n256GB\n\nGPU:\nIntegrated Radeon Vega 8 Graphics\n\nDISPLAY:\nNo Monitor\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nCONNECTIVITY:\nEthernet LAN\n\nPORTS:\n6 x USB 3.0\n1 x Type-C\n1 x Headphone/Microphone combo port\n1 x LAN Port\n2 x Display Port\n\nWhat's in the box?\n\n5 x HP EliteDesk 705 G4\n5 x Power Unit & Power Cable \n\nWARRANTY:\n12 Months",
+        price: 12000.00,
+        images: {
+            "REFURBISHED - 5 X HP ELITEDESK 705 G4 MINI PC - AMD RYZEN 3 PRO - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795509279/HPDesk705G_e6d7374e-1cd6-46df-85dd-96d2d8092a69gg_1_1.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795509286/ryzen_amd_hp_400_g4_1048_x_1048_px.png",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795509283/hp_800_g_mini_1_682e1cd5-c1f9-4d05-bfca-ecacdcd73a69.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ffff.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 72,
+        handle: "refurbished-hp-elitedesk-705-g4-mini-pc-amd-ryzen-3-pro-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - HP ELITEDESK 705 G4 MINI PC - AMD RYZEN 3 PRO - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "A compact and efficient desktop perfect for home offices, small businesses, and everyday computing. This refurbished HP EliteDesk model delivers reliable performance with an AMD Ryzen processor and fast SSD storage, making it an ideal choice for users seeking a space-saving solution without compromising on speed.\n\n\nREFURBISHED GRADE: Good condition used\n\n\nSPECIFICATIONS:\nMAKE:\nHP\n\nMODEL:\nEliteDesk 705 G4\n\nFORM FACTOR:\nMini PC\n\nCPU:\nAMD Ryzen 3 Pro 2200G\n\nRAM:\n8GB DDR4\n\nSSD:\n256GB\n\nGPU:\nIntegrated Radeon Vega 8 Graphics\n\nDISPLAY:\nNo Monitor\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n6 x USB 3.0\n1 x Type-C\n1 x Headphone/Microphone combo port\n1 x LAN Port\n2 x Display Port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\nHP EliteDesk 705 G4\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3500.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 705 G4 MINI PC - AMD RYZEN 3 PRO - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/SSSSSS.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/aaaa.png",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ddd.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ffff.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 71,
+        handle: "refurbished-hp-elitedesk-705-g5-mini-pc-amd-ryzen-3-pro-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - HP ELITEDESK 705 G5 MINI PC - AMD RYZEN 3 PRO - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "A compact and efficient desktop perfect for office administration, POS systems, and everyday home or small office use. This refurbished HP EliteDesk Mini PC delivers reliable AMD PRO performance in a space-saving design.\n\n\nREFURBISHED GRADE: Good condition used\n\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 705 G5\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nAMD Ryzen 3 Pro 3200G\n\nPROCESSOR SPEED:\n3.60GHz\n\nPROCESSOR CORES – THREADS:\n4 Cores – 4 Threads\n\nMEMORY:\n8GB DDR4\n\nSTORAGE:\n256GB Solid State Drive\n\nGRAPHICS:\nIntegrated Radeon Vega 8 Graphics\n\nDISPLAY:\nNo Monitor\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n6 x USB 3.0\n1 x Type-C\n1 x Headphone/Microphone combo port\n1 x LAN Port\n2 x Display Port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\n\nWhat's in the box?\nHP EliteDesk 705 G5\nPower Unit & Power Cable\n\n\nWARRANTY:\n12 Months",
+        price: 3500.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 705 G5 MINI PC - AMD RYZEN 3 PRO - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/SSSSSS.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ffff.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ddd.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/aaaa.png",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508688/ssss.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 70,
+        handle: "refurbished-hp-elitedesk-705-g5-mini-pc-amd-ryzen-5-pro-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - HP ELITEDESK 705 G5 MINI PC - AMD RYZEN 5 PRO - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "The HP EliteDesk 705 G5 Mini PC is a compact and efficient desktop perfect for office administration, home computing, and everyday tasks. Its small Mini form factor makes it an ideal space-saving solution for any desk setup, while the AMD Ryzen 5 PRO processor delivers reliable performance for word processing, web browsing and multitasking.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 705 G5\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nAMD Ryzen 5 Pro 3400G\n\nPROCESSOR SPEED:\n3.70GHz\n\nPROCESSOR CORES – THREADS:\n4 Cores – 8 Threads\n\nMEMORY:\n8GB DDR4\n\nSTORAGE:\n256GB Solid State Drive\n\nGRAPHICS:\nRadeon Vega 11 Graphics\n\nDISPLAY:\nNo Monitor\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n6 x USB 3.0\n1 x Type-C\n1 x Headphone/Microphone combo port\n1 x LAN Port\n2 x Display Port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP EliteDesk 705 G5\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3800.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 705 G5 MINI PC - AMD RYZEN 5 PRO - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/SSSSSS.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ddd.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ffff.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/aaaa.png",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508688/ssss.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 69,
+        handle: "refurbished-hp-elitedesk-705-g4-mini-pc-amd-ryzen-5-pro-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - HP ELITEDESK 705 G4 MINI PC - AMD RYZEN 5 PRO - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "The HP EliteDesk 705 G4 Mini PC is a compact, reliable desktop designed for office productivity, administration, POS systems and everyday computing. Powered by an AMD Ryzen 5 processor and equipped with 8GB of DDR4 memory and a 256GB SSD, it offers solid performance in a space-saving Mini form factor.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 705 G4\n\nFORM FACTOR:\nMini PC\n\nCPU:\nAMD Ryzen 5 Pro 2400G\n\nRAM:\n8GB DDR4\n\nSSD:\n256GB\n\nGPU:\nRadeon Vega 11 Graphics\n\nNo Monitor:\nNo Monitor\n\nNone:\nOptical Drive\n\nEthernet LAN:\nNetworking\n\n6 x USB 3.0:\nPorts\n\n1 x Type-C:\nPorts\n\n1 x Headphone/Microphone combo port:\nPorts\n\n1 x LAN Port:\nPorts\n\n2 x Display Port:\nPorts\n\nWindows 11 Pro 64 Bit:\nOperating System\n\nWhat's in the box?\nHP EliteDesk 705 G4\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3800.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 705 G4 MINI PC - AMD RYZEN 5 PRO - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/SSSSSS.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ffff.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508689/aaaa.png",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508687/ddd.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508688/ssss.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 68,
+        handle: "refurbished-lenovo-thinkcentre-m900-mini-pc-i5-6th-gen-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - LENOVO THINKCENTRE M900 MINI PC - I5 6TH GEN - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "The Lenovo ThinkCentre M900 is a compact and efficient mini PC that delivers solid everyday performance for home and office use. Perfect for general productivity, web browsing, and business applications, its space-saving design fits easily into any workspace.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nMAKE:\nLenovo\nMODEL:\nThinkCentre M900\nFORM FACTOR:\nMini PC\nCPU:\nIntel® Core™ i5-6400T\nSPEED:\n2.20GHz\nCORES – THREADS:\n4 Cores – 4 Threads\nRAM:\n8GB DDR4\nSSD:\n256GB Solid-State Drive\nGPU:\nIntel® HD Graphics 530\nDISPLAY:\nNo Monitor\nOPTICAL DRIVE:\nNone\nNETWORKING:\nEthernet LAN\nPORTS:\n6 x USB 3.0\n2 x DisplayPorts\n1 x LAN Port\n1 x Headphone/Microphone combo port\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nLenovo ThinkCentre M900 Mini PC\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3200.00,
+        images: {
+            "REFURBISHED - LENOVO THINKCENTRE M900 MINI PC - I5 6TH GEN - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508479/Frontflat_d6bf25ae-a447-4c87-abe9-65f3edc2083d.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508478/Lenovothinkcentrem70_910front2_1_18492b06-fdfe-4b34-810a-4c810e442708.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508479/LenovoThinkCentreM900RefurbishedMiniPC.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508478/Rear_cb72b01e-5e52-4a68-84a9-786564a0dfbf.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 67,
+        handle: "refurbished-mecer-jupiter-h410-mini-pc-i3-10th-gen-8gb-ddr4-128gb-ssd-computer",
+        title: "REFURBISHED - MECER JUPITER H410 MINI PC - I3 10TH GEN - 8GB DDR4 - 128GB SSD - COMPUTER",
+        description: "Looking for a compact desktop that doesn't compromise on performance? The refurbished Mecer Jupiter H410 Mini PC is an excellent choice for modern workspaces. Powered by an Intel 10th Gen Core i3 processor and featuring a 128GB SSD, this mini PC delivers reliable speed and efficiency in a space-saving design. Perfect for office tasks, educational use, or as a versatile home computer, it combines modern connectivity with a sleek, low-profile form factor.\n\nCONDITION/GRADE: REFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nMecer\n\nMODEL:\nJupiter H410\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nIntel® Core™ i3-10105\n\nPROCESSOR SPEED:\n3.70GHz\n\nPROCESSOR CORES – THREADS:\n4 Cores – 8 Threads\n\nMEMORY:\n8GB DDR4\n\nSTORAGE:\n128GB Solid State Drive\n\nGRAPHICS:\nIntel® UHD Graphics 630\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n4 x USB 3.0\n2 x USB 2.0\n1 x Type-C\n1 x Headphone/Microphone\n1 x LAN Port\n2 x Display Port\n1 x HDMI\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nMecer Jupiter H410\nCharger & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3950.00,
+        images: {
+            "REFURBISHED - MECER JUPITER H410 MINI PC - I3 10TH GEN - 8GB DDR4 - 128GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508285/MecertH4101.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508287/MecertH410.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508286/MercerH410minipc_0ba4f46d-ea3b-4a94-9239-46dd91dd67d7.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 66,
+        handle: "refurbished-hp-elitedesk-800-g3-mini-pc-i5-7th-gen-8gb-ddr4-500gb-hdd-computer",
+        title: "REFURBISHED - HP ELITEDESK 800 G3 MINI PC - I5 7TH GEN - 8GB DDR4 - 500GB HDD - COMPUTER",
+        description: "The HP EliteDesk 800 G3 Mini PC is a compact, reliable desktop perfect for everyday office tasks, web browsing and email. Its space-saving design fits easily into small workspaces and home setups, delivering practical performance in a tidy package.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nHP\n\nMODEL:\nEliteDesk 800 G3\n\nFORM FACTOR:\nMini PC\n\nCPU:\nIntel® Core™ i5-7400\n\nRAM:\n8GB DDR4\n\nSSD:\n500GB Hard Drive\n\nGPU:\nIntel® HD Graphics 630\n\nPORTS:\n6 x USB 3.0\n1 x Headphone/Microphone combo port\n1 x LAN Port\n2 x DisplayPorts\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nHP EliteDesk 800 G3\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3250.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 800 G3 MINI PC - I5 7TH GEN - 8GB DDR4 - 500GB HDD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508116/HPEliteDesk800G3MiniPCRefurbished1_708c1525-40f2-411c-a912-fa630b764f08.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508116/hp_elitedesk_800_g4_mini__43259_1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508116/HPEliteDesk800G3MiniPCRefurbished1_e2cf4c5d-6f74-4d24-9a6e-1d6c4df216b4.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508115/HPEliteDesk800G3MiniPCRefurbished2_7ffc1b88-9eee-4962-909c-c0733bc0107e.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508116/hp_800_g3_mini_1.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 65,
+        handle: "refurbished-lenovo-thinkcentre-m910q-mini-pc-i5-6th-gen-8gb-ddr4-256gb-ssd-computer",
+        title: "REFURBISHED - LENOVO THINKCENTRE M910Q MINI PC - I5 6TH GEN - 8GB DDR4 - 256GB SSD - COMPUTER",
+        description: "The Lenovo ThinkCentre M910q Tiny is a compact, business-class desktop PC designed for office environments, home offices, and space-saving workstations. Its ultra-compact design fits easily onto a desk or behind a monitor, while delivering reliable performance for everyday business applications, multitasking, web browsing, and general productivity.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\nBRAND:\nLenovo\n\nMODEL:\nThinkCentre M910Q\n\nFORM FACTOR:\nMini PC\n\nPROCESSOR:\nIntel® Core™ i5-6400T\n\nPROCESSOR SPEED:\n2.20GHz\n\nPROCESSOR CORES – THREADS:\n4 Cores – 4 Threads\n\nMEMORY:\n8GB DDR4\n\nSTORAGE:\n256GB Solid-State Drive\n\nGRAPHICS:\nIntel® HD Graphics 630\n\nDISPLAY:\nNo Monitor\n\nOPTICAL DRIVE:\nNone\n\nNETWORKING:\nEthernet LAN\n\nPORTS:\n6 x USB 3.0\n2 x Display Ports\n1 x LAN Port\n1 x Headphone/Microphone combo port\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nLenovo ThinkCentre M910Q\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 3650.00,
+        images: {
+            "REFURBISHED - LENOVO THINKCENTRE M910Q MINI PC - I5 6TH GEN - 8GB DDR4 - 256GB SSD - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795507192/Frontflat_42de9eb0-f662-4e0d-a4f3-187e22af572f_1.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795507192/Lenovothinkcentrem70_910front2_1_0d719284-c492-49e7-9752-62d5e19128cd_1.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795507191/MLDKT96023_1.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
+    {
+        id: 64,
+        handle: "refurbished-hp-elitedesk-800-g4-mini-pc-i5-8th-gen-8gb-ddr4-256gb-nvme-computer",
+        title: "REFURBISHED - HP ELITEDESK 800 G4 MINI PC - I5 8TH GEN - 8GB DDR4 - 256GB NVME - COMPUTER",
+        description: "The HP EliteDesk 800 G4 Mini PC is a compact, business-class desktop computer designed for professional environments, home offices and everyday computing. Its space-saving design makes it ideal for offices with limited desk space while delivering reliable performance for everyday business applications.\n\nREFURBISHED GRADE: Good condition used\n\nSPECIFICATIONS:\n\nBRAND:\nHP\n\nMODEL:\nEliteDesk 800 G4\n\nFORM FACTOR:\nMini PC\n\nCPU:\nIntel® Core™ i5-8400\n\nRAM:\n8GB DDR4\n\nSSD:\n256GB NVMe\n\nGPU:\nIntel® UHD Graphics 630\n\nDISPLAY:\nNo Monitor\n\nOPERATING SYSTEM:\nWindows 11 Pro 64 Bit\n\nPORTS:\n6 x USB 3.0\n1 x Headphone/Microphone combo port\n2 x DisplayPort\n1 x Type-C\n1 x LAN Port\n\nCONNECTIVITY:\nEthernet LAN\n\nWhat's in the box?\nHP EliteDesk 800 G4\nPower Unit & Power Cable\n\nWARRANTY:\n12 Months",
+        price: 4950.00,
+        images: {
+            "REFURBISHED - HP ELITEDESK 800 G4 MINI PC - I5 8TH GEN - 8GB DDR4 - 256GB NVME - COMPUTER": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/HPEliteDesk800G4MiniPCRefurbished2.jpg"
+        },
+        allImages: [
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/hp_elitedesk_800_g4_mini__43259.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/hp_800_g3_mini.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506879/HPEliteDesk800G4MiniPCRefurbished_cd577f3a-0dca-41e6-b85d-bc0a8d65ab3f.jpg",
+            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795506880/HPEliteDesk800G4MiniPCRefurbished1.jpg"
+        ],
+        options: [],
+        category: "Mini PCs"
+    },
+
     {
         id: 61,
         handle: "refurbished-dell-optiplex-7010-mini-pc-i5-13th-gen-16gb-ddr4-512gb-nvme-computer",
