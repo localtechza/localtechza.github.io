@@ -81,32 +81,86 @@
     padding-left: 32px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 16px;
 }
 
-.product-info h1 {
+.product-summary h1 {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
     color: #333;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    line-height: 1.25;
 }
 
-/* Description under the title — a touch smaller on desktop, where the
-   column is wide and 20px reads oversized. Phones keep their own 16px
-   size further down. */
-.product-info p {
+/* Price sits directly under the title so customers see it immediately */
+.product-summary .product-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #007bff;
+    margin: 0;
+}
+
+.product-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Quantity + Add to Cart share one clearly separated section */
+.purchase-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.purchase-section .quantity-selector {
+    margin-bottom: 0;
+}
+
+.buy-now {
+    width: 100%;
+    padding: 13px 24px;
+    background-color: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.buy-now:hover {
+    background-color: #15803d;
+}
+
+.buy-now:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(22, 163, 74, 0.5);
+}
+
+/* Description is last — no more scrolling past it to buy */
+.product-description {
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.product-description p {
     font-size: 17px;
     color: #000;
-    margin-bottom: 24px;
-}
-
-/* Keep the price blue so it stands out from the description */
-.product-info .product-price {
-    color: #007bff;
+    margin: 0;
+    white-space: pre-wrap;
 }
 
 .product-option {
-    margin-bottom: 24px;
+    margin-bottom: 0;
 }
 
 .product-option label {
@@ -226,11 +280,24 @@ button.add-to-cart:focus {
         width: 100%;
     }
 
-    .product-info h1 {
+    .purchase-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .purchase-section .quantity-selector {
+        justify-content: center;
+    }
+
+    .product-summary h1 {
         font-size: 22px;
     }
 
-    .product-info p {
+    .product-summary .product-price {
+        font-size: 22px;
+    }
+
+    .product-description p {
         font-size: 16px;
     }
 }
@@ -259,6 +326,6 @@ button.add-to-cart:focus {
     z-index: 1000;
 }
 
-.product-details .product-info p {
+.product-details .product-description p {
     white-space: pre-wrap;
 }

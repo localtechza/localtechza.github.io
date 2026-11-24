@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import products from '../data/products';
 import featuredProducts from '../data/featuredProducts';
 import './FeaturedCarousel.css';
 
 const FeaturedCarousel = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
-
     // Get featured products from the config
     const featured = featuredProducts
         .map(handle => products.find(p => p.handle === handle))

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import products from '../../data/products';
 import './ProductDetails.css';
 import { useCart } from '../../context/CartContext';
@@ -8,6 +8,7 @@ import { recordView } from '../../utils/viewed';
 
 const ProductDetails = () => {
     const { handle } = useParams();
+    const navigate = useNavigate();
     const product = products.find(p => p.handle === handle);
 
     const [selectedColor, setSelectedColor] = useState('');
@@ -16,7 +17,6 @@ const ProductDetails = () => {
     const [selectedWoodenStand, setSelectedWoodenStand] = useState('No Stand');
     const [basePrice, setBasePrice] = useState(0);
     const [quantity, setQuantity] = useState(1);
-    const [totalPrice, setTotalPrice] = useState(0);
     const [message, setMessage] = useState("");
     const [selectedImage, setSelectedImage] = useState('');
 
@@ -62,9 +62,8 @@ const ProductDetails = () => {
             }
 
             setBasePrice(calculatedPrice);
-            setTotalPrice(calculatedPrice * quantity);
         }
-    }, [selectedSize, selectedWoodenStand, quantity, selectedLineArt, product]);
+    }, [selectedSize, selectedWoodenStand, selectedLineArt, product]);
 
     // Get the color-variant image (controlled by selectors)
     const imageKey = `${selectedColor} ${selectedLineArt}`;
@@ -97,19 +96,16 @@ const ProductDetails = () => {
         const newQuantity = parseInt(e.target.value, 10);
         if (newQuantity >= 1) {
             setQuantity(newQuantity);
-            setTotalPrice(basePrice * newQuantity);
         }
     };
 
     const incrementQuantity = () => {
         setQuantity((prev) => prev + 1);
-        setTotalPrice(basePrice * (quantity + 1));
     };
 
     const decrementQuantity = () => {
         if (quantity > 1) {
             setQuantity((prev) => prev - 1);
-            setTotalPrice(basePrice * (quantity - 1));
         }
     };
 
@@ -118,7 +114,7 @@ const ProductDetails = () => {
 
         if (isNaN(itemPrice) || itemPrice <= 0) {
             alert('Price is not available or invalid.');
-            return;
+            return false;
         }
 
         const cartItem = {
@@ -142,6 +138,14 @@ const ProductDetails = () => {
         setTimeout(() => {
             setMessage("");
         }, 3000);
+
+        return true;
+    };
+
+    const handleBuyNow = () => {
+        if (handleAddToCart()) {
+            navigate('/checkout');
+        }
     };
 
     const hasColorOption = product.options?.some(opt => opt.name === "Color");
@@ -191,67 +195,85 @@ const ProductDetails = () => {
             </div>
 
             <div className="product-info">
-                <h1>{product.title}</h1>
-                <p>{product.description}</p>
-
-                {/* Color Selection */}
-                {hasColorOption && (
-                    <div className="product-option">
-                        <label>Color:</label>
-                        <select value={selectedColor} onChange={handleColorChange}>
-                            {product.options.find(opt => opt.name === "Color")?.values.map(color => (
-                                <option key={color} value={color}>{color}</option>
-                            ))}
-                        </select>
-                    </div>
-                )}
-
-                {/* Size Selection */}
-                {hasSizeOption && (
-                    <div className="product-option">
-                        <label>Size:</label>
-                        <select value={selectedSize} onChange={handleSizeChange}>
-                            {product.options.find(opt => opt.name === "Size")?.values.map(size => (
-                                <option key={size} value={size}>{size}</option>
-                            ))}
-                        </select>
-                    </div>
-                )}
-
-                {/* Line Art Selection */}
-                {hasLineArtOption && (
-                    <div className="product-option">
-                        <label>Line Art:</label>
-                        <select value={selectedLineArt} onChange={handleLineArtChange}>
-                            <option value="Plain">Plain</option>
-                            <option value="Line Art">With Line Art</option>
-                        </select>
-                    </div>
-                )}
-
-                {/* Wooden Stand Selection */}
-                {hasWoodenStandOption && (
-                    <div className="product-option">
-                        <label>Wooden Stand:</label>
-                        <select value={selectedWoodenStand} onChange={handleWoodenStandChange}>
-                            {product.options.find(opt => opt.name === "Wooden Stand")?.values.map(stand => (
-                                <option key={stand} value={stand}>{stand}</option>
-                            ))}
-                        </select>
-                    </div>
-                )}
-
-                {/* Quantity Selector */}
-                <div className="quantity-selector">
-                    <button onClick={decrementQuantity}>-</button>
-                    <input type="number" min="1" value={quantity} onChange={handleQuantityChange} />
-                    <button onClick={incrementQuantity}>+</button>
+                {/* Title and price stay at the top of the right-hand column */}
+                <div className="product-summary">
+                    <h1>{product.title}</h1>
+                    <p className="product-price">
+                        R{(basePrice || product.price || 0).toFixed(2)}
+                    </p>
                 </div>
 
-                {/* Price */}
-                <p className="product-price">R{totalPrice.toFixed(2)}</p>
+                {/* Product options (when the product has any) */}
+                <div className="product-options">
+                    {/* Color Selection */}
+                    {hasColorOption && (
+                        <div className="product-option">
+                            <label>Color:</label>
+                            <select value={selectedColor} onChange={handleColorChange}>
+                                {product.options.find(opt => opt.name === "Color")?.values.map(color => (
+                                    <option key={color} value={color}>{color}</option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
 
-                <button onClick={handleAddToCart}>Add to Cart</button>
+                    {/* Size Selection */}
+                    {hasSizeOption && (
+                        <div className="product-option">
+                            <label>Size:</label>
+                            <select value={selectedSize} onChange={handleSizeChange}>
+                                {product.options.find(opt => opt.name === "Size")?.values.map(size => (
+                                    <option key={size} value={size}>{size}</option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+
+                    {/* Line Art Selection */}
+                    {hasLineArtOption && (
+                        <div className="product-option">
+                            <label>Line Art:</label>
+                            <select value={selectedLineArt} onChange={handleLineArtChange}>
+                                <option value="Plain">Plain</option>
+                                <option value="Line Art">With Line Art</option>
+                            </select>
+                        </div>
+                    )}
+
+                    {/* Wooden Stand Selection */}
+                    {hasWoodenStandOption && (
+                        <div className="product-option">
+                            <label>Wooden Stand:</label>
+                            <select value={selectedWoodenStand} onChange={handleWoodenStandChange}>
+                                {product.options.find(opt => opt.name === "Wooden Stand")?.values.map(stand => (
+                                    <option key={stand} value={stand}>{stand}</option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+                </div>
+
+                {/* Quantity + Add to Cart in their own section */}
+                <div className="purchase-section">
+                    <div className="quantity-selector">
+                        <button onClick={decrementQuantity} aria-label="Decrease quantity">-</button>
+                        <input type="number" min="1" value={quantity} onChange={handleQuantityChange} />
+                        <button onClick={incrementQuantity} aria-label="Increase quantity">+</button>
+                    </div>
+                    <button className="add-to-cart" onClick={handleAddToCart}>
+                        Add to Cart
+                    </button>
+                </div>
+
+                {/* Buy Now goes straight to checkout with this item in the cart */}
+                <button className="buy-now" onClick={handleBuyNow}>
+                    Buy Now
+                </button>
+
+                {/* Description comes last */}
+                <div className="product-description">
+                    <p>{product.description}</p>
+                </div>
             </div>
 
             {/* Message Display */}
