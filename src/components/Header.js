@@ -109,40 +109,8 @@ const Header = () => {
                 <img src={logo} alt="LocalTech — home" className="logo" />
             </Link>
 
-            {/* Navigation */}
-            <nav id="main-menu" className={`main-nav${menuOpen ? " is-open" : ""}`}>
-                <ul className="navbar">
-                    <li><Link to="/">Home</Link></li>
-                    {/* Shop dropdown — hover/focus opens it on desktop (Header.css).
-                        On phones the button is hidden and its links flatten
-                        straight into the hamburger menu. */}
-                    <li className="has-dropdown">
-                        <button
-                            type="button"
-                            className="nav-dropdown-toggle"
-                            aria-haspopup="true"
-                            aria-label="Shop product categories"
-                        >
-                            Shop <span className="nav-caret" aria-hidden="true">▾</span>
-                        </button>
-                        <ul className="nav-dropdown">
-                            {/* Shop All is always here; each category below only
-                                appears while it has at least one product */}
-                            <li><Link to="/products/all">Shop All</Link></li>
-                            {visibleCategories.map(category => (
-                                <li key={category.path}>
-                                    <Link to={category.path}>{category.title}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </li>
-                    <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/bookings">Bookings</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
-            </nav>
-
-            {/* Live product search — one box, sized for desktop and mobile */}
+            {/* Live product search — sits between the logo and the page links,
+                using the wide gap that used to sit empty on the right */}
             <div className="header-search" ref={searchRef}>
                 <form className="header-search-form" onSubmit={handleSearchSubmit} role="search">
                     <svg
@@ -178,7 +146,8 @@ const Header = () => {
                     )}
                 </form>
 
-                {/* Matching products drop down under the box as you type */}
+                {/* Matching products drop down under the box — title on its own
+                    line with the price beneath, so nothing is squeezed sideways */}
                 {resultsOpen && query.trim() && results.length > 0 && (
                     <ul className="header-search-results">
                         {results.map((product) => (
@@ -189,11 +158,13 @@ const Header = () => {
                                     onClick={() => goToProduct(product)}
                                 >
                                     <img src={Object.values(product.images || {})[0]} alt="" />
-                                    <span className="header-search-result-title">
-                                        {product.title}
-                                    </span>
-                                    <span className="header-search-result-price">
-                                        R{priceOf(product).toFixed(2)}
+                                    <span className="header-search-result-info">
+                                        <span className="header-search-result-title">
+                                            {product.title}
+                                        </span>
+                                        <span className="header-search-result-price">
+                                            R{priceOf(product).toFixed(2)}
+                                        </span>
                                     </span>
                                 </button>
                             </li>
@@ -207,6 +178,39 @@ const Header = () => {
                     </div>
                 )}
             </div>
+
+            {/* Navigation */}
+            <nav id="main-menu" className={`main-nav${menuOpen ? " is-open" : ""}`}>
+                <ul className="navbar">
+                    <li><Link to="/">Home</Link></li>
+                    {/* Shop dropdown — hover/focus opens it on desktop (Header.css).
+                        On phones the button is hidden and its links flatten
+                        straight into the hamburger menu. */}
+                    <li className="has-dropdown">
+                        <button
+                            type="button"
+                            className="nav-dropdown-toggle"
+                            aria-haspopup="true"
+                            aria-label="Shop product categories"
+                        >
+                            Shop <span className="nav-caret" aria-hidden="true">▾</span>
+                        </button>
+                        <ul className="nav-dropdown">
+                            {/* Shop All is always here; each category below only
+                                appears while it has at least one product */}
+                            <li><Link to="/products/all">Shop All</Link></li>
+                            {visibleCategories.map(category => (
+                                <li key={category.path}>
+                                    <Link to={category.path}>{category.title}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+                    <li><Link to="/services">Services</Link></li>
+                    <li><Link to="/bookings">Bookings</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                </ul>
+            </nav>
 
             {/* Account + cart + hamburger — always visible, never in the menu */}
             <div className="header-actions">
