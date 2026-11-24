@@ -207,12 +207,16 @@
 .home-images {
     display: flex;
     align-items: flex-start; /* each image keeps its own shape — no cropping */
+    justify-content: center;
     gap: 20px;
 }
 
 .image-container {
     flex: 1;
     min-width: 0;
+    /* Never wider than a third — if a tile is hidden for having no products,
+       the remaining ones stay the size they were instead of ballooning */
+    max-width: 33.5%;
     display: flex;
     border-radius: 12px;
 }
@@ -269,9 +273,14 @@
         text-align: center;
     }
 
-    /* Stack the three images vertically on mobile, each one shown in full */
+    /* All three tiles stay side by side on phones too — smaller, but never
+       stacked one under the other */
     .home-images {
-        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container {
+        max-width: none; /* no third-width cap needed in the row of three */
     }
 
     .home-image {

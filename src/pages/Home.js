@@ -63,9 +63,10 @@ const Home = () => {
                     />
 
                     {/* Block 2: three clickable category tiles — labels are part
-                        of the images, so nothing sits on top of them. A tile whose
-                        category has no products is hidden and returns as soon as
-                        Product Lister adds one. */}
+                        of the images, so nothing sits on top of them. The first
+                        two follow the empty-category hiding rule; the right tile
+                        stays visible and points at Mini PCs while Gaming PCs
+                        has no products yet. */}
                     <div className="home-images">
                         {categoryHasProducts("Desktop PCs") && (
                             <Link to="/products/desktop-pcs" className="image-container category-tile">
@@ -77,11 +78,9 @@ const Home = () => {
                                 <img src={middleImage} alt="Accessories — PC accessories" className="home-image" />
                             </Link>
                         )}
-                        {categoryHasProducts("Gaming PCs") && (
-                            <Link to="/products/gaming-pcs" className="image-container category-tile">
-                                <img src={rightImage} alt="Home &amp; gaming — gaming PCs" className="home-image" />
-                            </Link>
-                        )}
+                        <Link to="/products/mini-pcs" className="image-container category-tile">
+                            <img src={rightImage} alt="Home &amp; gaming — mini PCs" className="home-image" />
+                        </Link>
                     </div>
                 </div>
 

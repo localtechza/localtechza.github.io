@@ -1,17 +1,39 @@
 // src/components/Header.js
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 import logo from "../assets/logo.webp";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
 import { visibleCategories } from "../data/categories";
+import products from "../data/products";
+
+// How many matches the dropdown shows before cutting off
+const SEARCH_LIMIT = 8;
+
+// Products all carry a single price; anything older with a price map is
+// shown from its cheapest variant.
+const priceOf = (product) => {
+    if (typeof product.price === "number") return product.price;
+    if (product.prices) {
+        const values = Object.values(product.prices);
+        return values.length ? Math.min(...values) : 0;
+    }
+    return 0;
+};
 
 const Header = () => {
     const { cart } = useCart();
     const { isSignedIn, email } = useAuth();
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
+
+    // Live product search
+    const [query, setQuery] = useState("");
+    const [results, setResults] = useState([]);
+    const [resultsOpen, setResultsOpen] = useState(false);
+    const searchRef = useRef(null);
 
     // Total number of products in the cart (adds up quantities)
     const cartCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
@@ -20,6 +42,65 @@ const Header = () => {
     useEffect(() => {
         setMenuOpen(false);
     }, [location]);
+
+    // "AJAX" search — matches are worked out shortly after each keystroke
+    // instead of on submit, so the list updates while the customer types.
+    useEffect(() => {
+        const term = query.trim().toLowerCase();
+        if (!term) {
+            setResults([]);
+            setResultsOpen(false);
+            return undefined;
+        }
+
+        const timer = window.setTimeout(() => {
+            const matches = products
+                .filter((product) =>
+                    (product.title || "").toLowerCase().includes(term) ||
+                    (product.handle || "").toLowerCase().includes(term) ||
+                    (product.category || "").toLowerCase().includes(term)
+                )
+                .slice(0, SEARCH_LIMIT);
+            setResults(matches);
+            setResultsOpen(true);
+        }, 150);
+
+        return () => window.clearTimeout(timer);
+    }, [query]);
+
+    // Click anywhere outside the search box closes the results
+    useEffect(() => {
+        const handleClickAway = (event) => {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setResultsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickAway);
+        return () => document.removeEventListener("mousedown", handleClickAway);
+    }, []);
+
+    // Leaving the page clears the search
+    useEffect(() => {
+        setQuery("");
+        setResults([]);
+        setResultsOpen(false);
+    }, [location]);
+
+    const goToProduct = (product) => {
+        setQuery("");
+        setResults([]);
+        setResultsOpen(false);
+        navigate(`/products/${product.handle}`);
+    };
+
+    const handleSearchSubmit = (event) => {
+        event.preventDefault();
+        if (results.length > 0) goToProduct(results[0]);
+    };
+
+    const handleSearchKeyDown = (event) => {
+        if (event.key === "Escape") setResultsOpen(false);
+    };
 
     return (
         <header className="header">
@@ -60,6 +141,72 @@ const Header = () => {
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
+
+            {/* Live product search — one box, sized for desktop and mobile */}
+            <div className="header-search" ref={searchRef}>
+                <form className="header-search-form" onSubmit={handleSearchSubmit} role="search">
+                    <svg
+                        className="header-search-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        aria-hidden="true"
+                    >
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                    </svg>
+                    <input
+                        type="search"
+                        value={query}
+                        placeholder="Search products…"
+                        aria-label="Search products"
+                        onChange={(event) => setQuery(event.target.value)}
+                        onFocus={() => query.trim() && setResultsOpen(true)}
+                        onKeyDown={handleSearchKeyDown}
+                    />
+                    {query && (
+                        <button
+                            type="button"
+                            className="header-search-clear"
+                            aria-label="Clear search"
+                            onClick={() => setQuery("")}
+                        >
+                            ×
+                        </button>
+                    )}
+                </form>
+
+                {/* Matching products drop down under the box as you type */}
+                {resultsOpen && query.trim() && results.length > 0 && (
+                    <ul className="header-search-results">
+                        {results.map((product) => (
+                            <li key={product.id}>
+                                <button
+                                    type="button"
+                                    className="header-search-result"
+                                    onClick={() => goToProduct(product)}
+                                >
+                                    <img src={Object.values(product.images || {})[0]} alt="" />
+                                    <span className="header-search-result-title">
+                                        {product.title}
+                                    </span>
+                                    <span className="header-search-result-price">
+                                        R{priceOf(product).toFixed(2)}
+                                    </span>
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+                {resultsOpen && query.trim() && results.length === 0 && (
+                    <div className="header-search-results header-search-empty">
+                        No products match “{query.trim()}”.
+                    </div>
+                )}
+            </div>
 
             {/* Account + cart + hamburger — always visible, never in the menu */}
             <div className="header-actions">

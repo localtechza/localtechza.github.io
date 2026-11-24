@@ -308,24 +308,7 @@ const products = [
     // =====================
     // Laptops
     // =====================
-    {
-        id: 56,
-        handle: "dell-pro-16-pc16250-ultra-5-235u-16gb-ddr5-512gb-nvme-16inch-laptop-new-boxed",
-        title: "DELL PRO 16 PC16250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED",
-        description: "The Dell Pro 16 PC16250 with Intel Core Ultra 5 235U is a mainstream commercial 16-inch business laptop designed for modern professionals and hybrid workers. It delivers AI-ready performance, robust security features, and a sleek, professional design that supports productivity and collaboration in office environments.\n\nREFURBISHED GRADE: NEW BOXED\n\nSPECIFICATIONS:\n\nMAKE:\nDell Pro 16 PC16250\n\nCPU:\nIntel® Core™ Ultra 5 235U\n\nBase clock:\n~2.0 GHz\n\nMax boost frequency:\nup to 4.9 GHz\n\nSmart cache:\n12 MB\n\nCores & threads:\nTotal Cores: 12\nTotal Threads: 14\n\nRAM:\n16GB DDR5\n\nSpeed:\n5600MHz\n\nSSD:\n512GB NVMe Solid State Drive\n\nDisplay:\n16inch Full HD+ (1920 × 1200)\n\nPanel type:\nIPS LCD\n\nAnti-glare:\nYes\n\nBrightness:\n300nits\n\nNTSC:\n45%\n\nGPU:\nIntel® Graphics\n\nCamera:\nIntegrated webcam\n\nResolution:\n1920 x 1080 pixels\n\nFPS:\n30 fps\n\nPrivacy shutter:\nYes\n\nWireless:\nWi-Fi\nBluetooth\n\nPorts / Expansion:\n2 × Thunderbolt™ 4 (USB-C, DisplayPort Alt Mode + Power Delivery)\n2 × USB-A 3.2 Gen 1\n1 × HDMI 2.1\n1 × combo audio jack\n\nTPM:\nTPM 2.0 security chip\n\nBattery:\n3-cell, ~45 Wh battery\n\nPower adapter:\n65 W USB-C power adapter (ExpressCharge™ capable)\n\nOperating system:\nWindows 11 Pro 64 Bit\n\nWhat's in the box?\nDELL PRO 16 PC16250\nCharger & Power Cable\n\nWARRANTY:\nDell Pro Support (Until April 13, 2029)",
-        price: 20500.00,
-        images: {
-            "DELL PRO 16 PC16250 - ULTRA 5 235U - 16GB DDR5 - 512GB NVME - 16INCH - LAPTOP - NEW BOXED": "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445296/DELLPRO16PC16250hh22.jpg"
-        },
-        allImages: [
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445296/DELLPro16PlusPC162501ai3.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445298/DELLPro16PlusPC162501ai2.jpg",
-            "https://res.cloudinary.com/rmmufvrh/image/upload/v1795445297/DELLPro16PlusPC162501ai1.jpg"
-        ],
-        options: [],
-        category: "Laptops"
-    },
-
+    
     {
         id: 55,
         handle: "dell-pro-14-plus-pb14250-ultra-7-265u-16gb-ddr5-512gb-nvme-14inch-laptop-new",

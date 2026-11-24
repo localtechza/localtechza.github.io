@@ -18,6 +18,38 @@
     margin: 0 auto;
 }
 
+/* Sort/filter box above the grid */
+.category-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 6px;
+}
+
+.category-toolbar label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.category-toolbar select {
+    padding: 9px 12px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    min-width: 190px;
+}
+
+.category-toolbar select:focus {
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
 /* Empty category message (only shown if someone opens the URL directly —
    the navigation hides categories with no products) */
 .category-empty {

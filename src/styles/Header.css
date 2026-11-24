@@ -13,7 +13,7 @@
 
 /* Logo */
 .logo {
-    height: 150px;
+    height: 130px;
 }
 
 /* Navigation Bar */
@@ -125,6 +125,150 @@
     align-items: center;
     gap: 12px;
     flex-shrink: 0;
+}
+
+/* ============ Product search (live results as you type) ============ */
+.header-search {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 12px;
+    width: 240px;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-search-form:focus-within {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.header-search-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    color: #6b7280;
+}
+
+.header-search-form input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #111827;
+    padding: 0;
+}
+
+.header-search-form input::placeholder {
+    color: #9ca3af;
+}
+
+/* Hide the browser's own search "clear" so only our × shows */
+.header-search-form input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.header-search-clear {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    color: #374151;
+    font-size: 15px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header-search-clear:hover {
+    background-color: #d1d5db;
+}
+
+/* Results dropdown */
+.header-search-results {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+    text-align: left;
+}
+
+.header-search-result {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.header-search-result:hover,
+.header-search-result:focus-visible {
+    background-color: #f3f4f6;
+}
+
+.header-search-result img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.header-search-result-title {
+    flex: 1;
+    min-width: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-search-result-price {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2563EB;
+}
+
+.header-search-empty {
+    padding: 14px;
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
 }
 
 /* Desktop: nav fills the space between logo and cart, links pushed right */
@@ -255,7 +399,19 @@
     }
 
     .logo {
-        height: 110px;
+        height: 96px;
+    }
+
+    /* Search gets its own full-width row right under the header bar —
+       same box on every phone/tablet, plenty of room for the results */
+    .header-search {
+        order: 1;
+        width: 100%;
+        margin: 10px 0 0;
+    }
+
+    .header-search-results {
+        max-height: 50vh;
     }
 
     /* Show the hamburger */
@@ -368,7 +524,7 @@
 /* Small phones */
 @media (max-width: 480px) {
     .logo {
-        height: 90px;
+        height: 78px;
     }
 
     .menu-toggle {
