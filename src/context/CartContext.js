@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
 
     // Generate a unique key for each cart item based on its attributes
     const generateItemKey = (item) => {
-        return `${item.id}-${item.color || ""}-${item.size || ""}-${item.stand || ""}-${item.lineArt || ""}`;
+        return `${item.id}-${item.color || ""}-${item.size || ""}`;
     };
 
     // Add an item to the cart

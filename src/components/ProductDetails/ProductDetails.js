@@ -13,8 +13,6 @@ const ProductDetails = () => {
 
     const [selectedColor, setSelectedColor] = useState('');
     const [selectedSize, setSelectedSize] = useState('');
-    const [selectedLineArt, setSelectedLineArt] = useState('Plain');
-    const [selectedWoodenStand, setSelectedWoodenStand] = useState('No Stand');
     const [basePrice, setBasePrice] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const [message, setMessage] = useState("");
@@ -39,37 +37,22 @@ const ProductDetails = () => {
             if (!selectedSize && options.some(opt => opt.name === "Size")) {
                 setSelectedSize(options.find(opt => opt.name === "Size")?.values[0]);
             }
-            if (!selectedWoodenStand && options.some(opt => opt.name === "Wooden Stand")) {
-                setSelectedWoodenStand(options.find(opt => opt.name === "Wooden Stand")?.values[0]);
-            }
-            if (!selectedLineArt && options.some(opt => opt.name === "Line Art")) {
-                setSelectedLineArt(options.find(opt => opt.name === "Line Art")?.values[0]);
-            }
         }
-    }, [product, selectedColor, selectedSize, selectedWoodenStand, selectedLineArt]);
+    }, [product, selectedColor, selectedSize]);
 
     useEffect(() => {
         if (product) {
-            let calculatedPrice = product?.prices?.[selectedSize] ?? product?.price ?? 0;
-
-            if (selectedWoodenStand === "With Stand" && product.standPrices) {
-                const standPrice = product.standPrices[selectedSize] ?? product.standPrices["With Stand"] ?? 0;
-                calculatedPrice += standPrice;
-            }
-
-            if (selectedLineArt === "Line Art") {
-                calculatedPrice += 395;
-            }
-
+            const calculatedPrice = product?.prices?.[selectedSize] ?? product?.price ?? 0;
             setBasePrice(calculatedPrice);
         }
-    }, [selectedSize, selectedWoodenStand, selectedLineArt, product]);
+    }, [selectedSize, product]);
 
-    // Get the color-variant image (controlled by selectors)
-    const imageKey = `${selectedColor} ${selectedLineArt}`;
+    // Get the color-variant image (controlled by the color selector).
+    // Colour photos are keyed either by colour alone or by "<colour> Plain",
+    // so both are tried before falling back.
     const firstImage = product.images ? Object.values(product.images)[0] : undefined;
     const colorVariantImage =
-        product.images?.[imageKey] ||
+        product.images?.[`${selectedColor} Plain`] ||
         product.images?.[selectedColor] ||
         product.images?.["Midnight Sky Plain"] ||
         firstImage ||
@@ -84,13 +67,7 @@ const ProductDetails = () => {
         setSelectedImage('');
     };
 
-    const handleLineArtChange = (e) => {
-        setSelectedLineArt(e.target.value);
-        setSelectedImage('');
-    };
-
     const handleSizeChange = (e) => setSelectedSize(e.target.value);
-    const handleWoodenStandChange = (e) => setSelectedWoodenStand(e.target.value);
 
     const handleQuantityChange = (e) => {
         const newQuantity = parseInt(e.target.value, 10);
@@ -125,8 +102,6 @@ const ProductDetails = () => {
             price: itemPrice,
             color: selectedColor,
             size: selectedSize,
-            lineArt: selectedLineArt,
-            stand: selectedWoodenStand,
             quantity: quantity,
         };
 
@@ -148,10 +123,11 @@ const ProductDetails = () => {
         }
     };
 
+    // Total price updates automatically whenever quantity or options change
+    const totalPrice = (basePrice || product.price || 0) * quantity;
+
     const hasColorOption = product.options?.some(opt => opt.name === "Color");
     const hasSizeOption = product.options?.some(opt => opt.name === "Size");
-    const hasLineArtOption = product.options?.some(opt => opt.name === "Line Art");
-    const hasWoodenStandOption = product.options?.some(opt => opt.name === "Wooden Stand");
 
     // Thumbnails: the extra photos (allImages) PLUS the default photo —
     // the one showing when the page opens. Without it, once a customer
@@ -199,7 +175,7 @@ const ProductDetails = () => {
                 <div className="product-summary">
                     <h1>{product.title}</h1>
                     <p className="product-price">
-                        R{(basePrice || product.price || 0).toFixed(2)}
+                        R{totalPrice.toFixed(2)}
                     </p>
                 </div>
 
@@ -224,29 +200,6 @@ const ProductDetails = () => {
                             <select value={selectedSize} onChange={handleSizeChange}>
                                 {product.options.find(opt => opt.name === "Size")?.values.map(size => (
                                     <option key={size} value={size}>{size}</option>
-                                ))}
-                            </select>
-                        </div>
-                    )}
-
-                    {/* Line Art Selection */}
-                    {hasLineArtOption && (
-                        <div className="product-option">
-                            <label>Line Art:</label>
-                            <select value={selectedLineArt} onChange={handleLineArtChange}>
-                                <option value="Plain">Plain</option>
-                                <option value="Line Art">With Line Art</option>
-                            </select>
-                        </div>
-                    )}
-
-                    {/* Wooden Stand Selection */}
-                    {hasWoodenStandOption && (
-                        <div className="product-option">
-                            <label>Wooden Stand:</label>
-                            <select value={selectedWoodenStand} onChange={handleWoodenStandChange}>
-                                {product.options.find(opt => opt.name === "Wooden Stand")?.values.map(stand => (
-                                    <option key={stand} value={stand}>{stand}</option>
                                 ))}
                             </select>
                         </div>

@@ -45,8 +45,6 @@ const ProductCard = ({ product }) => {
             price: priceValue,
             color: optionValue("Color"),
             size: optionValue("Size"),
-            lineArt: "Plain",
-            stand: "No Stand",
             quantity: 1,
         });
 

@@ -18,7 +18,7 @@ const Cart = () => {
         const product = products.find((p) => p.id === item.id || p.handle === item.handle);
         if (!product?.images) return null;
         return (
-            product.images[`${item.color || ""} ${item.lineArt || "Plain"}`] ||
+            product.images[`${item.color || ""} Plain`] ||
             product.images[item.color] ||
             Object.values(product.images)[0] ||
             null
@@ -26,7 +26,7 @@ const Cart = () => {
     };
 
     const itemKey = (item) =>
-        `${item.id}-${item.color || ""}-${item.size || ""}-${item.stand || ""}-${item.lineArt || ""}`;
+        `${item.id}-${item.color || ""}-${item.size || ""}`;
 
     return (
         <div className="cart-container">
@@ -59,8 +59,6 @@ const Cart = () => {
                                             <p>{item.quantity} x R{item.price.toFixed(2)}</p>
                                             {item.color && <p>Color: {item.color}</p>}
                                             {item.size && <p>Size: {item.size}</p>}
-                                            {item.lineArt && item.lineArt !== "Plain" && <p>Line Art: {item.lineArt}</p>}
-                                            {item.stand && item.stand !== "No Stand" && <p>Stand: {item.stand}</p>}
                                         </div>
                                         <button className="remove-button" onClick={() => removeFromCart(item)}>
                                             Remove
