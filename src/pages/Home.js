@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import FeaturedCarousel from "../components/FeaturedCarousel";
+import { categoryHasProducts } from "../data/categories";
 import "../styles/Home.css";
 import "../styles/HybridBanner.css";
 import paletteImage from "../assets/palette.webp";  // Repairs banner (desktop) — wording baked into the image
@@ -48,23 +49,44 @@ const Home = () => {
                         </Link>
                     </div>
 
+                    {/* Category carousels — same look and behaviour as Featured,
+                        capped at 10 cards each with a Show all link underneath */}
+                    <FeaturedCarousel
+                        title="Desktop PCs"
+                        category="Desktop PCs"
+                        showAllPath="/products/desktop-pcs"
+                    />
+                    <FeaturedCarousel
+                        title="Laptops"
+                        category="Laptops"
+                        showAllPath="/products/laptops"
+                    />
+
                     {/* Block 2: three clickable category tiles — labels are part
-                        of the images, so nothing sits on top of them */}
+                        of the images, so nothing sits on top of them. A tile whose
+                        category has no products is hidden and returns as soon as
+                        Product Lister adds one. */}
                     <div className="home-images">
-                        <Link to="/products/desktop-pcs" className="image-container category-tile">
-                            <img src={leftImage} alt="Office solutions — desktop PCs" className="home-image" />
-                        </Link>
-                        <Link to="/products/pc-accessories" className="image-container category-tile">
-                            <img src={middleImage} alt="Accessories — PC accessories" className="home-image" />
-                        </Link>
-                        <Link to="/products/gaming-pcs" className="image-container category-tile">
-                            <img src={rightImage} alt="Home &amp; gaming — gaming PCs" className="home-image" />
-                        </Link>
+                        {categoryHasProducts("Desktop PCs") && (
+                            <Link to="/products/desktop-pcs" className="image-container category-tile">
+                                <img src={leftImage} alt="Office solutions — desktop PCs" className="home-image" />
+                            </Link>
+                        )}
+                        {categoryHasProducts("PC Accessories") && (
+                            <Link to="/products/pc-accessories" className="image-container category-tile">
+                                <img src={middleImage} alt="Accessories — PC accessories" className="home-image" />
+                            </Link>
+                        )}
+                        {categoryHasProducts("Gaming PCs") && (
+                            <Link to="/products/gaming-pcs" className="image-container category-tile">
+                                <img src={rightImage} alt="Home &amp; gaming — gaming PCs" className="home-image" />
+                            </Link>
+                        )}
                     </div>
                 </div>
 
                 {/* Featured Products Carousel */}
-                <FeaturedCarousel />
+                <FeaturedCarousel showAllPath="/products/all" />
 
                 {/* PC repairs banner — one image with the wording baked in,
                     the whole picture links to the bookings page. */}

@@ -5,6 +5,7 @@ import "../styles/Header.css";
 import logo from "../assets/logo.webp";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
+import { visibleCategories } from "../data/categories";
 
 const Header = () => {
     const { cart } = useCart();
@@ -44,14 +45,14 @@ const Header = () => {
                             Shop <span className="nav-caret" aria-hidden="true">▾</span>
                         </button>
                         <ul className="nav-dropdown">
+                            {/* Shop All is always here; each category below only
+                                appears while it has at least one product */}
                             <li><Link to="/products/all">Shop All</Link></li>
-                            <li><Link to="/products/desktop-pcs">Desktop PCs</Link></li>
-                            <li><Link to="/products/laptops">Laptops</Link></li>
-                            <li><Link to="/products/mini-pcs">Mini PCs</Link></li>
-                            <li><Link to="/products/monitors">Monitors</Link></li>
-                            <li><Link to="/products/gaming-pcs">Gaming PCs</Link></li>
-                            <li><Link to="/products/pc-accessories">PC Accessories</Link></li>
-                            <li><Link to="/products/other-tech">Other Tech</Link></li>
+                            {visibleCategories.map(category => (
+                                <li key={category.path}>
+                                    <Link to={category.path}>{category.title}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </li>
                     <li><Link to="/services">Services</Link></li>

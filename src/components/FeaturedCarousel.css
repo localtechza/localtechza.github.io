@@ -121,6 +121,36 @@
     z-index: 1;
 }
 
+/* "Show all" link under the strip */
+.carousel-show-all-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.carousel-show-all {
+    display: inline-block;
+    padding: 9px 22px;
+    background-color: #2563EB;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.carousel-show-all:hover {
+    background-color: #1D4ED8;
+}
+
+.carousel-show-all:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 3px;
+}
+
 .carousel-btn:hover {
     background-color: #1D4ED8;
 }

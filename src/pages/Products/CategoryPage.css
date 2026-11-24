@@ -18,6 +18,14 @@
     margin: 0 auto;
 }
 
+/* Empty category message (only shown if someone opens the URL directly —
+   the navigation hides categories with no products) */
+.category-empty {
+    font-size: 1.05rem;
+    color: #555;
+    margin: 10px auto 30px;
+}
+
 /* Product Card Styling */
 .product-card {
     background: white;

@@ -20,6 +20,11 @@ const CategoryPage = ({ title, category }) => {
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>
+            {categoryProducts.length === 0 && (
+                <p className="category-empty">
+                    No products in this category yet — check back soon.
+                </p>
+            )}
             <Footer />
         </div>
     );
