@@ -273,14 +273,15 @@
         text-align: center;
     }
 
-    /* All three tiles stay side by side on phones too — smaller, but never
-       stacked one under the other */
+    /* Phones: the three tiles stack one under the other, each shown in
+       full — desktop keeps them side by side */
     .home-images {
-        gap: 10px;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .image-container {
-        max-width: none; /* no third-width cap needed in the row of three */
+        max-width: 100%; /* full width once they're stacked */
     }
 
     .home-image {
