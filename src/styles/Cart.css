@@ -97,15 +97,28 @@
     color: #666;
 }
 
-.cart-item-qty button {
-    width: 30px;
-    height: 30px;
+/* Buttons and the number box are exactly the same height/box, with the
+   glyph and the digits centred identically so nothing sits higher
+   or lower than anything else. */
+.cart-item-qty button,
+.cart-item-qty input {
+    box-sizing: border-box;
+    height: 32px;
+    margin: 0;
     padding: 0;
+    font-family: inherit;
+}
+
+.cart-item-qty button {
+    width: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #ccc;
     background-color: #f3f4f6;
     color: #333;
     border-radius: 4px;
-    font-size: 1.1rem;
+    font-size: 17px;
     line-height: 1;
     cursor: pointer;
 }
@@ -121,11 +134,20 @@
 
 .cart-item-qty input {
     width: 60px;
-    height: 30px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 0.95rem;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.cart-item-qty input::-webkit-outer-spin-button,
+.cart-item-qty input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .remove-button {
