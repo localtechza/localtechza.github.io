@@ -8,7 +8,7 @@ import "../styles/Cart.css";
 const Cart = () => {
     // Warm the backend before the customer reaches the checkout buttons.
     useBackendWake();
-    const { cart, removeFromCart, clearCart } = useContext(CartContext);
+    const { cart, updateQuantity, removeFromCart, clearCart } = useContext(CartContext);
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     // Items added before images were stored in the cart still get a thumbnail
@@ -59,6 +59,34 @@ const Cart = () => {
                                             <p>{item.quantity} x R{item.price.toFixed(2)}</p>
                                             {item.color && <p>Color: {item.color}</p>}
                                             {item.size && <p>Size: {item.size}</p>}
+
+                                            {/* Change the quantity right here — no need to
+                                                go back to the product page */}
+                                            <div className="cart-item-qty">
+                                                <label htmlFor={`qty-${itemKey(item)}`}>Qty:</label>
+                                                <button
+                                                    type="button"
+                                                    aria-label={`Decrease quantity of ${item.title}`}
+                                                    onClick={() => updateQuantity(item, (item.quantity || 1) - 1)}
+                                                    disabled={(item.quantity || 1) <= 1}
+                                                >
+                                                    −
+                                                </button>
+                                                <input
+                                                    id={`qty-${itemKey(item)}`}
+                                                    type="number"
+                                                    min="1"
+                                                    value={item.quantity || 1}
+                                                    onChange={(e) => updateQuantity(item, e.target.value)}
+                                                />
+                                                <button
+                                                    type="button"
+                                                    aria-label={`Increase quantity of ${item.title}`}
+                                                    onClick={() => updateQuantity(item, (item.quantity || 1) + 1)}
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
                                         </div>
                                         <button className="remove-button" onClick={() => removeFromCart(item)}>
                                             Remove

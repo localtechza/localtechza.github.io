@@ -56,9 +56,9 @@ const ProductCard = ({ product }) => {
         <div className="product-card">
             <Link className="product-card-link" to={product.handle ? `/products/${product.handle}` : '#'}>
                 <img src={productImage} alt={product.title || 'Product image'} />
-                <div>
-                    <h3>{product.title || 'No title available'}</h3>
-                    <p>{priceDisplay}</p>
+                <div className="product-card-info">
+                    <p className="product-card-price">{priceDisplay}</p>
+                    <h3 className="product-card-title">{product.title || 'No title available'}</h3>
                 </div>
             </Link>
             <button

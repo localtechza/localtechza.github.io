@@ -38,6 +38,19 @@ export const CartProvider = ({ children }) => {
         });
     };
 
+    // Update the quantity of an item already in the cart
+    // (minimum1; quantity 0 removes the item)
+    const updateQuantity = (item, quantity) => {
+        const newQuantity = Math.max(1, Number(quantity) || 1);
+        setCart((prevCart) =>
+            prevCart.map((p) =>
+                generateItemKey(p) === generateItemKey(item)
+                    ? { ...p, quantity: newQuantity }
+                    : p
+            )
+        );
+    };
+
     // Remove an item from the cart
     const removeFromCart = (item) => {
         setCart((prevCart) => {
@@ -52,7 +65,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+        <CartContext.Provider value={{ cart, addToCart, updateQuantity, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     );
