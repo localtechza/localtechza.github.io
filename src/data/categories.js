@@ -6,6 +6,7 @@
 // As soon as Product Lister adds a product to that category it appears again
 // — nothing has to be switched on by hand.
 import products from "./products";
+import { isListed } from "../utils/productStatus";
 
 const categories = [
     { title: "Desktop PCs", path: "/products/desktop-pcs" },
@@ -17,9 +18,12 @@ const categories = [
     { title: "Other Tech", path: "/products/other-tech" },
 ];
 
-// Does this category currently have at least one product?
+// Does this category currently have at least one product people can see?
+// (Drafted products don't count — the category hides until one is live.)
 export const categoryHasProducts = (title) =>
-    products.some((product) => product.category === title);
+    products.some(
+        (product) => product.category === title && isListed(product)
+    );
 
 // Only the categories worth showing right now.
 export const visibleCategories = categories.filter((category) =>

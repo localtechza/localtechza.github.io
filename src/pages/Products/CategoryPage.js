@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import products from '../../data/products';
+import { isListed } from '../../utils/productStatus';
 import Footer from "../../components/Footer";
 import './CategoryPage.css';
 
@@ -32,9 +33,11 @@ const CategoryPage = ({ title, category }) => {
     // Product Lister gives every new product a higher id than any existing
     // one, so id order is the order products were added to the catalogue.
     const categoryProducts = useMemo(() => {
-        const list = category
-            ? products.filter(product => product.category === category)
-            : [...products];
+        // Drafts are hidden from the site entirely (set in Product Lister)
+        const list = products.filter(
+            product => isListed(product) &&
+                (!category || product.category === category)
+        );
 
         switch (sort) {
             case "price-desc":

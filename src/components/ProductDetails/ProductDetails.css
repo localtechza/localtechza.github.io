@@ -329,3 +329,70 @@ button.add-to-cart:focus {
 .product-details .product-description p {
     white-space: pre-wrap;
 }
+
+/* ============ Stock status (set from Product Lister) ============ */
+/* Red pill under the price while the product is out of stock */
+.stock-notice {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 13px;
+    background-color: #dc2626;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 999px;
+}
+
+/* Buying is switched off while the item is out of stock */
+button.add-to-cart:disabled,
+.buy-now:disabled {
+    background-color: #9ca3af;
+    color: #fff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+button.add-to-cart:disabled:hover,
+.buy-now:disabled:hover,
+button.add-to-cart:focus:disabled,
+.buy-now:focus:disabled {
+    background-color: #9ca3af;
+}
+
+/* Drafted product: the URL still works, but nothing is for sale */
+.product-unavailable {
+    justify-content: center;
+}
+
+.product-unavailable-box {
+    flex: 1;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 40px 28px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.product-unavailable-box h1 {
+    font-size: 22px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.product-unavailable-box p {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0 0 22px;
+}
+
+.product-unavailable-box .buy-now {
+    display: inline-block;
+    width: auto;
+    padding: 12px 28px;
+    text-decoration: none;
+}

@@ -164,6 +164,24 @@
     background-color: #cc0000;
 }
 
+/* Lines whose product is out of stock or drafted */
+.cart-item-warning {
+    color: #b91c1c;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 6px 0 0;
+}
+
+li.is-blocked .cart-item {
+    border-color: #fca5a5;
+    background-color: #fef2f2;
+}
+
+li.is-blocked .cart-item-image {
+    filter: grayscale(0.6);
+    opacity: 0.8;
+}
+
 .cart-summary {
     text-align: right;
     margin-top: 20px;
@@ -200,6 +218,16 @@
 
 .checkout-button:hover {
     background-color: #1D4ED8;
+}
+
+/* Cart holds items that are out of stock or drafted */
+.checkout-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.checkout-button:disabled:hover {
+    background-color: #9ca3af;
 }
 
 /* Keep thumbnails comfortable on small phones */

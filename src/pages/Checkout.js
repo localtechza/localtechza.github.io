@@ -4,6 +4,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 import { useAuth } from "../context/AuthContext";
 import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
+import products from "../data/products";
+import { productStatus } from "../utils/productStatus";
 import "../styles/Checkout.css";
 import acceptedImage from "../assets/accepted.webp";
 
@@ -68,6 +70,15 @@ const Checkout = () => {
     const shippingFee = shippingOption === "courier" ? 120 : 0;
     const grandTotal = total + shippingFee;
 
+    // Items the shop has taken off sale since they went into the cart —
+    // they must be removed before any payment can go through.
+    const hasBlockedItems = cart.some((item) => {
+        const product = products.find(
+            (p) => p.id === item.id || (item.handle && p.handle === item.handle)
+        );
+        return product && productStatus(product) !== "live";
+    });
+
     // =========================
     // Shared checks — the email is what links the order to the customer's
     // account (order tracking + invoice delivery), so it is required.
@@ -79,6 +90,10 @@ const Checkout = () => {
         }
         if (!formData.address.trim()) return "Enter your delivery or pickup address.";
         if (cart.length === 0) return "Your cart is empty.";
+        if (hasBlockedItems) {
+            return "Your cart has items that are out of stock or no longer " +
+                "available — open your cart and remove them first.";
+        }
         return "";
     };
 
@@ -290,12 +305,19 @@ const Checkout = () => {
                         <h3>Total: R{grandTotal.toFixed(2)}</h3>
                     </div>
 
+                    {hasBlockedItems && (
+                        <div className="checkout-blocked">
+                            Some items in your cart are out of stock or no longer
+                            available. Open your cart and remove them to continue.
+                        </div>
+                    )}
+
                     {paymentMethod === "paystack" ? (
-                        <button onClick={handlePaystackPayment} disabled={loading}>
+                        <button onClick={handlePaystackPayment} disabled={loading || hasBlockedItems}>
                             {loading ? "Just a moment…" : "Pay with Card"}
                         </button>
                     ) : (
-                        <button onClick={handleEFTPayment} disabled={loading}>
+                        <button onClick={handleEFTPayment} disabled={loading || hasBlockedItems}>
                             {loading ? "Just a moment…" : "Place Order (EFT)"}
                         </button>
                     )}

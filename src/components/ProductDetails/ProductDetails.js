@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import products from '../../data/products';
 import './ProductDetails.css';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
 import { recordView } from '../../utils/viewed';
+import { productStatus } from '../../utils/productStatus';
 
 const ProductDetails = () => {
     const { handle } = useParams();
     const navigate = useNavigate();
     const product = products.find(p => p.handle === handle);
+
+    // "live" = for sale, "out" = listed but not buyable, "draft" = hidden
+    const status = productStatus(product);
+    const outOfStock = status === "out";
+    const drafted = status === "draft";
 
     const [selectedColor, setSelectedColor] = useState('');
     const [selectedSize, setSelectedSize] = useState('');
@@ -89,6 +95,11 @@ const ProductDetails = () => {
     const handleAddToCart = () => {
         const itemPrice = basePrice;
 
+        if (outOfStock) {
+            alert('This product is out of stock.');
+            return false;
+        }
+
         if (isNaN(itemPrice) || itemPrice <= 0) {
             alert('Price is not available or invalid.');
             return false;
@@ -142,6 +153,22 @@ const ProductDetails = () => {
         : [];
     const hasGallery = galleryImages.length > 0;
 
+    // Drafted products are hidden from the site — the link still resolves,
+    // but it shows a plain "unavailable" page instead of the product.
+    if (drafted) {
+        return (
+            <div className="product-details product-unavailable">
+                <div className="product-unavailable-box">
+                    <h1>{product.title}</h1>
+                    <p>This product isn't available right now.</p>
+                    <Link to="/products/all" className="buy-now">
+                        Continue shopping
+                    </Link>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="product-details">
             <div className="product-images">
@@ -177,6 +204,9 @@ const ProductDetails = () => {
                     <p className="product-price">
                         R{totalPrice.toFixed(2)}
                     </p>
+                    {outOfStock && (
+                        <p className="stock-notice">Out of stock</p>
+                    )}
                 </div>
 
                 {/* Product options (when the product has any) */}
@@ -213,14 +243,22 @@ const ProductDetails = () => {
                         <input type="number" min="1" value={quantity} onChange={handleQuantityChange} />
                         <button onClick={incrementQuantity} aria-label="Increase quantity">+</button>
                     </div>
-                    <button className="add-to-cart" onClick={handleAddToCart}>
-                        Add to Cart
+                    <button
+                        className="add-to-cart"
+                        onClick={handleAddToCart}
+                        disabled={outOfStock}
+                    >
+                        {outOfStock ? 'Out of stock' : 'Add to Cart'}
                     </button>
                 </div>
 
                 {/* Buy Now goes straight to checkout with this item in the cart */}
-                <button className="buy-now" onClick={handleBuyNow}>
-                    Buy Now
+                <button
+                    className="buy-now"
+                    onClick={handleBuyNow}
+                    disabled={outOfStock}
+                >
+                    {outOfStock ? 'Out of stock' : 'Buy Now'}
                 </button>
 
                 {/* Description comes last */}

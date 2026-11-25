@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import products from '../data/products';
 import featuredProducts from '../data/featuredProducts';
+import { isListed } from '../utils/productStatus';
 import './FeaturedCarousel.css';
 
 // One carousel component used three ways on the home page:
@@ -13,11 +14,13 @@ import './FeaturedCarousel.css';
 const FeaturedCarousel = ({ title = "Featured Products", category, showAllPath }) => {
     const trackRef = useRef(null);
 
-    const allItems = category
+    const allItems = (category
         ? products.filter(product => product.category === category)
         : featuredProducts
               .map(handle => products.find(p => p.handle === handle))
-              .filter(Boolean);
+              .filter(Boolean)
+    // Drafts never show anywhere on the site
+    ).filter(isListed);
 
     if (allItems.length === 0) return null;
 

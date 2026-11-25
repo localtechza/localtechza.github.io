@@ -7,6 +7,7 @@ import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
 import { visibleCategories } from "../data/categories";
 import products from "../data/products";
+import { isListed } from "../utils/productStatus";
 
 // How many matches the dropdown shows before cutting off
 const SEARCH_LIMIT = 8;
@@ -56,9 +57,10 @@ const Header = () => {
         const timer = window.setTimeout(() => {
             const matches = products
                 .filter((product) =>
-                    (product.title || "").toLowerCase().includes(term) ||
-                    (product.handle || "").toLowerCase().includes(term) ||
-                    (product.category || "").toLowerCase().includes(term)
+                    isListed(product) &&
+                    ((product.title || "").toLowerCase().includes(term) ||
+                        (product.handle || "").toLowerCase().includes(term) ||
+                        (product.category || "").toLowerCase().includes(term))
                 )
                 .slice(0, SEARCH_LIMIT);
             setResults(matches);

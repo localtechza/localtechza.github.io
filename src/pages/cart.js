@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import products from "../data/products";
+import { productStatus } from "../utils/productStatus";
 import { useBackendWake } from "../utils/backendWake";
 import "../styles/Cart.css";
 
@@ -28,6 +29,18 @@ const Cart = () => {
     const itemKey = (item) =>
         `${item.id}-${item.color || ""}-${item.size || ""}`;
 
+    // What the catalogue says about this line's product now. Bookings have
+    // no matching product, so they are always treated as live.
+    const statusFor = (item) => {
+        const product = products.find(
+            (p) => p.id === item.id || (item.handle && p.handle === item.handle)
+        );
+        return product ? productStatus(product) : "live";
+    };
+
+    // Drafted/out-of-stock items block checkout until they're removed
+    const hasBlockedItems = cart.some((item) => statusFor(item) !== "live");
+
     return (
         <div className="cart-container">
             <h2>Your Cart</h2>
@@ -39,9 +52,11 @@ const Cart = () => {
                         {cart.map((item) => {
                             const image = imageFor(item);
                             const productLink = item.handle ? `/products/${item.handle}` : null;
+                            const status = statusFor(item);
+                            const blocked = status !== "live";
 
                             return (
-                                <li key={itemKey(item)}>
+                                <li key={itemKey(item)} className={blocked ? "is-blocked" : ""}>
                                     <div className="cart-item">
                                         {image && (
                                             <Link to={productLink || "#"} className="cart-item-image-link">
@@ -59,6 +74,16 @@ const Cart = () => {
                                             <p>{item.quantity} x R{item.price.toFixed(2)}</p>
                                             {item.color && <p>Color: {item.color}</p>}
                                             {item.size && <p>Size: {item.size}</p>}
+                                            {status === "out" && (
+                                                <p className="cart-item-warning">
+                                                    Out of stock — remove this item to check out.
+                                                </p>
+                                            )}
+                                            {status === "draft" && (
+                                                <p className="cart-item-warning">
+                                                    No longer available — remove this item to check out.
+                                                </p>
+                                            )}
 
                                             {/* Change the quantity right here — no need to
                                                 go back to the product page */}
@@ -99,9 +124,15 @@ const Cart = () => {
                     <div className="cart-summary">
                         <p>Total: R{totalPrice.toFixed(2)}</p>
                         <button className="clear-cart-button" onClick={clearCart}>Clear Cart</button>
-                        <Link to="/checkout">
-                            <button className="checkout-button">Proceed to Checkout</button>
-                        </Link>
+                        {hasBlockedItems ? (
+                            <button className="checkout-button" disabled>
+                                Remove unavailable items to check out
+                            </button>
+                        ) : (
+                            <Link to="/checkout">
+                                <button className="checkout-button">Proceed to Checkout</button>
+                            </Link>
+                        )}
                     </div>
                 </>
             )}

@@ -48,6 +48,42 @@
     border-radius: 6px;
 }
 
+.product-card-media {
+    position: relative;
+    display: block;
+}
+
+/* Red "Out of stock" pill over the product photo */
+.product-card-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 9px;
+    background-color: #dc2626;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.product-card.is-out-of-stock .product-card-media img {
+    filter: grayscale(0.6);
+    opacity: 0.75;
+}
+
+.product-card-add:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.product-card-add:disabled:hover {
+    background-color: #9ca3af;
+}
+
 .product-card-info {
     padding-top: 10px;
 }
