@@ -1,7 +1,7 @@
 // src/pages/CheckoutResult.js
-// Where Paystack sends the customer back (callback_url -> /checkout-result).
-// Asks the backend to verify the payment with Paystack; a successful payment
-// flips the order from "Awaiting payment" to "Payment confirmed".
+// Where Stitch sends the customer back after the hosted checkout. The browser
+// redirect is not proof of payment — we always ask the backend to confirm the
+// real status. The old Paystack path is kept as a fallback.
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { BACKEND_URL } from "../config";
@@ -30,10 +30,11 @@ const CheckoutResult = () => {
             pending = null;
         }
 
-        // The reference we created before redirecting to Paystack wins; the
-        // ?reference= param is only a fallback.
         const reference =
             (pending && pending.ref) || searchParams.get("reference") || "";
+        const provider =
+            (pending && pending.provider) ||
+            (searchParams.get("provider") === "stitch" ? "stitch" : "paystack");
 
         if (pending) {
             setInvoiceNumber(pending.invoiceNumber || null);
@@ -48,6 +49,34 @@ const CheckoutResult = () => {
 
         (async () => {
             try {
+                if (provider === "stitch") {
+                    const linkId =
+                        (pending && pending.linkId) || searchParams.get("linkId") || "";
+                    const qs = new URLSearchParams();
+                    if (linkId) qs.set("linkId", linkId);
+                    if (reference) qs.set("reference", reference);
+
+                    const res = await fetch(`${BACKEND_URL}/api/stitch/status?${qs.toString()}`);
+                    const data = await res.json().catch(() => ({}));
+
+                    if (res.ok && data.paid) {
+                        setState("success");
+                        setDetail(
+                            data.amount
+                                ? `Paid ${(data.amount / 100).toLocaleString("en-ZA", { style: "currency", currency: "ZAR" })}`
+                                : ""
+                        );
+                    } else {
+                        setState("failed");
+                        setDetail(
+                            data.error ||
+                                "We haven't received the payment yet. If you've just paid, refresh in a moment."
+                        );
+                    }
+                    return;
+                }
+
+                // Parked Paystack path — kept intact in case it is ever approved.
                 const res = await fetch(`${BACKEND_URL}/verify-payment/${reference}`);
                 const data = await res.json().catch(() => ({}));
                 if (res.ok && data.data && data.data.status === "success") {

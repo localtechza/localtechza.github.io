@@ -7,10 +7,12 @@ export const BACKEND_URL = "https://localtech-backend.onrender.com";
 // LocalTech's live domain (GitHub Pages + Resend + Paystack all use this).
 export const SITE_DOMAIN = "https://localtechza.co.za";
 
-// Card payments (Paystack). Kept off until the merchant account is approved —
-// the full Paystack flow stays in Checkout.js and backend/server.js, so
-// switching this to true re-enables it with no other code changes.
+// Card payments (Stitch Express). Kept off until verification AND the test
+// integration are approved — the flow is built in Checkout.js and
+// backend/server.js, so switching this to true turns cards on with no other
+// changes. The old Paystack code is parked but no longer used.
 export const CARD_PAYMENTS_ENABLED = false;
+export const CARD_PROVIDER = "stitch";
 
 // Google Analytics — left as a placeholder until card payments are approved.
 // Replace both occurrences with the real G-XXXXXXXXXX id, or delete the

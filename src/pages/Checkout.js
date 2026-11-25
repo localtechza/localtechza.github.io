@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate, useLocation } from "react-router-dom";
-import { BACKEND_URL, CARD_PAYMENTS_ENABLED } from "../config";
+import { BACKEND_URL, CARD_PAYMENTS_ENABLED, CARD_PROVIDER } from "../config";
 import { useAuth } from "../context/AuthContext";
 import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
 import products from "../data/products";
@@ -17,6 +17,11 @@ const PENDING_KEY = "lt_pending_payment";
 // disagree with what the customer was shown at checkout.
 const COURIER_FEE = 0;
 
+// Stitch reviewers need to reach the card checkout while the site is still
+// EFT-only for everyone else. Adding this token to the checkout URL turns the
+// card option on for that visit only. Remove it after approval if you like.
+const REVIEW_TOKEN = "stitch-review-7f3a9c";
+
 const Checkout = () => {
     const { cart, clearCart } = useCart();
     const navigate = useNavigate();
@@ -24,6 +29,12 @@ const Checkout = () => {
     const { signIn } = useAuth();
     // Warm the backend while the customer is still filling in the form.
     useBackendWake();
+
+    // Card option is hidden from normal customers until approval, but a
+    // review URL can turn it on for the gateway's end-to-end check.
+    const cardsEnabled =
+        CARD_PAYMENTS_ENABLED ||
+        new URLSearchParams(location.search).get("review") === REVIEW_TOKEN;
 
     const [formData, setFormData] = useState({
         name: "",
@@ -34,7 +45,7 @@ const Checkout = () => {
 
     const [shippingOption, setShippingOption] = useState("pickup");
     const [paymentMethod, setPaymentMethod] = useState(
-        CARD_PAYMENTS_ENABLED ? "paystack" : "eft"
+        cardsEnabled ? "card" : "eft"
     );
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
@@ -208,6 +219,99 @@ const Checkout = () => {
     };
 
     // =========================
+    // STITCH EXPRESS (active card provider; Paystack above is parked)
+    // =========================
+    const handleStitchPayment = async () => {
+        if (hasSubmittedRef.current) return;
+
+        const problem = validateForm();
+        if (problem) {
+            setStatusMessage("Error: " + problem);
+            setStatusTone("error");
+            return;
+        }
+
+        hasSubmittedRef.current = true;
+        wakeBackend();
+        setLoading(true);
+        setStatusMessage(WAKE_MESSAGE);
+        setStatusTone("info");
+
+        const transactionId = `TXN-${Date.now()}`;
+
+        try {
+            // 1. Ask the backend for a hosted Stitch checkout link. If this
+            //    fails, no order is created and nobody has been charged.
+            const res = await fetch(`${BACKEND_URL}/api/stitch/initialize`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    amount: grandTotal,
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    reference: transactionId,
+                }),
+            });
+            const data = await res.json().catch(() => ({}));
+
+            if (!res.ok || !data.link || !data.linkId) {
+                throw new Error(
+                    data.error ||
+                        "Payment could not be started — you have not been charged. Please try again."
+                );
+            }
+
+            // 2. Book the order: invoice number, emails, account sign-in.
+            const checkoutRes = await fetch(`${BACKEND_URL}/checkout`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json", ...authHeaders() },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    cart,
+                    total: grandTotal,
+                    address: formData.address,
+                    shippingOption,
+                    paymentMethod: "stitch",
+                    transactionId,
+                    paymentLinkId: data.linkId,
+                }),
+            });
+            const checkoutData = await checkoutRes.json().catch(() => ({}));
+            if (!checkoutRes.ok) {
+                throw new Error(
+                    checkoutData.error || "Checkout failed — you have not been charged."
+                );
+            }
+
+            saveSessionToken(checkoutData.token);
+
+            // CheckoutResult uses this to check the real status with Stitch.
+            localStorage.setItem(
+                PENDING_KEY,
+                JSON.stringify({
+                    ref: transactionId,
+                    linkId: data.linkId,
+                    provider: "stitch",
+                    invoiceNumber: checkoutData.invoiceNumber,
+                    token: checkoutData.token || null,
+                })
+            );
+
+            clearCart();
+            window.location.href = data.link;
+        } catch (err) {
+            hasSubmittedRef.current = false;
+            setStatusMessage("Error: " + err.message);
+            setStatusTone("error");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // =========================
     // EFT (RESTORED EXACT BEHAVIOUR)
     // =========================
     const handleEFTPayment = async () => {
@@ -277,6 +381,8 @@ const Checkout = () => {
         }
     };
 
+    const cardHandler = CARD_PROVIDER === "stitch" ? handleStitchPayment : handlePaystackPayment;
+
     return (
         <div className="checkout-page">
             <div className="checkout-container">
@@ -309,12 +415,12 @@ const Checkout = () => {
                         </p>
                     )}
 
-                    {/* While Paystack approval is pending, EFT is the only
-                        option — but the card flow stays wired up behind the
-                        flag, ready to switch back on. */}
-                    {CARD_PAYMENTS_ENABLED ? (
+                    {/* While Stitch approval is pending, EFT is the only
+                        option — but the card flow is built and waits behind
+                        the flag. */}
+                    {cardsEnabled ? (
                         <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                            <option value="paystack">Pay With Card</option>
+                            <option value="card">Pay With Card</option>
                             <option value="eft">EFT</option>
                         </select>
                     ) : (
@@ -338,19 +444,19 @@ const Checkout = () => {
                         </div>
                     )}
 
-                    {/* The flag guarantees EFT even if stale state says "paystack" */}
-                    {!CARD_PAYMENTS_ENABLED || paymentMethod !== "paystack" ? (
+                    {/* The flag guarantees EFT even if stale state says "card" */}
+                    {!cardsEnabled || paymentMethod !== "card" ? (
                         <button onClick={handleEFTPayment} disabled={loading || hasBlockedItems}>
                             {loading ? "Just a moment…" : "Place Order (EFT)"}
                         </button>
                     ) : (
-                        <button onClick={handlePaystackPayment} disabled={loading || hasBlockedItems}>
+                        <button onClick={cardHandler} disabled={loading || hasBlockedItems}>
                             {loading ? "Just a moment…" : "Pay with Card"}
                         </button>
                     )}
 
                     {/* ✅ EFT DISPLAY */}
-                    {(!CARD_PAYMENTS_ENABLED || paymentMethod === "eft") && (
+                    {(!cardsEnabled || paymentMethod === "eft") && (
                         <div className="eft-instructions">
                             <p>Please make an EFT payment to:</p>
                             <p><strong>Bank:</strong> Capitec</p>
