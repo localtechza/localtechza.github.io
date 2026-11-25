@@ -22,6 +22,10 @@ const COURIER_FEE = 0;
 // card option on for that visit only. Remove it after approval if you like.
 const REVIEW_TOKEN = "stitch-review-7f3a9c";
 
+// Stitch must receive this on the payment link itself — registering it in the
+// dashboard is not enough. Stitch appends ?reference=...&payment_id=... on return.
+const STITCH_REDIRECT_URL = "https://localtechza.co.za/checkout-result";
+
 const Checkout = () => {
     const { cart, clearCart } = useCart();
     const navigate = useNavigate();
@@ -301,7 +305,12 @@ const Checkout = () => {
             );
 
             clearCart();
-            window.location.href = data.link;
+            // Registering the redirect URL in the dashboard is only half the
+            // job — it must also be appended to this specific payment link.
+            const redirectParam = `redirect_url=${encodeURIComponent(STITCH_REDIRECT_URL)}`;
+            window.location.href = data.link.includes("?")
+                ? `${data.link}&${redirectParam}`
+                : `${data.link}?${redirectParam}`;
         } catch (err) {
             hasSubmittedRef.current = false;
             setStatusMessage("Error: " + err.message);
