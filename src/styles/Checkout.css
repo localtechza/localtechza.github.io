@@ -186,18 +186,19 @@
     border-radius: 5px;
 }
 
-/* Payment badge — always centred below the form, on every device */
+/* Neutral checkout reassurance — always centred below the form */
 .secured-image {
-    width: 220px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 320px;
     margin: 20px auto 0;
     text-align: center;
 }
 
-.secured-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.secured-image p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 /* Mobile Styling */
@@ -213,7 +214,7 @@
     }
 
     .secured-image {
-        width: 180px;
+        max-width: 260px;
         margin-top: 16px;
     }
 }

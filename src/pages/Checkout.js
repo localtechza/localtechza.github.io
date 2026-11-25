@@ -7,7 +7,6 @@ import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake"
 import products from "../data/products";
 import { productStatus } from "../utils/productStatus";
 import "../styles/Checkout.css";
-import acceptedImage from "../assets/accepted.webp";
 
 // Where CheckoutResult picks the payment reference up after Paystack
 const PENDING_KEY = "lt_pending_payment";
@@ -486,9 +485,11 @@ const Checkout = () => {
                     )}
                 </div>
 
-                {/* Payment badge always sits below the form, on every device */}
+                {/* Neutral trust note. The old badge named Paystack, which is
+                    no longer our provider — avoid showing a gateway's brand
+                    until its own brand assets are supplied. */}
                 <div className="secured-image">
-                    <img src={acceptedImage} alt="Accepted payment methods" />
+                    <p>Secure checkout · EFT available on every order</p>
                 </div>
             </div>
         </div>
