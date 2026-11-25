@@ -39,16 +39,19 @@
     padding-left: 10px;
 }
 
+.legal-card ul,
+.legal-card ol {
+    display: block; /* guard against any other stylesheet flexing lists */
+    padding-left: 24px;
+    margin: 8px 0 16px;
+}
+
 .legal-card ul {
-    padding-left: 22px;
     list-style: disc;
-    margin: 8px 0;
 }
 
 .legal-card ol {
-    padding-left: 22px;
     list-style: decimal;
-    margin: 8px 0;
 }
 
 .legal-card li {
