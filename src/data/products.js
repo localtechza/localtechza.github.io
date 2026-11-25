@@ -257,7 +257,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354266/aocg2460vq6-1l.jpg"
         ],
         options: [],
-        category: "Desktop PCs"
+        category: "Desktop PCs",
+        status: "out"
     },
 
     {
@@ -379,7 +380,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444404/DellLatitude55503.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     {
@@ -437,7 +439,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795362893/44.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     {
@@ -605,7 +608,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360440/HPEliteBook850G8LaptopRefurbished3.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     {
@@ -641,7 +645,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360160/89315830_8535641983.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     {
@@ -659,7 +664,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795360002/4.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     
@@ -739,7 +745,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508688/ssss.jpg"
         ],
         options: [],
-        category: "Mini PCs"
+        category: "Mini PCs",
+        status: "out"
     },
 
     {
@@ -776,7 +783,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795508478/Rear_cb72b01e-5e52-4a68-84a9-786564a0dfbf.jpg"
         ],
         options: [],
-        category: "Mini PCs"
+        category: "Mini PCs",
+        status: "out"
     },
 
     {
@@ -939,7 +947,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354635/LenovoThinkCentreM80sGen3_84b2f3b4-a8fd-4e8c-9930-81b1529dcaf3.jpg"
         ],
         options: [],
-        category: "Mini PCs"
+        category: "Mini PCs",
+        status: "out"
     },
 
     {
@@ -1149,7 +1158,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795355565/DELLOptiPlex3050refurbisheddesktop.jpg"
         ],
         options: [],
-        category: "Mini PCs"
+        category: "Mini PCs",
+        status: "out"
     },
 
     {
