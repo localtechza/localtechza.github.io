@@ -1,109 +1,448 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://localtechza.co.za/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/services</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/all</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/bookings</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/desktop-pcs</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/contact</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/laptops</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/privacy</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/mini-pcs</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/terms</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/monitors</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/desktop-pcs</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/gaming-pcs</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/laptops</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/pc-accessories</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/mini-pcs</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/other-tech</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/monitors</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/services</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/gaming-pcs</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/bookings</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/pc-accessories</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/contact</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/other-tech</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/about</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/all</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/returns</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-hp-elitedesk-800-g6-sff-i5-10th-gen-16gb-ddr4-256gb-nvme-computer</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/terms</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-dell-optiplex-3080-sff-core-i5-10th-gen-16gb-ddr4-512gb-nvme-computer</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/privacy</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-dell-latitude-5490-i5-8th-gen-8gb-ddr4-240gb-nvme-14-inch-laptop</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g5-mini-pc-i5-9th-gen-16gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-hp-elitebook-840-g6-i7-8th-gen-16gb-ddr4-256gb-ssd-14-inch-laptop</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/refurbished-mecer-jupiter-h610-mini-pc-i3-12th-gen-8gb-ddr4-128gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-5-x-lenovo-thinkcentre-m910q-mini-pc-i5-6th-gen-8gb-ddr4-256gb-ssd-computer</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/dell-pro-16-plus-pb16250-ultra-5-236v-16gb-ddr5-512gb-nvme-16inch-laptop-new-boxed</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-mecer-jupiter-h610-mini-pc-i3-12th-gen-8gb-ddr4-128gb-ssd-philips-20inch-computer-set</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-3060-mini-tower-i5-8th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
   <url>
-    <loc>https://localtechza.co.za/#/products/refurbished-dell-p2319h-23inch-hd-computer-monitor-go-gadgets-sa</loc>
-    <lastmod>2026-11-20</lastmod>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m720s-sff-i5-9th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-prodesk-400-g5-sff-i5-8th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-v520-i5-7th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-precision-3420-i5-6th-gen-8gb-ddr4-256gb-ssd-computer-autocad-workstation</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m720s-sff-i3-8th-gen-8gb-ddr4-500gb-hdd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-3080-sff-i5-10th-gen-16gb-ddr4-512gb-nvme-dell-p2319h-23inch-computer-set</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m80s-sff-i5-10th-gen-16gb-ddr4-256gb-ssd-lenovo-thinkvision-s24-4e-23-8inch-computer-se</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g6-sff-i5-10th-gen-16gb-ddr4-256gb-nvme-hp-p24-g5-24inch-computer-set</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-v530s-sff-i7-8th-gen-16gb-ddr4-256gb-ssd-aoc-g2460vq6-24inch-computer-set</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-705-g4-mini-pc-amd-ryzen-5-pro-8gb-ddr4-256gb-ssd-hp-prodisplay-p202-20inch-computer-set</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-mecer-jupiter-h610-mini-pc-i3-12th-gen-8gb-ddr4-128gb-ssd-philips-20inch-computer-set</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/dell-pro-14-plus-pb14250-ultra-7-265u-16gb-ddr5-512gb-nvme-14inch-laptop-new</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-precision-7750-i7-10th-gen-32gb-ddr4-1tb-nvme-nvidia-rtx-3000-17-3-inch-laptop-autocad-workstation</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-precision-7560-i7-11th-gen-32gb-ddr4-512gb-nvme-nvidia-rtx-a4000-15-6inch-touch-screen-autocad-workstation-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/dell-latitude-5550-ultra-7-165h-16gb-ddr5-256gb-nvme-15-6-inch-touch-screen-laptop-demo</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/demo-dell-pro-14-plus-pb14250-ultra-5-235u-16gb-ddr5-512gb-nvme-14inch-laptop-demo</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbsihed-dell-latitude-7440-i7-13th-gen-16gb-lpddr5-512gb-nvme-14-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/demo-dell-pro-14-plus-pb14250-ultra-5-236v-16gb-ddr5-512gb-nvme-14inch-laptop-demo</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-zbook-firefly-14-g9-i7-12th-gen-16gb-ddr5-512gb-nvme-nvidia-t550-14-inch-touch-screen-autocad-workstation-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitebook-840-g10-i5-13th-gen-16gb-ddr5-265gb-nvme-14inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-zbook-firefly-15-g8-i7-11th-gen-32gb-ddr4-256gb-nvme-nvidia-t500-15-6-inch-laptop-autocad-workstation</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-pro-14-plus-pb14250-ultra-5-235u-16gb-ddr5-256gb-nvme-14inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-latitude-7420-i7-11th-gen-32gb-lpddr4-512gb-nvme-14-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-latitude-3540-i7-13th-gen-16gb-ddr4-512gb-nvme-15-6-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-probook-650-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-15-6-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-probook-450-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-ssd-15-6-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitebook-850-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-15-6-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitebook-840-g8-i5-11th-gen-16gb-ddr4-256gb-nvme-14-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitebook-830-g7-i7-10th-gen-16gb-ddr4-256gb-nvme-13-3inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-probook-440-g9-i3-12th-gen-16gb-ddr4-256gb-nvme-14-inch-laptop</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-5-x-hp-elitedesk-705-g4-mini-pc-amd-ryzen-3-pro-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-705-g4-mini-pc-amd-ryzen-3-pro-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-705-g5-mini-pc-amd-ryzen-3-pro-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-705-g5-mini-pc-amd-ryzen-5-pro-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-705-g4-mini-pc-amd-ryzen-5-pro-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m900-mini-pc-i5-6th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-mecer-jupiter-h410-mini-pc-i3-10th-gen-8gb-ddr4-128gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g3-mini-pc-i5-7th-gen-8gb-ddr4-500gb-hdd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m910q-mini-pc-i5-6th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g4-mini-pc-i5-8th-gen-8gb-ddr4-256gb-nvme-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-7010-mini-pc-i5-13th-gen-16gb-ddr4-512gb-nvme-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/lenovo-thinkcentre-neo-50q-gen-5-mini-pc-core-7-240h-16gb-ddr5-512gb-nvme-computer-demo</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g4-mini-pc-i5-8th-gen-8gb-ddr4-256gb-nvme-hp-le2202-lcd-computer-set-2</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-tio22d-m720q-i5-9th-gen-16gb-ddr4-256gb-nvme-22inch-all-in-one</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m80s-gen-3-sff-i5-12th-gen-16gb-ddr5-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-5000-sff-i5-12th-gen-16gb-ddr4-256gb-nvme-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/dell-optiplex-3090-mini-tower-refurbished-grade-good-condition-used</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g6-sff-i5-10th-gen-8gb-ddr4-256gb-nvme-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkcentre-m920s-sff-i7-9th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-vostro-3888-i5-10th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-3070-sff-i5-9th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-prodesk-400-g6-sff-i5-9th-gen-16gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-xe3-sff-i7-8th-gen-8gb-ddr4-256gb-nvme-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g5-sff-i5-9th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-prodesk-400-g6-sff-i5-9th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g4-sff-i5-8th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-optiplex-3050-mini-tower-i5-7th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-prodesk-600-g3-mini-pc-i5-7th-gen-8gb-ddr4-256gb-ssd-computer</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-hp-elitedesk-800-g4-mini-pc-i5-8th-gen-8gb-ddr4-256gb-nvme-hp-le2202-lcd-computer-set</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/dell-p2724deb-27inch-wqhd-led-video-conferencing-computer-monitor-demo</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/dell-p2425h-24inch-fhd-led-100hz-computer-monitor-new</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-se2416h-24inch-hd-computer-monitor</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-e2418hn-24inch-hd-computer-monitor</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lg-23mp57hq-23inch-hd-computer-monitor</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lg-22mp57hq-22inch-hd-computer-monitor</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-samsung-s22f350fha-21-5inch-led-computer-monitor</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-lenovo-thinkpad-hybrid-135w-usb-c-lenovo-accessories</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-dell-wd19s-180w-thunderbolt-docking-station-usb-c-dell-accessories</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localtechza.co.za/products/refurbished-5-x-dell-wd19s-180w-thunderbolt-docking-station-usb-c-dell-accessories</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
 </urlset>

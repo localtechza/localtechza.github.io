@@ -261,6 +261,19 @@ const ProductDetails = () => {
                     {outOfStock ? 'Out of stock' : 'Buy Now'}
                 </button>
 
+                {/* Trust promises right where the buy decision happens */}
+                {/\b(refurbished|used|demo|pre-owned)\b/i.test(
+                    `${product.title || ""} ${product.handle || ""}`
+                ) && (
+                    <p className="product-trust-note">
+                        <strong>✓ Tested by us before it ships.</strong> Every refurbished
+                        and used unit is checked and working before it leaves the workshop.
+                    </p>
+                )}
+                <p className="product-shipping-note">
+                    ✓ Free courier delivery on all orders
+                </p>
+
                 {/* Description comes last */}
                 <div className="product-description">
                     <p>{product.description}</p>

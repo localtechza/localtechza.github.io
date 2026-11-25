@@ -39,8 +39,10 @@ const Privacy = () => {
                             across devices.
                         </li>
                         <li>
-                            <strong>Payment information</strong> — card payments are processed by
-                            Paystack. We never see or store your full card number or CVV.
+                            <strong>Payment information</strong> — card payments are coming soon;
+                            when they go live they will be processed by Paystack, and we will never
+                            see or store your full card number or CVV. Right now we only receive
+                            your name and invoice number with your EFT proof of payment.
                         </li>
                         <li>
                             <strong>Messages you send us</strong> — via the contact or booking
@@ -59,7 +61,7 @@ const Privacy = () => {
                     <h2>Who we share it with</h2>
                     <p>We only share what is necessary with these service providers:</p>
                     <ul>
-                        <li><strong>Paystack</strong> — card payments.</li>
+                        <li><strong>Paystack</strong> — card payments (coming soon).</li>
                         <li><strong>MongoDB</strong> — secure database hosting for accounts and orders.</li>
                         <li><strong>Resend</strong> — delivery of login codes and invoice emails.</li>
                         <li><strong>Courier companies</strong> — delivery of your order (name, address, phone).</li>

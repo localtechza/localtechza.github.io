@@ -45,6 +45,12 @@
     margin: 8px 0;
 }
 
+.legal-card ol {
+    padding-left: 22px;
+    list-style: decimal;
+    margin: 8px 0;
+}
+
 .legal-card li {
     margin-bottom: 6px;
 }

@@ -64,6 +64,39 @@
     cursor: pointer;
 }
 
+/* Payment method notice while card payments are pending approval */
+.payment-coming-soon {
+    margin: 0 0 4px;
+    padding: 10px 12px;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    color: #1e40af;
+    font-size: 0.95rem;
+}
+
+.payment-coming-soon p {
+    margin: 0 0 4px;
+}
+
+.payment-coming-soon p:last-child {
+    margin-bottom: 0;
+    color: #37507a;
+    font-size: 0.88rem;
+}
+
+/* Free courier shipping note under the delivery choice */
+.checkout-free-shipping {
+    margin: -4px 0 4px;
+    padding: 8px 10px;
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 6px;
+    color: #047857;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 /* Total Summary */
 .total-summary {
     text-align: right;

@@ -2,20 +2,57 @@
 <html lang="en">
   <head>
     
-    <!-- TODO: Replace G-XXXXXXXXXX below with your new Google Analytics ID (or remove this block) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!--
+      Google Analytics. GA only MEASURES visitors; it has no effect on whether
+      Google can find the site (that is the router + sitemap.xml).
+
+      To switch it on: put your real G-XXXXXXXXXX id in BOTH places below
+      (there is a matching GA_ID in src/config.js). While it still contains
+      "XXXX" nothing is loaded and no hits are sent.
+    -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      // Works on github.io now and on your real domain later
-      gtag('config', 'G-XXXXXXXXXX', {
-        cookie_domain: 'auto'
-      });
+      (function () {
+        var GA_ID = "G-XXXXXXXXXX";
+        if (!GA_ID || GA_ID.indexOf("XXXX") !== -1) return; // not configured yet
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag("js", new Date());
+        gtag("config", GA_ID, { cookie_domain: "auto" });
+
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+        document.head.appendChild(s);
+      })();
     </script>
 
     <meta charset="utf-8" />
+    <!--
+      GitHub Pages serves 404.html for unknown paths, which rewrites the URL to
+      "/?/products/laptops". Turn that back into the clean path BEFORE React
+      loads, so React Router sees a normal URL and Google sees a real one.
+      (Paired with public/404.html — the spa-github-pages technique.)
+    -->
+    <script>
+      (function (l) {
+        if (l.search && l.search.charAt(1) === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />

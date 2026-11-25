@@ -105,7 +105,17 @@ const Header = () => {
     };
 
     return (
-        <header className="header">
+        <>
+            {/* Announcement bar — site-wide offers, above everything */}
+            <div className="announcement-bar" role="note">
+                <span className="announcement-bar-main">Free shipping on all orders</span>
+                <span className="announcement-bar-sep" aria-hidden="true">•</span>
+                <span className="announcement-bar-sub">
+                    Every refurbished &amp; used PC tested before it ships
+                </span>
+            </div>
+
+            <header className="header">
             {/* Logo */}
             <Link to="/" className="logo-container">
                 <img src={logo} alt="LocalTech — home" className="logo" />
@@ -273,7 +283,8 @@ const Header = () => {
                     <span></span>
                 </button>
             </div>
-        </header>
+            </header>
+        </>
     );
 };
 

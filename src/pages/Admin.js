@@ -1,5 +1,5 @@
 // src/pages/Admin.js
-// The owner's order desk — reached only by typing #/admin (never linked
+// The owner's order desk — reached only by typing /admin (never linked
 // from the site) and unlocked with the ADMIN_PIN set on Render.
 //
 // Two tabs: every order with a one-click status change, and the list of

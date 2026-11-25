@@ -1,5 +1,5 @@
 // src/pages/CheckoutResult.js
-// Where Paystack sends the customer back (callback_url -> #/checkout-result).
+// Where Paystack sends the customer back (callback_url -> /checkout-result).
 // Asks the backend to verify the payment with Paystack; a successful payment
 // flips the order from "Awaiting payment" to "Payment confirmed".
 import React, { useState, useEffect, useRef } from "react";

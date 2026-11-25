@@ -1,5 +1,8 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route, } from "react-router-dom";
+// BrowserRouter (no "#") so every page gets its own real URL that Google can
+// index — see public/404.html for the GitHub Pages redirect that makes this
+// work on a static host.
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Bookings from "./pages/Bookings";
@@ -21,6 +24,8 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Returns from "./pages/Returns";
+import About from "./pages/About";
 import Header from "./components/Header";
 import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
@@ -59,6 +64,8 @@ function AppWrapper() {
         {/* Legal pages (linked from the footer) */}
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/returns" element={<Returns />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );

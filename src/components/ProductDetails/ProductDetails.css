@@ -330,8 +330,7 @@ button.add-to-cart:focus {
     white-space: pre-wrap;
 }
 
-/* ============ Stock status (set from Product Lister) ============ */
-/* Red pill under the price while the product is out of stock */
+/* Red "Out of stock" pill under the price */
 .stock-notice {
     display: inline-block;
     margin-top: 10px;
@@ -395,4 +394,27 @@ button.add-to-cart:focus:disabled,
     width: auto;
     padding: 12px 28px;
     text-decoration: none;
+}
+
+/* ============ Trust notes (free shipping + tested before dispatch) ============ */
+.product-trust-note,
+.product-shipping-note {
+    margin: 10px 0 0;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.product-trust-note {
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}
+
+.product-shipping-note {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+    font-weight: 600;
 }

@@ -66,8 +66,8 @@ const Terms = () => {
                     <h2>Payment</h2>
                     <ul>
                         <li>
-                            <strong>Card:</strong> paid securely through Paystack. We never see or
-                            store your full card details.
+                            <strong>Card:</strong> coming soon. Online card payments are being
+                            set up and will be announced here when they go live.
                         </li>
                         <li>
                             <strong>EFT:</strong> pay to Capitec, account name LocalTech, account
@@ -82,7 +82,8 @@ const Terms = () => {
                     <ul>
                         <li>
                             Choose <strong>pickup from our workshop</strong> (Waterfall, KZN) or{" "}
-                            <strong>courier</strong> (R120, shown at checkout) at checkout.
+                            <strong>courier</strong> at checkout —{" "}
+                            <strong>courier delivery is free on all orders</strong>.
                         </li>
                         <li>
                             Courier delivery times are estimates, not guarantees. You are

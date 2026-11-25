@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate, useLocation } from "react-router-dom";
-import { BACKEND_URL } from "../config";
+import { BACKEND_URL, CARD_PAYMENTS_ENABLED } from "../config";
 import { useAuth } from "../context/AuthContext";
 import { useBackendWake, wakeBackend, WAKE_MESSAGE } from "../utils/backendWake";
 import products from "../data/products";
@@ -11,6 +11,11 @@ import acceptedImage from "../assets/accepted.webp";
 
 // Where CheckoutResult picks the payment reference up after Paystack
 const PENDING_KEY = "lt_pending_payment";
+
+// Courier is FREE on every order. Set back to 120 to charge for it again —
+// this must match COURIER_FEE in backend/server.js or the invoice will
+// disagree with what the customer was shown at checkout.
+const COURIER_FEE = 0;
 
 const Checkout = () => {
     const { cart, clearCart } = useCart();
@@ -28,7 +33,9 @@ const Checkout = () => {
     });
 
     const [shippingOption, setShippingOption] = useState("pickup");
-    const [paymentMethod, setPaymentMethod] = useState("paystack");
+    const [paymentMethod, setPaymentMethod] = useState(
+        CARD_PAYMENTS_ENABLED ? "paystack" : "eft"
+    );
     const [loading, setLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState("");
     const [statusTone, setStatusTone] = useState("info"); // info | success | error
@@ -67,7 +74,7 @@ const Checkout = () => {
     };
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const shippingFee = shippingOption === "courier" ? 120 : 0;
+    const shippingFee = shippingOption === "courier" ? COURIER_FEE : 0;
     const grandTotal = total + shippingFee;
 
     // Items the shop has taken off sale since they went into the cart —
@@ -293,13 +300,32 @@ const Checkout = () => {
 
                     <select value={shippingOption} onChange={(e) => setShippingOption(e.target.value)}>
                         <option value="pickup">Pickup from our workshop</option>
-                        <option value="courier">Courier (R120)</option>
+                        <option value="courier">Courier — FREE on all orders</option>
                     </select>
 
-                    <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
-                        <option value="paystack">Pay With Card</option>
-                        <option value="eft">EFT</option>
-                    </select>
+                    {shippingOption === "courier" && (
+                        <p className="checkout-free-shipping">
+                            🚚 Free courier shipping — you pay nothing extra for delivery.
+                        </p>
+                    )}
+
+                    {/* While Paystack approval is pending, EFT is the only
+                        option — but the card flow stays wired up behind the
+                        flag, ready to switch back on. */}
+                    {CARD_PAYMENTS_ENABLED ? (
+                        <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
+                            <option value="paystack">Pay With Card</option>
+                            <option value="eft">EFT</option>
+                        </select>
+                    ) : (
+                        <div className="payment-coming-soon">
+                            <p><strong>Payment method: EFT (bank transfer)</strong></p>
+                            <p>
+                                Card payments are coming soon. Your invoice will show our
+                                bank details — just email us the proof of payment.
+                            </p>
+                        </div>
+                    )}
 
                     <div className="total-summary">
                         <h3>Total: R{grandTotal.toFixed(2)}</h3>
@@ -312,18 +338,19 @@ const Checkout = () => {
                         </div>
                     )}
 
-                    {paymentMethod === "paystack" ? (
-                        <button onClick={handlePaystackPayment} disabled={loading || hasBlockedItems}>
-                            {loading ? "Just a moment…" : "Pay with Card"}
-                        </button>
-                    ) : (
+                    {/* The flag guarantees EFT even if stale state says "paystack" */}
+                    {!CARD_PAYMENTS_ENABLED || paymentMethod !== "paystack" ? (
                         <button onClick={handleEFTPayment} disabled={loading || hasBlockedItems}>
                             {loading ? "Just a moment…" : "Place Order (EFT)"}
+                        </button>
+                    ) : (
+                        <button onClick={handlePaystackPayment} disabled={loading || hasBlockedItems}>
+                            {loading ? "Just a moment…" : "Pay with Card"}
                         </button>
                     )}
 
                     {/* ✅ EFT DISPLAY */}
-                    {paymentMethod === "eft" && (
+                    {(!CARD_PAYMENTS_ENABLED || paymentMethod === "eft") && (
                         <div className="eft-instructions">
                             <p>Please make an EFT payment to:</p>
                             <p><strong>Bank:</strong> Capitec</p>
