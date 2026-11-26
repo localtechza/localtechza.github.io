@@ -27,9 +27,9 @@
 
 /* Footer Left Section for Social Media Icons */
 .footer-left {
-    position: absolute;
-    left: 15px;
     display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
 }
 
 /* Improved Link Styling */
@@ -73,11 +73,13 @@
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    padding: 6px 10px;
+    padding: 5px 9px;
     border-radius: 5px;
+    white-space: nowrap;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
-    font-size: 14px;
+    font-size: 12px;
     transition: all 0.3s ease;
 }
 
@@ -108,8 +110,9 @@
 .example-2 .icon-content a svg {
     position: relative;
     z-index: 1;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
+    fill: currentColor; /* icon follows the link colour, including hover */
 }
 
 .example-2 .icon-content a:hover {
