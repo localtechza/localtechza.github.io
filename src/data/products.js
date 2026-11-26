@@ -177,7 +177,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795354999/46150620_5721091954.jpg"
         ],
         options: [],
-        category: "Desktop PCs"
+        category: "Desktop PCs",
+        status: "out"
     },
 
     {
@@ -362,7 +363,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795444743/DellPrecision7550RefurbishedLaptop2.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     {
