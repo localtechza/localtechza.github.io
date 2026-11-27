@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-/* Payment method notice while card payments are pending approval */
+/* Payment method notice (EFT fallback / parked card flow) */
 .payment-coming-soon {
     margin: 0 0 4px;
     padding: 10px 12px;

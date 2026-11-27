@@ -66,8 +66,9 @@ const Terms = () => {
                     <h2>Payment</h2>
                     <ul>
                         <li>
-                            <strong>Card:</strong> coming soon. Online card payments are being
-                            set up and will be announced here when they go live.
+                            <strong>Card:</strong> pay securely online at checkout. Card
+                            payments are processed by Stitch — we never see or store your full
+                            card number or CVV.
                         </li>
                         <li>
                             <strong>EFT:</strong> pay to Capitec, account name LocalTech, account

@@ -423,9 +423,7 @@ const Checkout = () => {
                         </p>
                     )}
 
-                    {/* While Stitch approval is pending, EFT is the only
-                        option — but the card flow is built and waits behind
-                        the flag. */}
+                    {/* Cards are live; EFT stays available as an alternative. */}
                     {cardsEnabled ? (
                         <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
                             <option value="card">Pay With Card</option>
@@ -435,8 +433,8 @@ const Checkout = () => {
                         <div className="payment-coming-soon">
                             <p><strong>Payment method: EFT (bank transfer)</strong></p>
                             <p>
-                                Card payments are coming soon. Your invoice will show our
-                                bank details — just email us the proof of payment.
+                                Your invoice will show our bank details — just email us the
+                                proof of payment.
                             </p>
                         </div>
                     )}

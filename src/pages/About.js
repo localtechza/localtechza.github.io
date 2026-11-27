@@ -104,8 +104,9 @@ const About = () => {
                             workshop, or free courier straight to your door.
                         </li>
                         <li>
-                            Pay by EFT — see <Link to="/terms">Terms of Service</Link> for the
-                            account details. Card payments are coming soon.
+                            Pay by EFT or card. EFT details are in our{" "}
+                            <Link to="/terms">Terms of Service</Link>; card payments are
+                            processed securely by Stitch.
                         </li>
                         <li>
                             Changed your mind or something wrong? Read our{" "}
