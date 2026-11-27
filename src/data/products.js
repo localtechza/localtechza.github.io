@@ -125,7 +125,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795355725/76732176_4017448670.jpg"
         ],
         options: [],
-        category: "Mini PCs"
+        category: "Mini PCs",
+        status: "out"
     },
 
     {
@@ -535,7 +536,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795361940/DELLLATITUDE742077.jpg"
         ],
         options: [],
-        category: "Laptops"
+        category: "Laptops",
+        status: "out"
     },
 
     {
@@ -876,7 +878,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795449834/40297571dd38fe601d8d9eea5e731a69_1.jpg"
         ],
         options: [],
-        category: "Mini PCs"
+        category: "Mini PCs",
+        status: "out"
     },
 
     {
@@ -1313,7 +1316,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795352300/HP23MP55HQ1.jpg"
         ],
         options: [],
-        category: "Monitors"
+        category: "Monitors",
+        status: "out"
     },
 
     {
@@ -1330,7 +1334,8 @@ const products = [
             "https://res.cloudinary.com/rmmufvrh/image/upload/v1795352062/Samsung19InchmonitorRefurbished1_4e12e39c-04e9-4573-818f-58ed0b11165f.jpg"
         ],
         options: [],
-        category: "Monitors"
+        category: "Monitors",
+        status: "out"
     },
 
     
