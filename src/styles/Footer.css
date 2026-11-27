@@ -23,13 +23,18 @@
 .footer-content {
     width: 100%;  /* Make sure footer content stretches across */
     text-align: center;
+    /* Reserve room for the social icons pinned at the bottom-left */
+    padding-bottom: 46px;
 }
 
-/* Footer Left Section for Social Media Icons */
+/* Social icons sit at the bottom-left on desktop. The footer is already
+   position:relative, so this anchors them without pushing the text around. */
 .footer-left {
+    position: absolute;
+    left: 18px;
+    bottom: 12px;
     display: flex;
-    justify-content: center;
-    margin-bottom: 14px;
+    justify-content: flex-start;
 }
 
 /* Improved Link Styling */
@@ -208,6 +213,10 @@ html, body {
         justify-content: center; /* Center icons */
         flex-wrap: wrap; /* Allow wrapping if needed */
         margin-bottom: 10px; /* Add spacing between icons and text */
+    }
+
+    .footer-content {
+        padding-bottom: 0; /* No reserved space needed when icons are in flow */
     }
 
     .footer-left .icon-content {
