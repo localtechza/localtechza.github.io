@@ -25,13 +25,13 @@
     text-align: center;
 }
 
-/* Icons and policy links share one centred line */
+/* Icons and policy links share one line: icons pinned to the far left,
+   links centred in the row. */
 .footer-links-row {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px 16px;
     width: 100%;
 }
 
@@ -39,13 +39,15 @@
     margin: 0;
 }
 
-/* Social icons — sits inside .footer-links-row so it lines up with the
-   policy links instead of floating above or below them. */
+/* Social icons — anchored to the very left of the row and vertically
+   aligned with the policy links. */
 .footer-left {
-    position: static;
-    transform: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* Improved Link Styling */
@@ -218,6 +220,11 @@ html, body {
         text-align: center;
     }
 
+    .footer-links-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .footer-left {
         position: static; /* Remove absolute positioning */
         top: auto;
@@ -225,7 +232,7 @@ html, body {
         display: flex;
         justify-content: center; /* Center icons */
         flex-wrap: wrap; /* Allow wrapping if needed */
-        margin-bottom: 10px; /* Add spacing between icons and text */
+        margin-bottom: 0;
     }
 
     .footer-content {
