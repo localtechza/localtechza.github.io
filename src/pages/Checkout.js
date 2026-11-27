@@ -483,11 +483,10 @@ const Checkout = () => {
                     )}
                 </div>
 
-                {/* Neutral trust note. The old badge named Paystack, which is
-                    no longer our provider — avoid showing a gateway's brand
-                    until its own brand assets are supplied. */}
+                {/* Plain-text reassurance. No custom gateway badge — Stitch
+                    has not published approved checkout artwork for us to use. */}
                 <div className="secured-image">
-                    <p>Secure checkout · EFT available on every order</p>
+                    <p>Pay securely by card (Stitch) or EFT.</p>
                 </div>
             </div>
         </div>
