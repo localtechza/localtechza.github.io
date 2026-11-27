@@ -25,16 +25,27 @@
     text-align: center;
 }
 
-/* Social icons sit on the left, vertically centred with the footer text.
-   The footer is already position:relative, so this anchors them without
-   pushing the text around. */
-.footer-left {
-    position: absolute;
-    left: 18px;
-    top: 50%;
-    transform: translateY(-50%);
+/* Icons and policy links share one centred line */
+.footer-links-row {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    width: 100%;
+}
+
+.footer-links {
+    margin: 0;
+}
+
+/* Social icons — sits inside .footer-links-row so it lines up with the
+   policy links instead of floating above or below them. */
+.footer-left {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
 }
 
 /* Improved Link Styling */
